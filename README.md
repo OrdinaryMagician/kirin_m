@@ -53,7 +53,7 @@ Like any **Anarukon** firearm, the weapon not only needs to be reloaded with mor
 
 This is basically an over-under shotgun powered by magic, designed by famed gunsmith **Irai Sokana**, grandmother of one of **Kirin**'s maids. Each cartridge comes packed with several iron pellets and a charge of pyromantic salt. **Kirin** can carry up to 30 cartridges in total.
 
-Primary fire shoots the top barrel, while secondary fire shoots the bottom barrel. Due to the employment of solidified pyromantic mana, a potent burst of flame will come out of the barrel with each shot, making shots at point blank deal A LOT of fire damage. Pressing the zoom key toggles a *"linked fire"* mode, where either trigger press will fire both barrels at once.
+Primary fire shoots the top barrel, while secondary fire shoots the bottom barrel. Due to the employment of solidified pyromantic mana, a potent burst of flame will be released with each shot, making shots at point blank deal A LOT of fire damage. Pressing the zoom key toggles a *"linked fire"* mode, where either trigger press will fire both barrels at once.
 
 Unlike other firearms, the use of a physical propellant means that the weapon does not need to be replenished with mana for it to keep operating.
 
@@ -61,13 +61,13 @@ Unlike other firearms, the use of a physical propellant means that the weapon do
 
 A gift from **Kirin**'s very distant cousin. This beast is effectively an FTL rocket launcher. Due to some specifics of deployment, the weapon had to be delivered in a disassembled state, but the three main parts ended up scattered. **Saya** cites that **Cyrus** may have done it on purpose so the weapon can be *"unlocked in stages"*, which she additionally commented on as being *"some videogamey bullshit"*. Nevertheless, **Kirin** considers that to make the prospect of using it more exciting, as he has a great admiration for **Misa**'s handiwork.
 
-Primary fire will deploy the payload, piercing through everything in its path in the mere blink of an eye. Secondary fire arms the explosive early, causing the projectile to burst upon hitting its first target. Zoom lets you you aim through the scope, for long distance shots.
+Primary fire will deploy the payload, piercing through any small targets in its path in the mere blink of an eye. Secondary fire arms the explosive early, causing the projectile to burst upon hitting its first target. Zoom lets you aim through the scope, for long distance shots.
 
 Ammunition for this weapon can be found sometimes scattered throughout the world, but it's fairly rare compared to that of the other two. Part of the challenge, perhaps. **Kirin** can only carry three rounds for this, due to their size. The weapon itself can hold two in reserve and one in the chamber, adding up to a total of six shots.
 
 ## Spellcasting
 
-Of course, **Kirin** knows a wide range of spells that he can make use of at his leisure, should he possess the mana to spare. All of these make use only of the primary and secondary fire buttons.
+Of course, **Kirin** knows a wide range of spells that he can make use of at his leisure, should he possess the mana to spare. All of these require only the primary and secondary fire buttons to be used, so their operation is much easier.
 
 ### Slot 5 - Flame of the Heart
 
@@ -89,7 +89,7 @@ Both fire buttons do what you'd expect.
 
 ### Slot 8 - Boundary Break
 
-A staple of the **Yanikov** family. Tears open a gap through space-time connecting to a distant spot, allowing you to transport there almost instantly. **Kirin** generally doesn't use it outside of emergencies, as he considers it *"slothful"* to avoid walking by simply tearing through space.
+A staple of the **Yanikov** family that not many can fully master. Tears open a gap through space-time connecting to a distant spot, allowing you to transport there almost instantly. **Kirin** generally doesn't use it outside of emergencies, as he considers it *"slothful"* to avoid walking by simply tearing through space.
 
 Secondary fire can be held to set up the destination spot. Tapping primary fire will then send you there in an instant. Do note that if you simply tap primary fire by itself, you won't be able to guess exactly where you may land, but it can still be useful to do quick dashes to flee the enemy.
 
@@ -117,15 +117,19 @@ Each of these regains a bit of health and mana when eaten. Part of his grandmoth
 
 ### Refreshing Beverage *[Quartz Flask]*
 
-A popular, sugar-rich drink used mainly by **Anarukon** athletes. Regains some health on use.
+A popular, sugar-rich drink used mainly by **Anarukon** athletes. Regains some health on use, and has a very appealing taste to boot.
 
 ### Akashna Extract *[Mystic Urn]*
 
-A refreshing bottle of sweet tea with a pungent odor, made from iron-rich Akashna blood. Greatly boosts regeneration upon consumption, though its full effects fade after a while.
+A refreshing bottle of sweet tea with a pungent odor, made from iron-rich Akashna blood. Greatly boosts regeneration upon consumption, though its full effects fade after a while. Alerts enemies when opened.
+
+### Mana Stimulant *[Mystic Ambit Incant]*
+
+A potion that boosts mana absorption for some time, allowing you to replenish your reserves quicker. Has a distinct *"rooty"* taste.
 
 ### Ring of Protection *[Amulet of Warding, Falcon Shield, Mesh Armor, Platinum Helm]*
 
-You can carry up to eight of these at the same time, stacking into almost complete invulnerability. They will turn to dust after absorbing too much damage, however. Strangely, you don't need to put these in your fingers for them to have any effect. They'll work as long as you keep them close to your body, so Kirin just keeps them in his chest pocket.
+You can carry up to eight of these at the same time, stacking into almost complete invulnerability. They will shatter after absorbing too much damage, however. Strangely, you don't need to put these in your fingers for them to have any effect. They'll work as long as you keep them close to your body, so Kirin just puts them in his chest pocket.
 
 ### Ring Set *[Dragonskin Bracers]*
 
@@ -133,7 +137,7 @@ Four rings of protection in one package.
 
 ### Red Oni Milk *[Icon of the Defender]*
 
-A flask of **Ibuki**'s own fresh milk. So nutritious it can boost one's defenses to unheard of levels.
+A flask of **Ibuki**'s own fresh milk. So nutritious it can boost one's defenses to unheard of levels, for a limited time.
 
 ### 6mm Short *[Blue Mana]*
 
@@ -153,7 +157,7 @@ Found in pairs of 2 rounds. **Kirin** only grabs what he needs, of course.
 
 ### Small Bomb *[Flechette]*
 
-A gift from **Saya**. Small, but packed with plenty of **Explodium**.
+A gift from **Saya**. Small, but packed with plenty of **Explodium**. They appear to be home-made, and have some odd Japanese word handwritten on them.
 
 ### YEET Mechanism *[Disc of Repulsion]*
 
