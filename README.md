@@ -39,7 +39,7 @@ There are four weapons available throughout your journey, one of which you alrea
 
 Fight your enemies with your own body. This shouldn't be very effective considering **Kirin**'s physical form, but it's helpful in a pinch.
 
-Primary fire alternates between two quick jabs and a hook. This has some decent staggering potential, and can quickly push back small foes. Secondary fire opts for a swift side-sweeping kick. This is where **Kirin**'s lower body strength shines, pushing real hard against rows of enemies.
+Primary fire alternates between two quick jabs and a hook. This has some decent staggering potential, and can quickly push back small foes. Secondary fire opts for a swift side-sweeping kick. This is where **Kirin**'s lower body strength shines, pushing real hard against rows of enemies. This kick can also be quickly delivered while using other weapons through a dedicated keybind.
 
 The reload and zoom functions allow you to block and parry respectively. Blocking is mostly effective, thanks to the armored lining of your suit, especially around the cuffs. Parrying, if timed well, will leave an enemy stunned for a short period of time, upon which any damage to them is amplified. It is not possible to parry projectiles, you are not **Demo-chan**, nor know exactly how they can even do such a thing.
 
@@ -187,7 +187,7 @@ Found in bunches of 5 rounds. Likewise, these will be jammed into reserve mags a
 
 ### 10mm Frag *[Green Mana]*
 
-*"To weaponize pyromancy in such a fashion... Such is warfare."*
+*"To weaponize pyromancy in this fashion... Such is warfare."*
 
 Found as single rounds.
 
@@ -273,6 +273,12 @@ Once **Kirin** is finished with one ammo type, he'll switch to the other one, if
 **Kirin** has a phone, and it is the most powerful tool at his disposal for gathering and processing information about the environment. A journal is available that will be automatically filled in with notes about locked doors, spots where a puzzle item is needed, and other remarks of interest. It's also possible to track the positions of uncollected items and look them up later if needed. And, of course, you also have access to neat lil' stats on your performance, progress through the campaign, and whatnot, just like back in **SWWM GZ**. You can also use it to light the way, though it won't be as potent as the Pocket Light.
 
 Don't worry about it running out of battery, though, it's got plenty of juice for several days *(And honestly, if you somehow take that long playing the game that it does run out... You've got a bigger problem there)*.
+
+---
+
+## Compatibility
+
+I'm afraid this mod will be **Hexen**-only, for story reasons. It should be compatible with a wide variety of custom mapsets, too, as long as they don't introduce new weapons (which will kinda throw off things).
 
 ---
 
