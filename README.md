@@ -207,7 +207,7 @@ Found as single rounds.
 
 *"Purupurupikopuyo...?"*
 
-A gift from **Saya**. Small, but packed with plenty of **Explodium**. They appear to be home-made, and have some odd Japanese word handwritten on them.
+A gift from **Saya**. Small, but packed with plenty of **Explodium**. They appear to be home-made, and have some odd Japanese word handwritten on them. Used through a dedicated grenade button.
 
 ### Safety Tether *[Chaos Device]*
 
