@@ -23,7 +23,7 @@ As a member of the **Anarukon** race, **Kirin** is completely immortal, and bear
 
 Apart from these abilities, he's also somewhat skilled at hand to hand combat, as a requirement for self-defense against assassins. He also knows full well how to employ various firearms. Nevertheless, magic is where he shines, so these are mostly complementary.
 
-As **Kirin** has no access to **Hammerspace**, he instead carries all his equipment on his body, thus limiting somewhat how much he can hold. He's got two holsters for a pistol and a submachine gun, along with slings for carrying two other weapons, all four of which he personally chose for this journey. For ammunition and other items he's got a couple pouches and a backpack. **Saya** couldn't stop fawning over how *"tactical"* he looked all suited up. Should also be mentioned that his emperor suit was constructed with armored lining, although it's not enough protection to survive in a serious combat situation.
+Although **Kirin** has no access to **Hammerspace**, he nevertheless is capable of *"carrying"* a lot of equipment in the *"void"* that he has access to through the unique powers of his **Yanikov** blood. Most items will be put away and brought back from there as needed, although for very quick access, he'd rather have some of them on his body. Therefore, he's got two holsters, for a pistol and a submachine gun, along with slings for carrying two other weapons on his back, all four of these having been personally chosen by him for this journey. In regards to ammunition, he's got some side pouches for quick access to carefully managed magazines and spare rounds. **Saya** is very impressed by his tactical approach, she really couldn't stop fawning over how he looks all suited up for combat. It should also be mentioned that his emperor suit was constructed with armored lining, although it's not enough protection to survive in a serious combat situation.
 
 Should he fall in battle, he will simply get back up again shortly afterwards. Should his body be torn to shreds, his remains shall scatter in the wind and he will be reformed in a safer place, together with all his belongings. Such is the blessing of the **Father of Eternity**.
 
@@ -129,7 +129,7 @@ Secondary fire can be held to set up the destination spot. Tapping primary fire 
 
 ## Items
 
-Obviously to aid you in this lone journey, you're going to need some extra help. Various items have been scattered around, as per usual. Your backpack is bigger on the inside thanks to some sneaky **Yanikov** magic, so you can hold plenty of items easily. As **Kirin** is very orderly, he will never waste anything. Excess amounts of items that can't be picked up will be left behind for later. This is especially important for ammunition, of course.
+Obviously to aid you in this lone journey, you're going to need some extra help. Various items have been scattered around, as per usual. While you don't really need to care about storage space, **Kirin** would rather not hoard too much, so there are some limits to the items you can carry. Also he will never waste anything, so excess amounts that can't be picked up will be left behind for later. This is especially important for ammunition, of course.
 
 ### Candy Bean *[Crystal Vial]*
 
@@ -270,9 +270,11 @@ Once **Kirin** is finished with one ammo type, he'll switch to the other one, if
 
 *"Uhm... Of course I have one, why wouldn't I?"*
 
-**Kirin** has a phone, and it is the most powerful tool at his disposal for gathering and processing information about the environment. A journal is available that will be automatically filled in with notes about locked doors, spots where a puzzle item is needed, and other remarks of interest. It's also possible to track the positions of uncollected items and look them up later if needed. And, of course, you also have access to neat lil' stats on your performance, progress through the campaign, and whatnot, just like back in **SWWM GZ**. You can also use it to light the way, though it won't be as potent as the Pocket Light.
+**Kirin** has a phone, and it is the most powerful tool at his disposal for gathering and processing information about the environment. A journal is available that will be automatically filled in with notes about locked doors, spots where a puzzle item must be used, and other remarks of interest. It's also possible to track the positions of uncollected items and look them up later if needed. And, of course, you also have access to neat lil' stats on your performance, progress through the campaign, and whatnot, just like back in **SWWM GZ**. You can also use it to light the way, though it won't be as potent as the Pocket Light.
 
 Don't worry about it running out of battery, though, it's got plenty of juice for several days *(And honestly, if you somehow take that long playing the game that it does run out... You've got a bigger problem there)*.
+
+BTW if you're curious, that phone background is his favorite anime character.
 
 ---
 
