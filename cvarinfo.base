@@ -1,0 +1,27 @@
+// shared cvars
+nosave float kirin_flashstrength = 1.0;
+user float kirin_bumpstrength = 1.0;
+nosave int kirin_hudmargin = 10;
+nosave int kirin_maxshown = 4;
+nosave int kirin_maxshownbig = 10;
+nosave int kirin_maxpickup = 5;
+nosave int kirin_chatduration = 25;
+nosave int kirin_msgduration = 5;
+nosave int kirin_pickduration = 3;
+nosave bool kirin_shaders = true;
+server bool kirin_blood = true;
+server int kirin_maxblood = 400;
+server int kirin_maxgibs = 100;
+server int kirin_maxcasings = 200;
+server int kirin_maxdebris = 500;
+nosave bool kirin_fuzz = true;
+server bool kirin_shadows = true;
+nosave int kirin_shadowdist = 2000;
+nosave int kirin_forcestats = 1;
+server int kirin_drlaskill = 3;
+nosave bool kirin_weapontooltips = true;
+nosave string kirin_tooltipshown = "";
+nosave noarchive bool kirin_tooltipnote = false;
+nosave bool kirin_mm_enable = true;
+nosave int kirin_playtime = 0;
+// mod-specific cvars

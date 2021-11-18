@@ -1,0 +1,11 @@
+[default]
+// tags, pickups
+T_KIRIN = "Kirin Xanai";
+// quit messages
+QUITMSG = "Farewell, brave soul...";
+// misc
+KIRIN_TITLEPRESENTSA = "UnSX Team";
+KIRIN_TITLEPRESENTSB = "presents";
+KIRIN_TITLEMODBYA = "a mod by";
+KIRIN_TITLEMODBYB = "Marisa Kirisame";
+// weapon tooltips

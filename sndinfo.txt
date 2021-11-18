@@ -1,0 +1,4 @@
+$pitchshiftrange 0
+
+kirin/preamb	sounds/kirin_preamb.ogg
+kirin/logoflash	sounds/kirin_logoflash.ogg

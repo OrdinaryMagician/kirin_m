@@ -1,0 +1,106 @@
+version "4.7.1"
+
+/*
+   RED STAR OF INNOCENCE Main Codebase
+   (C)2021 Marisa Kirisame, UnSX Team
+   This copyright and the attached LICENSE.code file apply to all files
+   included from here, with the exception of any third-party libraries
+*/
+
+/// SWWM GZ Common Library
+// library constants
+const SWWMMODPREFIX = "kirin";
+const SWWMMAXBACKPACK = 0;
+const SWWMHEALTHFLASH = Color(255,96,64);
+const SWWMARMORFLASH = Color(192,64,255);
+const SWWMLOGONAME = "M_KIRIN";
+const SWWMCREDITSCOL0 = Font.CR_ORANGE;
+const SWWMCREDITSCOL1 = Font.CR_FIRE;
+const SWWMCREDITSCOL2 = Font.CR_GOLD;
+// Gutamatics
+#include "zscript/swwm_Gutamatics/Include.zsc"
+// utility code
+#include "zscript/utility/swwm_coordutil.zsc"
+#include "zscript/utility/swwm_utility.zsc"
+// base code
+#include "zscript/swwm_common.zsc"
+#include "zscript/swwm_common_fx.zsc"
+#include "zscript/swwm_handler.zsc"
+#include "zscript/swwm_statichandler.zsc"
+#include "zscript/swwm_thinkers.zsc"
+#include "zscript/swwm_player.zsc"
+#include "zscript/swwm_blod.zsc"
+// handler code
+#include "zscript/handler/swwm_handler_damage.zsc"
+#include "zscript/handler/swwm_handler_flash.zsc"
+#include "zscript/handler/swwm_handler_iwantdie.zsc"
+#include "zscript/handler/swwm_handler_process.zsc"
+#include "zscript/handler/swwm_handler_queues.zsc"
+#include "zscript/handler/swwm_handler_replacements.zsc"
+#include "zscript/handler/swwm_handler_worldload.zsc"
+#include "zscript/handler/swwm_handler_worldthings.zsc"
+// menu code
+#include "zscript/menu/swwm_help.zsc"
+#include "zscript/menu/swwm_menus.zsc"
+#include "zscript/menu/swwm_credits.zsc"
+// compat code
+#include "zscript/compat/swwm_compat.zsc"
+// hud
+#include "zscript/hud/swwm_hud.zsc"
+#include "zscript/hud/swwm_hudextra.zsc"
+// items
+#include "zscript/items/swwm_baseitem.zsc"
+#include "zscript/items/swwm_basehealth.zsc"
+#include "zscript/items/swwm_basearmor.zsc"
+#include "zscript/items/swwm_baseammo.zsc"
+#include "zscript/items/swwm_angerysigil.zsc"
+#include "zscript/items/swwm_safetytether.zsc"
+// weapons
+#include "zscript/weapons/swwm_baseweapon.zsc"
+#include "zscript/weapons/swwm_baseweapon_fx.zsc"
+#include "zscript/weapons/swwm_baseweapon_melee.zsc"
+// monsters
+#include "zscript/swwm_monsters.zsc"
+
+/// RED STAR OF INNOCENCE Specific Code
+// utility code
+#include "zscript/utility/kirin_utility.zsc"
+// base code
+#include "zscript/kirin_player.zsc"
+#include "zscript/kirin_player_fx.zsc"
+// handler code
+#include "zscript/handler/kirin_handler_process.zsc"
+#include "zscript/handler/kirin_handler_shaders.zsc"
+#include "zscript/handler/kirin_handler_replacements.zsc"
+// menu code
+#include "zscript/menu/kirin_credits.zsc"
+#include "zscript/menu/kirin_title.zsc"
+// hud
+#include "zscript/hud/kirin_hud.zsc"
+// items
+#include "zscript/items/kirin_ammoitems.zsc"
+#include "zscript/items/kirin_ammospawn.zsc"
+#include "zscript/items/kirin_armor.zsc"
+#include "zscript/items/kirin_health.zsc"
+#include "zscript/items/kirin_powerups.zsc"
+// weapons
+#include "zscript/weapons/kirin_cqc.zsc"
+#include "zscript/weapons/kirin_cqc_fx.zsc"
+#include "zscript/weapons/kirin_pistol.zsc"
+#include "zscript/weapons/kirin_pistol_fx.zsc"
+#include "zscript/weapons/kirin_smg.zsc"
+#include "zscript/weapons/kirin_smg_fx.zsc"
+#include "zscript/weapons/kirin_shotgun.zsc"
+#include "zscript/weapons/kirin_shotgun_fx.zsc"
+#include "zscript/weapons/kirin_ballista.zsc"
+#include "zscript/weapons/kirin_ballista_fx.zsc"
+#include "zscript/weapons/kirin_heart.zsc"
+#include "zscript/weapons/kirin_heart_fx.zsc"
+#include "zscript/weapons/kirin_flame.zsc"
+#include "zscript/weapons/kirin_flame_fx.zsc"
+#include "zscript/weapons/kirin_frost.zsc"
+#include "zscript/weapons/kirin_frost_fx.zsc"
+#include "zscript/weapons/kirin_lightning.zsc"
+#include "zscript/weapons/kirin_lightning_fx.zsc"
+#include "zscript/weapons/kirin_gap.zsc"
+#include "zscript/weapons/kirin_gap_fx.zsc"

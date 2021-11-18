@@ -1,0 +1,106 @@
+GameInfo
+{
+	AddEventHandlers = "SWWMStaticHandler", "SWWMHandler"
+	PlayerClasses = "KirinPlayer"
+	StatusBarClass = "KirinStatusBar"
+	QuitSound = "misc/teleport"
+	QuitMessages = "$QUITMSG"
+	ChatSound = "misc/chat"
+	NoMergePickupMsg = true
+	CursorPic = "graphics/kirincurs.png"
+	DimColor = "Black"
+	DimAmount = 0.5
+	BlurAmount = 0
+	Endoom = "ENDKIRIN"
+	PickupColor = "White"
+	MenuFontColor_Title = "Orange"
+	MenuFontColor_Label = "Gold"
+	MenuFontColor_Value = "Orange"
+	MenuFontColor_Action = "Gold"
+	MenuFontColor_Header = "Orange"
+	MenuFontColor_Highlight = "Fire"
+	MenuFontColor_Selection = "Fire"
+	MenuSliderColor = "Orange"
+	MenuSliderBackColor = "Gold"
+	MenuBackButton = "graphics/kirinback.png"
+	MessageBoxClass = "SWWMMessageBox"
+	HelpMenuClass = "SWWMHelpMenu"
+	MenuDelegateClass = "SWWMMenuDelegate"
+	PauseSign = "graphics/kirinpause.png"
+	BorderFlat = "graphics/bord_flat.png"
+	Border = 2, 0, "graphics/bord_tr.png", "graphics/bord_t.png", "graphics/bord_tl.png", "graphics/bord_r.png", "graphics/bord_l.png", "graphics/bord_br.png", "graphics/bord_b.png", "graphics/bord_bl.png"
+	ForceTextInMenus = true
+	TelefogHeight = 28
+	// precache all intro sounds
+	PrecacheSounds = "kirin/preamb", "kirin/logoflash"
+	// precache all intro textures, to avoid hiccups
+	PrecacheTextures = "graphics/kirinsigil.png",
+		"graphics/kirinsigil_bloom.png",
+		"graphics/kirinsigil_bloom_fade.png",
+		"graphics/kirinsigil_fade.png",
+		"graphics/kirinsigil_smoke.png",
+		"graphics/kirinsigil_smokeglow.png",
+		"graphics/kirinsigil_smokeglow_fade.png",
+		"graphics/KirinLogo.png",
+		"graphics/KirinLogo_Layers.png",
+		"graphics/M_KIRIN.png"
+}
+
+ClearSkills
+
+Skill chill
+{
+	AutoUseHealth
+	DamageFactor = 0.5
+	EasyBossBrain
+	SlowMonsters
+	SpawnFilter = baby
+	ACSReturn = 0
+	Name = "$KIRIN_SKCHILL"
+}
+Skill easy
+{
+	DamageFactor = 0.75
+	SpawnFilter = easy
+	ACSReturn = 1
+	Name = "$KIRIN_SKEASY"
+}
+Skill normal
+{
+	SpawnFilter = normal
+	ACSReturn = 2
+	Name = "$KIRIN_SKNORMAL"
+	DefaultSkill
+}
+Skill hard
+{
+	DamageFactor = 1.25
+	SpawnFilter = hard
+	ACSReturn = 3
+	Name = "$KIRIN_SKHARD"
+}
+Skill hardcore
+{
+	DisableCheats
+	FastMonsters
+	HealthFactor = 1.5
+	DamageFactor = 1.5
+	Aggressiveness = 0.25
+	SpawnFilter = nightmare
+	SpawnMulti
+	ACSReturn = 4
+	Name = "$KIRIN_SKHARDCORE"
+	MustConfirm = "$KIRIN_SKHARDCORECONFIRM"
+}
+
+Map TITLEMAP "RED STAR OF INNOCENCE Title Map"
+{
+	Music = ""
+	EventHandlers = "KirinTitleStuff"
+}
+
+DamageType EndLevel
+{
+	NoArmor
+	Obituary = "$O_ENDLEVEL"
+}

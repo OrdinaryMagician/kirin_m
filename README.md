@@ -39,7 +39,7 @@ There are four weapons available throughout your journey, one of which you alrea
 
 Fight your enemies with your own body. This shouldn't be very effective considering **Kirin**'s physical form, but it's helpful in a pinch.
 
-Primary fire alternates between two quick jabs and a hook. This has some decent staggering potential, and can quickly push back small foes. Secondary fire opts for a swift side-sweeping kick. This is where **Kirin**'s lower body strength shines, pushing real hard against rows of enemies. This kick can also be quickly delivered while using other weapons through a dedicated keybind.
+Primary fire alternates between two quick jabs and a hook. This has some decent staggering potential, and can quickly push back small foes. Secondary fire opts for a swift side-sweeping kick. This is where **Kirin**'s lower body strength shines, pushing real hard against rows of enemies.
 
 The reload and zoom functions allow you to block and parry respectively. Blocking is mostly effective, thanks to the armored lining of your suit, especially around the cuffs. Parrying, if timed well, will leave an enemy stunned for a short period of time, upon which any damage to them is amplified. It is not possible to parry projectiles, you are not **Demo-chan**, nor know exactly how they can even do such a thing.
 
@@ -59,7 +59,7 @@ Like any **Anarukon** firearm, the weapon not only needs to be reloaded with mor
 
 Another usual **Anarukon** sidearm, often seen in the hands of mercenaries. At 5mm, it definitely doesn't have as much stopping power as the **Rykha**, but it can deliver the pain much faster and with lower recoil. Each magazine holds a whopping 20 rounds. **Kirin** can carry up to 80 rounds in total.
 
-Primary fire does what one would expect, while secondary lets **Kirin** be a bit of a naughty boy and temporarily imbue the weapon with a poison enchantment, which will transfer to each fired bullet for a limited time.
+Primary fire shoots alternating between each barrel at a steady rate, while secondary fire engages a *"dual-shot"* mode, which rapidly discharges both sides of the magazine. Only a select few models of the **Xei** have this feature, however, due to the complexity of its implementation.
 
 As per usual, this weapon also has to be replenished with mana through the same method as the pistol, although due to its lower muzzle energy the mana supply tends to last much longer, and dry-firing isn't as damaging.
 
@@ -67,7 +67,7 @@ As per usual, this weapon also has to be replenished with mana through the same 
 
 *"A genuine Sokana piece, it is an honor to wield it."*
 
-This is basically an over-under shotgun powered by magic, designed by famed gunsmith **Irai Sokana**, grandmother of one of **Kirin**'s maids. Each cartridge comes packed with several iron pellets and a charge of pyromantic salt. **Kirin** can carry up to 20 cartridges in total.
+This is basically an over-under shotgun powered by magic, designed by famed gunsmith **Irai Sokana**, grandmother of one of **Kirin**'s maids. Each cartridge comes packed with several iron pellets and a charge of pyromantic salt. **Kirin** can carry up to 18 cartridges in total.
 
 Primary fire shoots the top barrel, while secondary fire shoots the bottom barrel. Due to the employment of solidified pyromantic mana, a potent burst of flame will be released with each shot, making attacks at point blank deal A LOT of fire damage. Pressing the zoom key toggles a *"linked fire"* mode, where either trigger press will fire both barrels at once.
 

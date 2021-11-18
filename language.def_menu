@@ -1,0 +1,42 @@
+[default]
+// keybinds
+KIRIN_KEYS = "RED STAR OF INNOCENCE Bindings";
+KIRIN_PRIMARYFIRE = "Primary Fire";
+KIRIN_SECONDARYFIRE = "Secondary Fire";
+KIRIN_RELOADFIRE = "Reload / Block";
+KIRIN_ZOOMFIRE = "Alt Reload / Parry";
+KIRIN_MELEE = "Quick Kick";
+KIRIN_EXTRAFIRE = "Grenade";
+// skills
+KIRIN_SKCHILL="\cnBlue Star\c-";
+KIRIN_SKEASY="\cjWhite Star\c-";
+KIRIN_SKNORMAL="\cfYellow Star\c-";
+KIRIN_SKHARD="\ciOrange Star\c-";
+KIRIN_SKHARDCORE="\crRed Star\c-";
+KIRIN_SKHARDCORECONFIRM="\crAre you sure you want to do that?\nYou might get your ass kicked.\c-\n\n\cgFast monsters\n1.5x monster health & damage\n25% extra aggressiveness\nCheats are disabled\nCoop monsters will spawn\c-\n\n(Press Y for a challenge)";
+// mod menu
+KIRIN_MTITLE = "RED STAR OF INNOCENCE Options";
+KIRIN_MCREDS = "RED STAR OF INNOCENCE Credits";
+// credits
+KIRIN_CSTITLE = "UnSX Side Story: Kirin";
+KIRIN_CSTITLE2 = "Undying Born Under An Innocent Red Star";
+// Help menu
+KIRIN_HELP_NPAGE = "6";
+KIRIN_HELP_PAGE1 = "The Story So Far";
+KIRIN_HELP_PAGE1_TXT =
+"TODO";
+KIRIN_HELP_PAGE2 = "Who Is Kirin Xanai";
+KIRIN_HELP_PAGE2_TXT =
+"TODO";
+KIRIN_HELP_PAGE3 = "Emperor's Arsenal (Part 1: Weapons)";
+KIRIN_HELP_PAGE3_TXT =
+"TODO";
+KIRIN_HELP_PAGE4 = "Emperor's Arsenal (Part 2: Items)";
+KIRIN_HELP_PAGE4_TXT =
+"TODO";
+KIRIN_HELP_PAGE5 = "Emperor's Arsenal (Part 3: Powerups)";
+KIRIN_HELP_PAGE5_TXT =
+"TODO";
+KIRIN_HELP_PAGE6 = "Additional Tips";
+KIRIN_HELP_PAGE6_TXT =
+"TODO";

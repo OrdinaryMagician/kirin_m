@@ -1,0 +1,18 @@
+// RED STAR OF INNOCENCE HUD
+
+Class KirinStatusBar : SWWMStatusBar
+{
+	override void UpdateInterpolators()
+	{
+	}
+	override void GetMinimapColors()
+	{
+	}
+	override void DrawWeapons()
+	{
+	}
+	override int DrawStatus()
+	{
+		return 0;
+	}
+}

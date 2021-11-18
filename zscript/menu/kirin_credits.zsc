@@ -1,0 +1,13 @@
+// mod credits
+
+Class KirinCreditsMenu : SWWMCreditsMenu
+{
+	override void ChildInit( Menu parent )
+	{
+		cmusic.Push(new("SWWMCreditsEntry").Init("Aviators","Let There Be Fire (Instrumental)"));
+	}
+	override String, int GetCreditsMus()
+	{
+		return "music/kirin_titlemus.ogg", 0;
+	}
+}

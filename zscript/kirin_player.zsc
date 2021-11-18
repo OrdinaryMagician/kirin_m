@@ -1,0 +1,23 @@
+// Bless the cute emperor 🍑
+
+Class KirinPlayer : SWWMPlayer
+{
+	Default
+	{
+		Tag "$T_KIRIN";
+		Speed 1;
+		Radius 16;
+		Height 56;
+		Mass 60;
+		PainChance 255;
+		Health 100;
+		Player.DisplayName "$T_KIRIN";
+		Player.ViewHeight 52;
+		Player.AirCapacity 0;
+		Player.ForwardMove 1., 1.;
+		Player.SideMove 1., 1.;
+		Player.SoundClass "kirin";
+		DamageFactor "Drowning", 0.;
+		+DONTMORPH;
+	}
+}

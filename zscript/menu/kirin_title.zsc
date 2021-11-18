@@ -1,0 +1,191 @@
+// Things for the titlemap
+
+Struct TitleSmoke
+{
+	int age, maxage;
+	Vector2 pos, vel;
+	double ang, angvel;
+	double scale;
+}
+
+Class KirinTitleStuff : EventHandler
+{
+	ui TextureID bgtex;
+	ui TitleSmoke smk[128];
+	ui Shape2D smk_shape;
+	ui Shape2DTransform smk_tform;
+	ui TextureID smk_tex[8];
+	ui TextureID logotex[2];
+	ui TextureID kirintex[3];
+	ui TextureID gradtex;
+	ui int gtime;
+
+	private ui void TickSmokeLayers()
+	{
+		for ( int i=0; i<128; i++ )
+		{
+			int presim = 0;
+			if ( smk[i].age >= smk[i].maxage )
+			{
+				if ( smk[i].maxage == 0 ) presim = Random[UIStuff](0,60);
+				else presim = -1;
+				smk[i].age = Random[UIStuff](-20,0);
+				smk[i].maxage = Random[UIStuff](60,120);
+				smk[i].pos = (FRandom[UIStuff](-512.,512.),FRandom[UIStuff](0.,256.));
+				smk[i].vel = (FRandom[UIStuff](-2.,2.),FRandom[UIStuff](-2.,-8.));
+				smk[i].ang = FRandom[UIStuff](0.,360.);
+				smk[i].angvel = FRandom[UIStuff](1.,4.)*RandomPick[UIStuff](-1,1);
+				smk[i].scale = FRandom[UIStuff](256.,512.);
+			}
+			for ( int j=0; j<=presim; j++ )
+			{
+				smk[i].age++;
+				if ( smk[i].age <= 0 ) continue;
+				smk[i].pos += smk[i].vel;
+				smk[i].ang += smk[i].angvel;
+			}
+		}
+	}
+
+	override void UiTick()
+	{
+		gtime++;
+		if ( gtime == 1 )
+		{
+			S_ChangeMusic("");
+			S_StartSound("kirin/preamb",CHAN_VOICE,CHANF_UI,1.,0.);
+		}
+		else if ( gtime == 34.6*GameTicRate )
+		{
+			System.StopAllSounds();
+			S_StartSound("kirin/logoflash",CHAN_WEAPON,CHANF_UI,1.,0.);
+		}
+		else if ( gtime == 35*GameTicRate )
+		{
+			Shader.SetEnabled(players[consoleplayer],"kirinsigil1",false);
+			Shader.SetEnabled(players[consoleplayer],"kirinsigil2",false);
+			Shader.SetEnabled(players[consoleplayer],"kirinsigil3",false);
+		}
+		else if ( gtime == 37*GameTicRate ) S_ChangeMusic("music/kirin_titlemus.ogg");
+		if ( gtime >= 35*GameTicRate ) TickSmokeLayers();
+		if ( gamestate != GS_LEVEL ) return;
+		// you're not supposed to be here
+		Menu.SetMenu('EndGameMenu');
+		let m = MessageBoxMenu(Menu.GetCurrentMenu());
+		if ( m ) m.HandleResult(true);
+		// special thanks to marrub for this absolute crime
+	}
+
+	private ui void RenderSmokeLayer( RenderEvent e, double GameSecs, bool back, double alpha = 1. )
+	{
+		if ( !smk_shape )
+		{
+			smk_shape = new("Shape2D");
+			smk_shape.PushVertex((-1,-1));
+			smk_shape.PushVertex((1,-1));
+			smk_shape.PushVertex((-1,1));
+			smk_shape.PushVertex((1,1));
+			smk_shape.PushCoord((0,0));
+			smk_shape.PushCoord((1,0));
+			smk_shape.PushCoord((0,1));
+			smk_shape.PushCoord((1,1));
+			smk_shape.PushTriangle(0,3,1);
+			smk_shape.PushTriangle(0,2,3);
+		}
+		if ( !smk_tform ) smk_tform = new("Shape2DTransform");
+		double zoomscl = Screen.GetHeight()/600.;
+		int imin = back?64:0;
+		int imax = back?128:64;
+		int base = back?250:750;
+		for ( int i=imin; i<imax; i++ )
+		{
+			if ( !smk_tex[i%8] ) smk_tex[i%8] = TexMan.CheckForTexture("graphics/title_smoke_"..(i%8)..".png",TexMan.Type_Any);
+			smk_tform.Clear();
+			// base transforms
+			smk_tform.Scale((1,1)*smk[i].scale);
+			smk_tform.Rotate(smk[i].ang+smk[i].angvel*e.FracTic);
+			smk_tform.Translate(smk[i].pos+smk[i].vel*e.FracTic);
+			// screen transforms
+			smk_tform.Translate((0,base));
+			smk_tform.Scale((1,1)*zoomscl);
+			smk_tform.Translate((Screen.GetWidth()/2,0));
+			smk_shape.SetTransform(smk_tform);
+			double alf = cos((smk[i].age/double(smk[i].maxage))*90)*alpha;
+			alf *= clamp(smk[i].age/10.,0,1);
+			Screen.DrawShape(smk_tex[i%8],false,smk_shape,DTA_Alpha,alf,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(4,12,32));
+		}
+	}
+
+	override void WorldLoaded( WorldEvent e )
+	{
+		Shader.SetEnabled(players[consoleplayer],"kirinsigil1",true);
+		Shader.SetEnabled(players[consoleplayer],"kirinsigil2",true);
+		Shader.SetEnabled(players[consoleplayer],"kirinsigil3",true);
+	}
+
+	override void RenderUnderlay( RenderEvent e )
+	{
+		double GameSecs = (gtime+e.FracTic)/GameTicRate;
+		double alf;
+		String str;
+		if ( GameSecs < 35 )
+		{
+			if ( GameSecs < 5 ) Screen.Dim("Black",1.-clamp(GameSecs/5.,0.,1.),0,0,Screen.GetWidth(),Screen.GetHeight());
+			Shader.SetUniform1f(players[consoleplayer],"kirinsigil1","timer",GameSecs-11.);
+			Shader.SetUniform1f(players[consoleplayer],"kirinsigil3","timer",GameSecs-11.);
+			alf = clamp(GameSecs-1,0.,1.);
+			alf *= 1.-clamp(GameSecs-6,0.,1.);
+			String str = StringTable.Localize("$KIRIN_TITLEPRESENTSA");
+			Screen.DrawText(smallfont,Font.CR_GOLD,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2)-(smallfont.GetHeight()*CleanYFac),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+			str = StringTable.Localize("$KIRIN_TITLEPRESENTSB");
+			Screen.DrawText(smallfont,Font.CR_ORANGE,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+			alf = clamp(GameSecs-7,0.,1.);
+			alf *= 1.-clamp(GameSecs-12,0.,1.);
+			str = StringTable.Localize("$KIRIN_TITLEMODBYA");
+			Screen.DrawText(smallfont,Font.CR_ORANGE,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2)-(smallfont.GetHeight()*CleanYFac),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+			str = StringTable.Localize("$KIRIN_TITLEMODBYB");
+			Screen.DrawText(smallfont,Font.CR_GOLD,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+			if ( GameSecs > 34 ) Screen.Dim(Color(255,224,64),clamp((GameSecs-34.6)*3.,0.,1.),0,0,Screen.GetWidth(),Screen.GetHeight());
+			return;
+		}
+		if ( kirin_fuzz )
+		{
+			if ( !bgtex ) bgtex = TexMan.CheckForTexture("graphics/tempbg.png",TexMan.Type_Any);
+			Vector2 tsize = TexMan.GetScaledSize(bgtex);
+			double zoom = max(ceil(Screen.GetWidth()/tsize.x),ceil(Screen.GetHeight()/tsize.y));
+			Vector2 vsize = (Screen.GetWidth(),Screen.GetHeight())/zoom;
+			Screen.DrawTexture(bgtex,false,(vsize.x-tsize.x)/2,(vsize.y-tsize.y)/2,DTA_VirtualWidthF,vsize.x,DTA_VirtualHeightF,vsize.y,DTA_KeepRatio,true,DTA_ColorOverlay,Color(192,0,0,0));
+			Screen.Dim(Color(16,12,0),1.-clamp((GameSecs-35)*.25,.25,1.),0,0,Screen.GetWidth(),Screen.GetHeight());
+		}
+		else Screen.Dim(Color(16,12,0),1.,0,0,Screen.GetWidth(),Screen.GetHeight());
+		double texscl = Screen.GetHeight()/1300.;
+		double logoscl = Screen.GetHeight()/2000.;
+		if ( !gradtex ) gradtex = TexMan.CheckForTexture("graphics/title_grad.png",TexMan.Type_Any);
+		if ( !kirintex[0] ) kirintex[0] = TexMan.CheckForTexture("graphics/title_kirin.png",TexMan.Type_Any);
+		if ( !kirintex[1] ) kirintex[1] = TexMan.CheckForTexture("graphics/title_kirin_eye.png",TexMan.Type_Any);
+		if ( !kirintex[2] ) kirintex[2] = TexMan.CheckForTexture("graphics/title_kirin_flame.png",TexMan.Type_Any);
+		if ( !logotex[0] ) logotex[0] = TexMan.CheckForTexture("graphics/KirinLogo.png",TexMan.Type_Any);
+		if ( !logotex[1] ) logotex[1] = TexMan.CheckForTexture("graphics/KirinLogo_Glow.png",TexMan.Type_Any);
+		Screen.DrawTexture(gradtex,false,0,Screen.GetHeight(),DTA_DestWidth,Screen.GetWidth(),DTA_DestHeight,512*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(128,0,0),DTA_TopOffset,256);
+		Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,Screen.GetHeight(),DTA_Rotate,90,DTA_DestHeight,Screen.GetHeight(),DTA_DestWidth,640*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_TopOffset,256,DTA_Alpha,.5);
+		Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,0,DTA_Rotate,270,DTA_DestHeight,Screen.GetHeight(),DTA_DestWidth,640*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_TopOffset,256,DTA_Alpha,.5);
+		Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,Screen.GetHeight(),DTA_Rotate,90,DTA_DestHeight,Screen.GetHeight(),DTA_DestWidth,512*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(32,6,4),DTA_TopOffset,256);
+		Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,0,DTA_Rotate,270,DTA_DestHeight,Screen.GetHeight(),DTA_DestWidth,512*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(32,6,4),DTA_TopOffset,256);
+		RenderSmokeLayer(e,GameSecs,true,.5);
+		Screen.DrawTexture(kirintex[2],false,Screen.GetWidth()/2-400*texscl,0,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Translucent);
+		Screen.DrawTexture(kirintex[0],false,Screen.GetWidth()/2-400*texscl,0,DTA_ScaleX,texscl,DTA_ScaleY,texscl);
+		Screen.DrawTexture(kirintex[1],false,Screen.GetWidth()/2-400*texscl,0,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Add);
+		RenderSmokeLayer(e,GameSecs,false,1.);
+		Screen.DrawTexture(gradtex,false,0,Screen.GetHeight(),DTA_DestWidth,Screen.GetWidth(),DTA_DestHeight,256*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(64,32,0),DTA_TopOffset,256);
+		if ( GameSecs < 38 )
+		{
+			alf = clamp((GameSecs-35)*16.,0.,1.);
+			Screen.DrawTexture(logotex[0],false,Screen.GetWidth()/2-1024*logoscl,Screen.GetHeight()-875*logoscl,DTA_ScaleX,logoscl,DTA_ScaleY,logoscl,DTA_Alpha,alf);
+			alf = 1.-clamp((GameSecs-35)*.35,0.,1.);
+			Screen.DrawTexture(logotex[1],false,Screen.GetWidth()/2-1024*logoscl,Screen.GetHeight()-875*logoscl,DTA_ScaleX,logoscl,DTA_ScaleY,logoscl,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alf);
+			alf = 1.-clamp(GameSecs-35,0.,1.);
+			Screen.Dim(Color(255,224,64),alf,0,0,Screen.GetWidth(),Screen.GetHeight());
+		}
+		else Screen.DrawTexture(logotex[0],false,Screen.GetWidth()/2-1024*logoscl,Screen.GetHeight()-875*logoscl,DTA_ScaleX,logoscl,DTA_ScaleY,logoscl);
+	}
+}

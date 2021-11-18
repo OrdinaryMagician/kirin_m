@@ -1,0 +1,78 @@
+HardwareShader Texture "graphics/tempbg.png"
+{
+	Shader "shaders/glsl/Fuzz.fp"
+	Texture "noisetex" "textures/graynoise.png"
+	Define "KIRINCOLORS"
+}
+HardwareShader Texture "graphics/KirinLogo.png"
+{
+	Shader "shaders/glsl/KirinLogoAnimated.fp"
+	Texture "LogoTex" "graphics/KirinLogo_Layers.png"
+}
+HardwareShader PostProcess beforebloom
+{
+	Name "kirinsigil1"
+	Shader "shaders/pp/KirinSigil.fp" 330
+	Texture basetex "graphics/kirinsigil.png"
+	Texture fadetex "graphics/kirinsigil_fade.png"
+	Texture glowtex "graphics/kirinsigil_bloom.png"
+	Texture noisetex "textures/rgbnoise.png"
+	Uniform float timer
+}
+HardwareShader PostProcess beforebloom
+{
+	Name "kirinsigil2"
+	Shader "shaders/pp/KirinSigilBlur.fp" 330
+}
+HardwareShader PostProcess beforebloom
+{
+	Name "kirinsigil3"
+	Shader "shaders/pp/KirinSigilSmoke.fp" 330
+	Texture smoketex "graphics/kirinsigil_smoke.png"
+	Texture glowtex "graphics/kirinsigil_smokeglow.png"
+	Uniform float timer
+}
+HardwareShader Texture "graphics/title_kirin.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_kirin_eye.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_kirin_flame.png"
+{
+	Shader "shaders/glsl/Bilinear_wave.fp"
+}
+HardwareShader Texture "graphics/title_smoke_0.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_smoke_1.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_smoke_2.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_smoke_3.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_smoke_4.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_smoke_5.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_smoke_6.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_smoke_7.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}

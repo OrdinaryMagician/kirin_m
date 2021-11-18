@@ -1,0 +1,12 @@
+// Red Star of Innocence shaders
+
+extend Class SWWMHandler
+{
+	private ui void RenderShaders( RenderEvent e )
+	{
+	}
+
+	static clearscope void ClearAllShaders( PlayerInfo p, bool noscope = false )
+	{
+	}
+}
