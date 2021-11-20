@@ -1,0 +1,5 @@
+// A motherfucking FTL ballista, because why not
+
+Class KirinBallista : SWWMWeapon
+{
+}

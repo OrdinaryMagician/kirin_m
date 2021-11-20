@@ -15,7 +15,8 @@ HardwareShader PostProcess beforebloom
 	Shader "shaders/pp/KirinSigil.fp" 330
 	Texture basetex "graphics/kirinsigil.png"
 	Texture fadetex "graphics/kirinsigil_fade.png"
-	Texture glowtex "graphics/kirinsigil_bloom.png"
+	Texture glowtex "graphics/kirinsigil_glow.png"
+	Texture bloomtex "graphics/kirinsigil_bloom.png"
 	Texture noisetex "textures/rgbnoise.png"
 	Uniform float timer
 }

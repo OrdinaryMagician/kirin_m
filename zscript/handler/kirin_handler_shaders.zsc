@@ -8,5 +8,9 @@ extend Class SWWMHandler
 
 	static clearscope void ClearAllShaders( PlayerInfo p, bool noscope = false )
 	{
+		// make sure titlemap shaders get disabled just in case
+		Shader.SetEnabled(players[consoleplayer],"kirinsigil1",false);
+		Shader.SetEnabled(players[consoleplayer],"kirinsigil2",false);
+		Shader.SetEnabled(players[consoleplayer],"kirinsigil3",false);
 	}
 }

@@ -1,0 +1,5 @@
+// A double-barrel, double-mag SMG? Oh my...
+
+Class KirinSMG : SWWMWeapon
+{
+}

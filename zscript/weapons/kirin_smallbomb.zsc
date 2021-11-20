@@ -1,0 +1,5 @@
+// Small Bombs: Responsible For Everything
+
+Class KirinBomb : SWWMWeapon
+{
+}

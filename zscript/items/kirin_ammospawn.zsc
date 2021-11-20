@@ -1,0 +1,5 @@
+// ammo supplies, which give specific ammo types until depleted
+
+Class KirinAmmoSupply : Inventory abstract
+{
+}

@@ -104,3 +104,5 @@ const SWWMCREDITSCOL2 = Font.CR_GOLD;
 #include "zscript/weapons/kirin_lightning_fx.zsc"
 #include "zscript/weapons/kirin_gap.zsc"
 #include "zscript/weapons/kirin_gap_fx.zsc"
+#include "zscript/weapons/kirin_smallbomb.zsc"
+#include "zscript/weapons/kirin_smallbomb_fx.zsc"

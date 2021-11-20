@@ -1,11 +1,114 @@
 [default]
 // tags, pickups
+T_KIRINCQC = "Unarmed Combat";
+T_KIRINPISTOL = "Rykha Semi-Auto";
+I_KIRINPISTOL = "Nelaka Rykha Semi-Auto Pistol";
+T_KIRINSMG = "Xei PDW";
+I_KIRINSMG = "Nelaka Xei PDW";
+T_KIRINSHOTGUN = "Fragment Carbine";
+I_KIRINSHOTGUN = "Sokana Fragment Carbine";
+T_KIRINBALLISTA = "Warp Ballista";
+I_KIRINBALLISTA = "Unissix Crafts Warp Ballista";
+T_KIRINBALLISTA1 = "Warp Ballista Grip";
+T_KIRINBALLISTA2 = "Warp Ballista Receiver";
+T_KIRINBALLISTA3 = "Warp Ballista Barrel";
+T_KIRINHEART = "Flame of the Heart";
+T_KIRINFLAME = "Ember Flash";
+T_KIRINFROST = "Cryotic Blast";
+T_KIRINLIGHTNING = "Great Discharge";
+T_KIRINGAP = "Boundary Break";
+T_KIRINMAG = "Mag Management";
+T_KIRINBEAN = "Candy Bean";
+T_KIRINDRINK = "Refreshing Beverage";
+T_KIRINBLOOD = "Akashna Extract";
+T_KIRINMANA = "Mana Stimulant";
+T_KIRINRING = "Ring of Protection";
+T_KIRINRINGS = "Ring Set";
+T_KIRINMILK = "Red Oni Milk";
+T_KIRINPISTOLAMMO = "8mm Short";
+T_KIRINSMGAMMO = "5mm Xei";
+T_KIRINSHOTGUNAMMO = "10mm Frag";
+T_KIRINBALLISTAAMMO = "50mm HEAP";
+T_KIRINBOMB = "Small Bomb";
+T_KIRINBOMBS = "Small Bombs";
+T_KIRINFAST = "Accelerator Amulet";
+T_KIRINTHRALL = "Enthrallment Solution";
+T_KIRINLIGHT = "Pocket Light";
+T_KIRINFLIGHT = "Aerial Amulet";
 T_KIRIN = "Kirin Xanai";
 // quit messages
 QUITMSG = "Farewell, brave soul...";
 // misc
+KIRIN_ASMFAIL = "You don't have all Ballista parts yet";
+KIRIN_ASMSUCC = "You have assembled the Warp Ballista";
+D_KIRINFAST = "The Accelerator Amulet's effects have expired.";
+D_KIRINLIGHT = "The Pocket Light ran out of battery.";
+D_KIRINMILK = "The effects of Ibuki's milk have worn off.";
+D_KIRINFLIGHT = "The Aerial Amulet ran out of power.";
 KIRIN_TITLEPRESENTSA = "UnSX Team";
 KIRIN_TITLEPRESENTSB = "presents";
 KIRIN_TITLEMODBYA = "a mod by";
 KIRIN_TITLEMODBYB = "Marisa Kirisame";
+KIRIN_TITLETXT1A = "May you accept then my divine blessing, o child of undeath.";	// Sezae ka irai adka nazeda, i Anarukonoskai.
+KIRIN_TITLETXT1B = "Let all know of this great emperor from the rust-covered lands.";	// Akaranokxhe yuda nokhaze ira psykkas na Sykhai skhana.
+KIRIN_TITLETXT2 = "Of your people you are servant, for your people you shall fight.";	// Seine kon da khosaya, dera kon dae takharei.
+KIRIN_TITLETXT3A = "Sworn protector you are of the rust-covered empire,";		// Akoxha de ukhaashxe irada Sykhai sya,
+KIRIN_TITLETXT3B = "undying child born under an \cgInnocent Red Star\c-.";		// Anarukonoskai myze suna Kirin na Xatha Naai.
 // weapon tooltips
+TT_KIRINCQC =
+"Fight with your fists and legs.\n"
+"\n"
+"\cxPrimary Fire (Tap):\c- Quick jabs.\n"
+"\cxPrimary Fire (Hold):\c- Charged hook.\n"
+"\cxSecondary Fire:\c- Side-sweeping kick.\n"
+"\cxReload:\c- Block.\n"
+"\cxAlt Reload:\c- Parry.";
+TT_KIRINPISTOL =
+"A common firearm, small but potent.\n"
+"8mm Short, 8+1 rounds. Small mana pool.\n"
+"\n"
+"\cxPrimary Fire:\c- Steady shooting.\n"
+"\cxSecondary Fire:\c- Pressure overcharge.";
+TT_KIRINSMG =
+"A trusty mercenary's sidearm.\n"
+"5mm Xei, 20+2 rounds. Large mana pool.\n"
+"\n"
+"\cxPrimary Fire:\c- Interlaced shooting.\n"
+"\cxSecondary Fire:\c- Dual shot mode.";
+TT_KIRINSHOTGUN =
+"A fine boomstick for the gun-toting pyromancer.\n"
+"10mm Frag, two shots. No mana required.\n"
+"\n"
+"\cxPrimary Fire:\c- Shoot each barrel.\n"
+"\cxSecondary Fire:\c- Boost loaded shells.";
+TT_KIRINBALLISTA =
+"Faster than light impalement action.\n"
+"50mm HEAP, one shot. No mana requred.\n"
+"\n"
+"\cxPrimary Fire:\c- Piercing shot.\n"
+"\cxSecondary Fire:\c- Explosive shot.";
+TT_KIRINHEART =
+"A popular healing spell for couples.\n"
+"\n"
+"\cxPrimary Fire:\c- Steady self-heal.\n"
+"\cxSecondary Fire:\c- Stationary heal aura.";
+TT_KIRINFLAME =
+"A fairly common pyromantic spell.\n"
+"\n"
+"\cxPrimary Fire:\c- Left-handed cast.\n"
+"\cxSecondary Fire:\c- Right-handed cast.";
+TT_KIRINFROST =
+"A quite typical cryomantic spell.\n"
+"\n"
+"\cxPrimary Fire:\c- Left-handed cast.\n"
+"\cxSecondary Fire:\c- Right-handed cast.";
+TT_KIRINLIGHTNING =
+"A hair-raisingly potent electromantic spell.\n"
+"\n"
+"\cxPrimary Fire:\c- Manual blast.\n"
+"\cxSecondary Fire:\c- Ball lightning.";
+TT_KIRINGAP =
+"The key to the power of the Yanikov bloodline.\n"
+"\n"
+"\cxPrimary Fire:\c- Direct warp.\n"
+"\cxSecondary Fire:\c- Hold to visualize destination.";

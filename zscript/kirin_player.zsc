@@ -12,6 +12,16 @@ Class KirinPlayer : SWWMPlayer
 		PainChance 255;
 		Health 100;
 		Player.DisplayName "$T_KIRIN";
+		Player.StartItem "KirinPistol";
+		Player.StartItem "KirinPistolAmmo", 16;
+		Player.StartItem "KirinGap";
+		Player.StartItem "KirinLightning";
+		Player.StartItem "KirinFrost";
+		Player.StartItem "KirinFlame";
+		Player.StartItem "KirinHeart";
+		Player.StartItem "KirinUnarmed";
+		Player.StartItem "KirinMana", 100;
+		Player.StartItem "KirinInternalArmor";
 		Player.ViewHeight 52;
 		Player.AirCapacity 0;
 		Player.ForwardMove 1., 1.;

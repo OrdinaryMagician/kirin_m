@@ -69,7 +69,7 @@ As per usual, this weapon also has to be replenished with mana through the same 
 
 This is basically an over-under shotgun powered by magic, designed by famed gunsmith **Irai Sokana**, grandmother of one of **Kirin**'s maids. Each cartridge comes packed with several iron pellets and a charge of pyromantic salt. **Kirin** can carry up to 18 cartridges in total.
 
-Primary fire shoots the top barrel, while secondary fire shoots the bottom barrel. Due to the employment of solidified pyromantic mana, a potent burst of flame will be released with each shot, making attacks at point blank deal A LOT of fire damage. Pressing the zoom key toggles a *"linked fire"* mode, where either trigger press will fire both barrels at once.
+Primary fire shoots each barrel. Due to the employment of solidified pyromantic mana, a potent burst of flame will be released with each shot, making attacks at point blank deal A LOT of fire damage. Secondary fire allows you to overcharge the loaded shells, enhancing their strength even further at the cost of extreme recoil.
 
 Unlike other firearms, the use of a physical propellant means that the weapon does not need to be replenished with mana for it to keep operating.
 
@@ -79,7 +79,7 @@ Unlike other firearms, the use of a physical propellant means that the weapon do
 
 A gift from **Kirin**'s very distant cousin. This beast is effectively an FTL rocket launcher. Due to some specifics of deployment, the weapon had to be delivered in a disassembled state, but the three main parts ended up scattered. **Saya** cites that **Cyrus** may have done it on purpose so the weapon can be *"unlocked in stages"*, which she additionally commented on as being *"some videogamey bullshit"*. Nevertheless, **Kirin** considers that to make the prospect of using it more exciting, as he has a great admiration for **Misa**'s handiwork.
 
-Primary fire will deploy the payload, piercing through any small targets in its path in the mere blink of an eye. Secondary fire arms the explosive early, causing the projectile to burst upon hitting its first target. Zoom lets you aim through the scope, for long distance shots.
+Primary fire will deploy the payload, piercing through any small targets in its path in the mere blink of an eye, before colliding with something hard enough to trigger its explosive charge. Secondary fire arms the explosive early, causing the projectile to burst upon hitting its first target.
 
 Ammunition for this weapon can be found sometimes scattered throughout the world, but it's fairly rare compared to that of the other three. Part of the challenge, perhaps. **Kirin** can only carry six rounds for this, due to their size. The weapon itself can hold one in the chamber, adding up to a total of seven shots.
 

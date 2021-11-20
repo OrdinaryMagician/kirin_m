@@ -1,0 +1,191 @@
+// ammo for Kirin mod
+
+// Mana, it's just there
+Class KirinMana : SWWMAmmo
+{
+	Default
+	{
+		Inventory.MaxAmount 100;
+		+INVENTORY.UNDROPPABLE;
+		+INVENTORY.UNTOSSABLE;
+		+INVENTORY.UNCLEARABLE;
+		+INVENTORY.QUIET;
+	}
+}
+
+// mixin for ammo types that have individual mags
+// kind of a mess, truly, but hey, it works
+Mixin Class KirinMagSplitAmmo
+{
+	int Mags[MAGCOUNT];
+
+	override void AttachToOwner( Actor other )
+	{
+		Super.AttachToOwner(other);
+		// set our mags based on given ammo
+		int gamt = Amount;
+		int i = 0;
+		while ( (gamt > 0) && (i < MAGCOUNT) )
+		{
+			Mags[i] = min(gamt,MAGAMOUNT);
+			gamt -= MAGAMOUNT;
+			i++;
+		}
+	}
+
+	void TakeMags( int tamt )
+	{
+		while ( tamt > 0 )
+		{
+			int lst = -1;
+			int amt = MAGAMOUNT+1;
+			for ( int i=0; i<MAGCOUNT; i++ )
+			{
+				if ( (Mags[i] <= 0) || (Mags[i] > amt) ) continue;
+				amt = Mags[i];
+				lst = i;
+			}
+			if ( lst == -1 ) break;
+			amt = Mags[lst];
+			Mags[lst] -= min(tamt,amt);
+			tamt -= amt;
+		}
+		if ( developer < 3 ) return;
+		String str = "Mag rounds:";
+		for ( int i=0; i<MAGCOUNT; i++ ) str.AppendFormat(" %d",mags[i]);
+		Console.Printf(str);
+	}
+
+	void GiveMags( int gamt )
+	{
+		while ( gamt > 0 )
+		{
+			int lst = -1;
+			int amt = -1;
+			for ( int i=0; i<MAGCOUNT; i++ )
+			{
+				if ( (Mags[i] >= MAGAMOUNT) || (Mags[i] <= amt) ) continue;
+				amt = Mags[i];
+				lst = i;
+			}
+			if ( lst == -1 ) break;
+			amt = MAGAMOUNT-Mags[lst];
+			Mags[lst] += min(gamt,amt);
+			gamt -= amt;
+		}
+		if ( developer < 3 ) return;
+		String str = "Mag rounds:";
+		for ( int i=0; i<MAGCOUNT; i++ ) str.AppendFormat(" %d",mags[i]);
+		Console.Printf(str);
+	}
+
+	override void DoEffect()
+	{
+		Super.DoEffect();
+		// fix ammo if there are discrepancies
+		int ramt = 0;
+		for ( int i=0; i<MAGCOUNT; i++ ) ramt += Mags[i];
+		if ( ramt != Amount )
+		{
+			if ( developer >= 2 ) Console.Printf("Amount discrepancy on %s: %d found, %d expected",GetClassName(),Amount,ramt);
+			if ( ramt > Amount ) TakeMags(ramt-Amount);
+			else GiveMags(Amount-ramt);
+		}
+	}
+
+	override Inventory CreateTossable( int amt )
+	{
+		int oldamt = Amount;
+		Inventory res = Super.CreateTossable(amt);
+		// take from mags
+		if ( Amount < oldamt ) TakeMags(oldamt-Amount);
+		return res;
+	}
+
+	override bool HandlePickup( Inventory item )
+	{
+		int oldamt = Amount;
+		bool res = Super.HandlePickup(item);
+		// distribute ammo among mags
+		if ( Amount > oldamt ) GiveMags(Amount-oldamt);
+		return res;
+	}
+}
+
+// dem 8mm bolts
+Class KirinPistolAmmo : SWWMAmmo
+{
+	const MAGCOUNT = 5;
+	const MAGAMOUNT = 8;
+	mixin KirinMagSplitAmmo;
+
+	Default
+	{
+		Tag "$T_KIRINPISTOLAMMO";
+		Inventory.PickupMessage "$T_KIRINPISTOLAMMO";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 40;
+		+INVENTORY.UNTOSSABLE;
+		+SWWMAMMO.USEPICKUPMSG;
+	}
+}
+
+// lil' 5mm darts
+Class KirinSMGAmmo : SWWMAmmo
+{
+	const MAGCOUNT = 8;
+	const MAGAMOUNT = 10;
+	mixin KirinMagSplitAmmo;
+
+	Default
+	{
+		Tag "$T_KIRINSMGAMMO";
+		Inventory.PickupMessage "$T_KIRINSMGAMMO";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 80;
+		+INVENTORY.UNTOSSABLE;
+		+SWWMAMMO.USEPICKUPMSG;
+	}
+}
+
+// 10mm sheels
+Class KirinShotgunAmmo : SWWMAmmo
+{
+	Default
+	{
+		Tag "$T_KIRINSHOTGUNAMMO";
+		Inventory.PickupMessage "$T_KIRINSHOTGUNAMMO";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 18;
+		+INVENTORY.UNTOSSABLE;
+		+SWWMAMMO.USEPICKUPMSG;
+	}
+}
+
+// HUGE
+Class KirinBallistaAmmo : SWWMAmmo
+{
+	Default
+	{
+		Tag "$T_KIRINBALLISTAAMMO";
+		Inventory.PickupMessage "$T_KIRINBALLISTAAMMO";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 6;
+		+INVENTORY.UNTOSSABLE;
+		+SWWMAMMO.USEPICKUPMSG;
+	}
+}
+
+// small bombs™
+Class KirinBombAmmo : SWWMAmmo
+{
+	Default
+	{
+		Tag "$T_KIRINBOMBS";
+		Inventory.PickupMessage "$T_KIRINBOMB";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 15;
+		+INVENTORY.UNTOSSABLE;
+		+SWWMAMMO.USEPICKUPMSG;
+	}
+}

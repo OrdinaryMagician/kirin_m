@@ -1,0 +1,5 @@
+// A potent over-under shotgun
+
+Class KirinShotgun : SWWMWeapon
+{
+}

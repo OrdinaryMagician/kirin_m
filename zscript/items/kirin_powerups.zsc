@@ -1,0 +1,5 @@
+// Kirin mod powerups
+
+Class KirinBean : Inventory
+{
+}

@@ -33,7 +33,7 @@ void main()
 	uv = TexCoord-vec2(.5);
 	uv.x *= ar/sar;
 	uv = clamp(-uv*.75+vec2(.5),0.,1.);
-	base += texture(glowtex,uv).rgb*clamp(timer-15.,0.,10.)*.05;
+	base += texture(glowtex,uv).rgb*clamp(timer-20.,0.,10.)*.05;
 	uv = (TexCoord.st+vec2(1.,0.))*sr;
 	float ang = timer*.05;
 	vec2 uv2 = vec2(uv.x*cos(ang)-uv.y*sin(ang),uv.y*cos(ang)+uv.x*sin(ang))*1.3;

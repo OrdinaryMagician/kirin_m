@@ -1,0 +1,5 @@
+// Hand to hand combat
+
+Class KirinUnarmed : SWWMWeapon
+{
+}
