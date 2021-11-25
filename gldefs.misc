@@ -77,3 +77,35 @@ HardwareShader Texture "graphics/title_smoke_7.png"
 {
 	Shader "shaders/glsl/Bilinear.fp"
 }
+HardwareShader Texture "graphics/title_fire_0.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_fire_1.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_fire_2.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_fire_3.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_fire_4.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_fire_5.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_fire_6.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
+HardwareShader Texture "graphics/title_fire_7.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}

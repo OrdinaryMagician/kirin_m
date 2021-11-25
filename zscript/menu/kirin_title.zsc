@@ -11,10 +11,10 @@ Struct TitleSmoke
 Class KirinTitleStuff : EventHandler
 {
 	ui TextureID bgtex;
-	ui TitleSmoke smk[128];
+	ui TitleSmoke smk[128], flm[128];
 	ui Shape2D smk_shape;
 	ui Shape2DTransform smk_tform;
-	ui TextureID smk_tex[8];
+	ui TextureID smk_tex[8], flm_tex[8];
 	ui TextureID logotex[2];
 	ui TextureID kirintex[3];
 	ui TextureID gradtex;
@@ -43,6 +43,29 @@ Class KirinTitleStuff : EventHandler
 				if ( smk[i].age <= 0 ) continue;
 				smk[i].pos += smk[i].vel;
 				smk[i].ang += smk[i].angvel;
+			}
+			presim = 0;
+			if ( flm[i].age >= flm[i].maxage )
+			{
+				if ( flm[i].maxage == 0 ) presim = Random[UIStuff](0,40);
+				else presim = -1;
+				flm[i].age = Random[UIStuff](-5,0);
+				flm[i].maxage = Random[UIStuff](40,80);
+				flm[i].pos = (FRandom[UIStuff](-128.,128.),FRandom[UIStuff](0.,128.));
+				flm[i].vel = (FRandom[UIStuff](-4.,4.),FRandom[UIStuff](-8.,-16.));
+				flm[i].ang = FRandom[UIStuff](0.,360.);
+				flm[i].angvel = FRandom[UIStuff](1.,4.)*RandomPick[UIStuff](-1,1);
+				flm[i].scale = FRandom[UIStuff](128.,256.);
+			}
+			for ( int j=0; j<=presim; j++ )
+			{
+				flm[i].age++;
+				if ( flm[i].age <= 0 ) continue;
+				flm[i].pos += flm[i].vel;
+				flm[i].vel.x *= .96;
+				flm[i].vel.y -= .02;
+				flm[i].ang += flm[i].angvel;
+				flm[i].scale *= .99;
 			}
 		}
 	}
@@ -113,6 +136,25 @@ Class KirinTitleStuff : EventHandler
 			double alf = cos((smk[i].age/double(smk[i].maxage))*90)*alpha;
 			alf *= clamp(smk[i].age/10.,0,1);
 			Screen.DrawShape(smk_tex[i%8],false,smk_shape,DTA_Alpha,alf,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(4,12,32));
+		}
+		if ( !back ) return;
+		base = 950;
+		for ( int i=0; i<128; i++ )
+		{
+			if ( !flm_tex[i%8] ) flm_tex[i%8] = TexMan.CheckForTexture("graphics/title_fire_"..(i%8)..".png",TexMan.Type_Any);
+			smk_tform.Clear();
+			// base transforms
+			smk_tform.Scale((1,1)*flm[i].scale*(1.-.01*e.FracTic));
+			smk_tform.Rotate(flm[i].ang+flm[i].angvel*e.FracTic);
+			smk_tform.Translate(flm[i].pos+flm[i].vel*e.FracTic);
+			// screen transforms
+			smk_tform.Translate((0,base));
+			smk_tform.Scale((1,1)*zoomscl);
+			smk_tform.Translate((Screen.GetWidth()/2,0));
+			smk_shape.SetTransform(smk_tform);
+			double alf = 1.-(flm[i].age/double(flm[i].maxage))**2.;
+			alf *= clamp(flm[i].age/5.,0,1);
+			Screen.DrawShape(flm_tex[i%8],false,smk_shape,DTA_Alpha,alf,DTA_LegacyRenderStyle,STYLE_Add);
 		}
 	}
 
