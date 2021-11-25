@@ -24,29 +24,29 @@ KIRIN_CSTITLE2 = "Undying Born Under An Innocent Red Star";
 KIRIN_HELP_NPAGE = "6";
 KIRIN_HELP_PAGE1 = "The Story So Far";
 KIRIN_HELP_PAGE1_TXT =
-"\cx\"Hey, Kirin-kun, I'm kinda curious about seeing you fight. Since Demo-chan's already done her part in here, would you like to give it a spin too?\"\n"
+"\cf\"Hey, Kirin-kun, I'm kinda curious about seeing you fight. Since Demo-chan's already done her part in here, would you like to give it a spin too?\"\c-\n"
 "\n"
-"Those were \cxSaya Miyamoto\c-'s words, asking for her newlywed husband, \cxEmperor Kirin Xanai\c-, to provide a practical demonstration of his combat prowess. Still, despite his previous promise of never setting foot on the world of \cxCronos\c-, having borne witness to its puzzle-infested horrors, he had to concede, for her beloved. The way she looked at him, pleading, it was impossible to refuse. Even the \cxDemolitionist\c- and \cxIbuki\c- themselves joined in, it was an undefeatable three-way attack!\n"
+"Those were \cfSaya Miyamoto\c-'s words, asking for her newlywed husband, \cfEmperor Kirin Xanai\c-, to provide a practical demonstration of his combat prowess. Still, despite his previous promise of never setting foot on the world of \cfCronos\c-, having borne witness to its puzzle-infested horrors, he had to concede, for her beloved. The way she looked at him, pleading, it was impossible to refuse. Even the \cfDemolitionist\c- and \cfIbuki\c- themselves joined in, it was an undefeatable three-way attack!\n"
 "\n"
 "And so, having assembled an arsenal of his own, much like those of his faithful fighting companions, he set forth for adventure, with nothing in hand but his wits, his magic, and A GUN.\n"
 "\n"
-"\cxAnd so he who was born under an Innocent Red Star, shall show the vile beasts of this world no mercy.\c-";
+"\cfAnd so he who was born under an Innocent Red Star, shall show the vile beasts of this world no mercy.\c-";
 KIRIN_HELP_PAGE2 = "Who Is Kirin Xanai";
 KIRIN_HELP_PAGE2_TXT =
-"\cxKirin\c- is the only child of \cxFormer Empress Sythana Yanikov\c-, whom he has always admired greatly, wishing to follow in her steps upon growing up. And so he did at the young age of 12, when he took her place as the new \cxEmperor\c- of the communities of \cxAkkou\c-. Loved by his people, whom he faithfully serves as protector and advisor, he is skilled not only in matters of community management, but also in the art of warfare. In the defense of his homeland, he stands at the front of all as a true monarch of the \cxAnarukon\c- people would.\n"
+"\cfKirin\c- is the only child of \cfFormer Empress Sythana Yanikov\c-, whom he has always admired greatly, wishing to follow in her steps upon growing up. And so he did at the young age of 12, when he took her place as the new \cfEmperor\c- of the communities of \cfAkkou\c-. Loved by his people, whom he faithfully serves as protector and advisor, he is skilled not only in matters of community management, but also in the art of warfare. In the defense of his homeland, he stands at the front of all as a true monarch of the \cfAnarukon\c- people would.\n"
 "\n"
 "And now, he's married to a bunch of crazy people, three of which are wholly obsessed with guns and explosions and whatever else. And he couldn't be happier about it, of course.\n"
 "\n"
-"Sure, he's well-trained in hand to hand combat, as well as being an excellent spellsword, but guns? Yeah, he knows how to use a gun. Firearms are pretty much a staple of the modern Anarukon warrior's toolset, after all.\n"
+"Sure, he's well-trained in hand to hand combat, as well as being an excellent spellsword, but guns? Yeah, he knows how to use a gun. Firearms are pretty much a staple of the modern \cfAnarukon\c- warrior's toolset, after all.\n"
 "\n"
 "And all of this he can do, while being extra handsome to boot.";
 KIRIN_HELP_PAGE3 = "Emperor's Arsenal (Part 1: Weapons)";
 KIRIN_HELP_PAGE3_TXT =
-"There weren't really many weapons that \cxKirin\c- wanted to have to carry around in the field, so he figured just four of them would do the job. Three of them were his personal picks, while the fourth was a gift from a good friend in his extended family, which unfortunately had to be delivered in separate parts, to be assembled afterwards. This pretty much plays out like typical \cxHexen\c- now, does it?\n"
+"There weren't really many weapons that \cfKirin\c- wanted to have to carry around in the field, so he figured just four of them would do the job. Three of them were his personal picks, while the fourth was a gift from a good friend in his extended family, which unfortunately had to be delivered in separate parts, to be assembled afterwards. This pretty much plays out like typical \cfHexen\c- now, does it?\n"
 "\n"
-"The operation of each is fairly straightforward, with two fire buttons and a reload... Except for two of these weapons, which have an additional secondary reload function. You see, common \cxAnarukon\c- firearms are actually operated by magic, and therefore require their own internal mana pool. Thankfully, refilling these is quite simple as well. As a bonus, as long as you maintain this mana charge, the weapons will be capable of dealing some damage even if they're depleted of ammunition.\n"
+"The operation of each is fairly straightforward, with two fire buttons and a reload... Except for two of these weapons, which have an additional secondary reload function. You see, common \cfAnarukon\c- firearms are actually operated by magic, and therefore require their own internal mana pool. Thankfully, refilling these is quite simple as well. As a bonus, as long as you maintain this mana charge, the weapons will be capable of dealing some damage even if they're depleted of ammunition.\n"
 "\n"
-"By the way, due to the general lack of \cxHammerspace\c- in here, you have to do mag management by yourself. There is a dedicated key for this, which allows you to sit down and calmly consolidate all that ammunition in your partially loaded mags. Of course, make sure you are free from any distractions or threats in the process, or you'll make a big mess.\n"
+"By the way, due to the general lack of \cfHammerspace\c- in here, you have to do mag management by yourself. There is a dedicated key for this, which allows you to sit down and calmly consolidate all that ammunition in your partially loaded mags. Of course, make sure you are free from any distractions or threats in the process, or you'll make a big mess.\n"
 "\n"
 "Do note that you also start with five spells which you can use at any time, provided you've got the mana to spare. Certainly, there's always enough options available to approach any encounter. Hell, you could even fight with your bare hands if you so desire.";
 KIRIN_HELP_PAGE4 = "Emperor's Arsenal (Part 2: Items)";
@@ -55,18 +55,18 @@ KIRIN_HELP_PAGE4_TXT =
 "\n"
 "So, what about armor? Anything clunky to strap on? Nope, not really, instead, you will often find protective rings, with stackable effects. Up to eight rings can be held at a time, allowing for an almost complete absorption of damage. Convenient, isn't it?\n"
 "\n"
-"You may also find some other goodies not listed here, too. All stored nicely either in your pockets or in... Somewhere. \cxKirin\c- has no need for \cxHammerspace\c-, really, he's got his own magical methods of off-world storage, courtesy of his bloodline.";
+"You may also find some other goodies not listed here, too. All stored nicely either in your pockets or in... Somewhere. \cfKirin\c- has no need for \gxHammerspace\c-, really, he's got his own magical methods of off-world storage, courtesy of his bloodline.";
 KIRIN_HELP_PAGE5 = "Emperor's Arsenal (Part 3: Powerups)";
 KIRIN_HELP_PAGE5_TXT =
-"Being as resourceful as he is, \cxKirin\c- knows of various divine artifacts he could borrow strength from, and thanks to his connections, he can definitely get his hands on a helpful supply of them. He also has his own beloved wives to receive some gifts from too, of course. And what better gift than that of the milk of the \cxRed Oni\c- herself? Among other things, of course.\n"
+"Being as resourceful as he is, \cfKirin\c- knows of various divine artifacts he could borrow strength from, and thanks to his connections, he can definitely get his hands on a helpful supply of them. He also has his own beloved wives to receive some gifts from too, of course. And what better gift than that of the milk of the \cfRed Oni\c- herself? Among other things, of course.\n"
 "\n"
 "For the sake of not \"hoarding\", Kirin will only pick up a limited number of powerups at any time, like any other item, leaving what he doesn't need behind.\n"
 "\n"
 "There's not much else to say, really. Like in the other mods, the effects of powerups stack with each use, and their remaining duration is displayed on the HUD.";
 KIRIN_HELP_PAGE6 = "Additional Tips";
 KIRIN_HELP_PAGE6_TXT =
-"\cxKirin\c- has a smartphone. It is very useful in the field. For starters, it can serve as a source of light that, while not being as strong as a flashlight, still helps. It's also of course handy for information. You can track your progress easily, keeping notes on locked doors and other contraptions and memorizing the locations of items in the map so you can look them up later if you want to resupply.\n"
+"\cfKirin\c- has a smartphone. It is very useful in the field. For starters, it can serve as a source of light that, while not being as strong as a flashlight, still helps. It's also of course handy for information. You can track your progress easily, keeping notes on locked doors and other contraptions and memorizing the locations of items in the map so you can look them up later if you want to resupply.\n"
 "\n"
-"Yeah, you won't get lost as much with that power at your fingertips. It's also a good thing that, being such a fine work of \cxNukuri\c- technology, the battery lasts really damn long. But don't worry, if you somehow manage to drain it, it can just be recharged anyway. Not that you'd ever see this feature in action unless you somehow spend 5 real-time days in the same campaign...\n"
+"Yeah, you won't get lost as much with that power at your fingertips. It's also a good thing that, being such a fine work of \cfNukuri\c- technology, the battery lasts really damn long. But don't worry, if you somehow manage to drain it, it can just be recharged anyway. Not that you'd ever see this feature in action unless you somehow spend 5 real-time days in the same campaign...\n"
 "\n"
-"So, anything else? Well, I suppose there's the fact \cxKirin\c- is completely immortal. Get your ass kicked, and you'll be able to get back up after a couple seconds (even though realistically this would be several minutes instead). Get your ass REALLY kicked, and what's left of your body will turn to dust and regenerate from scratch at a safe point. The latter option is still available even if your body didn't get blown to pieces, so there's that.";
+"So, anything else? Well, I suppose there's the fact \cfKirin\c- is completely immortal. Get your ass kicked, and you'll be able to get back up after a couple seconds (even though realistically this would be several minutes instead). Get your ass REALLY kicked, and what's left of your body will turn to dust and regenerate from scratch at a safe point. The latter option is still available even if your body didn't get blown to pieces, so there's that.";
