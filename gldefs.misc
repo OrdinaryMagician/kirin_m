@@ -9,6 +9,10 @@ HardwareShader Texture "graphics/KirinLogo.png"
 	Shader "shaders/glsl/KirinLogoAnimated.fp"
 	Texture "LogoTex" "graphics/KirinLogo_Layers.png"
 }
+HardwareShader Texture "graphics/KirinLogo_Glow.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
 HardwareShader PostProcess beforebloom
 {
 	Name "kirinsigil1"
