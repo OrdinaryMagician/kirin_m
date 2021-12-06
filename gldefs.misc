@@ -7,7 +7,14 @@ HardwareShader Texture "graphics/tempbg.png"
 HardwareShader Texture "graphics/KirinLogo.png"
 {
 	Shader "shaders/glsl/KirinLogoAnimated.fp"
-	Texture "LogoTex" "graphics/KirinLogo_Layers.png"
+	// what no 2d arrays does to a mf
+	Texture "Layer1" "graphics/KirinLogo_Layer1.png"
+	Texture "Layer2" "graphics/KirinLogo_Layer2.png"
+	Texture "Layer3" "graphics/KirinLogo_Layer3.png"
+	Texture "Layer4" "graphics/KirinLogo_Layer4.png"
+	Texture "Layer5" "graphics/KirinLogo_Layer5.png"
+	Texture "Layer6" "graphics/KirinLogo_Layer6.png"
+	Texture "Layer7" "graphics/KirinLogo_Layer7.png"
 }
 HardwareShader Texture "graphics/KirinLogo_Glow.png"
 {

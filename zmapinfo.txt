@@ -42,7 +42,13 @@ GameInfo
 		"graphics/kirinsigil_smokeglow.png",
 		"graphics/kirinsigil_smokeglow_fade.png",
 		"graphics/KirinLogo.png",
-		"graphics/KirinLogo_Layers.png",
+		"graphics/KirinLogo_Layer1.png",
+		"graphics/KirinLogo_Layer2.png",
+		"graphics/KirinLogo_Layer3.png",
+		"graphics/KirinLogo_Layer4.png",
+		"graphics/KirinLogo_Layer5.png",
+		"graphics/KirinLogo_Layer6.png",
+		"graphics/KirinLogo_Layer7.png",
 		"graphics/M_KIRIN.png"
 }
 

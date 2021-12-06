@@ -1,5 +1,5 @@
-# RED STAR OF INNOCENCE
-## UnSX Side Story: Kirin
+# SWWM GZ Side Story ~ Red Star of Innocence
+![](docimg/KirinLogo.png)
 
 ---
 
