@@ -1,0 +1,108 @@
+[es]
+// tags, pickups
+T_KIRINCQC = "Combate Mano a Mano";
+T_KIRINPISTOL = "Semiautomática Rykha";
+I_KIRINPISTOL = "Pistola Semiautomática Nelaka Rykha";
+T_KIRINSMG = "PDW Xei";
+I_KIRINSMG = "PDW Nelaka Xei";
+T_KIRINSHOTGUN = "Carabina de Fragmento";
+I_KIRINSHOTGUN = "Carabina de Fragmento Sokana";
+T_KIRINBALLISTA = "Balista de Distorsión";
+I_KIRINBALLISTA = "Balista de Distorsión de Artesanía Unissix";
+T_KIRINBALLISTA1 = "Mango de Balista de Distorsión";
+T_KIRINBALLISTA2 = "Cuerpo de Balista de Distorsión";
+T_KIRINBALLISTA3 = "Cañón de Balista de Distorsión";
+T_KIRINHEART = "Llama del Corazón";
+T_KIRINFLAME = "Estallido de Ascuas";
+T_KIRINFROST = "Estallido Gélido";
+T_KIRINLIGHTNING = "Gran Descarga";
+T_KIRINGAP = "Rotura de Frontera";
+T_KIRINMAG = "Manejo de Cargador";
+T_KIRINBEAN = "Haba de Caramelo";
+T_KIRINDRINK = "Bebida Refrescante";
+T_KIRINBLOOD = "Extracto de Akashna";
+T_KIRINMANA = "Estimulante de Maná";
+T_KIRINRING = "Anillo de Protección";
+T_KIRINRINGS = "Conjunto de Anillos";
+T_KIRINMILK = "Leche Oni Rojo";
+T_KIRINPISTOLAMMO = "8mm Corto";
+T_KIRINBOMB = "Pequeña Bomba";
+T_KIRINBOMBS = "Pequeñas Bombas";
+T_KIRINFAST = "Amuleto de Aceleración";
+T_KIRINTHRALL = "Solución de Embelesamiento";
+T_KIRINLIGHT = "Luz de Bolsillo";
+T_KIRINFLIGHT = "Amuleto Aéreo";
+// quit messages
+QUITMSG = "Adiós, alma valerosa...";
+// misc
+KIRIN_ASMFAIL = "Aun no tienes todas las partes de la Balista";
+KIRIN_ASMSUCC = "Has ensamblado la Balista de Distorsión";
+D_KIRINFAST = "Los efectos del Amuleto de Aceleración han expirado.";
+D_KIRINLIGHT = "La Luz de Bolsillo se ha quedado sin batería.";
+D_KIRINMILK = "Los efectos de la leche de Ibuki se han desvanecido.";
+D_KIRINFLIGHT = "El Amuleto Aéreo ha perdido su potencia.";
+KIRIN_TITLEPRESENTSB = "presenta";
+KIRIN_TITLEMODBYA = "un mod de";
+KIRIN_TITLETXT1A = "Acepta entonces mi bendición divina, oh hijo inmortal.";		// Sezae ka irai adka nazeda, i Anarukonoskai.
+KIRIN_TITLETXT1B = "Que sepan todos de este gran emperador de las tierras oxidadas.";	// Akaranokxhe yuda nokhaze ira psykkas na Sykhai skhana.
+KIRIN_TITLETXT2 = "De tu gente eres sirviente, por tu gente has de luchar.";		// Seine kon da khosaya, dera kon dae takharei.
+KIRIN_TITLETXT3A = "Protector por juramento eres del imperio oxidado,"			// Akoxha de ukhaashxe irada Sykhai sya,
+KIRIN_TITLETXT3B = "hijo inmortal nacido bajo una \cgInocente Estrella Roja\c-.";	// Anarukonoskai myze suna Kirin na Xatha Naai.
+// weapon tooltips
+TT_KIRINCQC =
+"Lucha con tus puños y tus piernas.\n"
+"\n"
+"\cxFuego Primario (Pulsar):\c- Ataques rápidos.\n"
+"\cxFuego Primario (Mantener):\c- Gancho cargado.\n"
+"\cxFuego Secundario:\c- Patada giratoria.\n"
+"\cxRecarga:\c- Bloquear.\n"
+"\cxRecarga Alternativa:\c- Parar.";
+TT_KIRINPISTOL =
+"Un arma común, pequeña pero potente.\n"
+"8mm Corto, 8+1 balas. Poca reserva de maná.\n"
+"\n"
+"\cxFuego Primario:\c- Disparo.\n"
+"\cxFuego Secundario:\c- Sobrecarga de presión.";
+TT_KIRINSMG =
+"Un arma fiel de mercenario.\n"
+"5mm Xei, 20+2 balas. Gran reserva de maná.\n"
+"\n"
+"\cxFuego Primario:\c- Disparo entrelazado.\n"
+"\cxFuego Secundario:\c- Modo de disparo dual.";
+TT_KIRINSHOTGUN =
+"Una buena escopeta para el piromante pistolero.\n"
+"10mm Frag, dos disparos. No requiere maná.\n"
+"\n"
+"\cxFuego Primario:\c- Dispara cada cañón.\n"
+"\cxFuego Secundario:\c- Potencia los cartuchos cargados.";
+TT_KIRINBALLISTA =
+"Acción empaladora a velocidad superluminal.\n"
+"50mm HEAP, un disparo. No requiere maná.\n"
+"\n"
+"\cxFuego Primario:\c- Disparo perforador.\n"
+"\cxFuego Secundario:\c- Disparo explosivo.";
+TT_KIRINHEART =
+"Un popular hechizo para parejas.\n"
+"\n"
+"\cxFuego Primario:\c- Curación continuada.\n"
+"\cxFuego Secundario:\c- Aura de curación estática.";
+TT_KIRINFLAME =
+"Un hechizo de piromancia común.\n"
+"\n"
+"\cxFuego Primario:\c- Invocación a mano izquierda.\n"
+"\cxSecondary Fire:\c- Invocación a mano derecha.";
+TT_KIRINFROST =
+"Un típico hechizo de criomancia.\n"
+"\n"
+"\cxFuego Primario:\c- Invocación a mano izquierda.\n"
+"\cxSecondary Fire:\c- Invocación a mano derecha.";
+TT_KIRINLIGHTNING =
+"Un espeluznantemente potente hechizo electromántico.\n"
+"\n"
+"\cxFuego Primario:\c- Estallido manual.\n"
+"\cxFuego Secundario:\c- Orbe de rayos.";
+TT_KIRINGAP =
+"La clave del poder del linaje Yanikov.\n"
+"\n"
+"\cxFuego Primario:\c- Transporte directo.\n"
+"\cxFuego Secundario:\c- Mantén para visualizar destino.";

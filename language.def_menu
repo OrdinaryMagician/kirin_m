@@ -60,7 +60,7 @@ KIRIN_HELP_PAGE5 = "Emperor's Arsenal (Part 3: Powerups)";
 KIRIN_HELP_PAGE5_TXT =
 "Being as resourceful as he is, \cfKirin\c- knows of various divine artifacts he could borrow strength from, and thanks to his connections, he can definitely get his hands on a helpful supply of them. He also has his own beloved wives to receive some gifts from too, of course. And what better gift than that of the milk of the \cfRed Oni\c- herself? Among other things, of course.\n"
 "\n"
-"For the sake of not \"hoarding\", Kirin will only pick up a limited number of powerups at any time, like any other item, leaving what he doesn't need behind.\n"
+"For the sake of not \"hoarding\", \cfKirin\c- will only pick up a limited number of powerups at any time, like any other item, leaving what he doesn't need behind.\n"
 "\n"
 "There's not much else to say, really. Like in the other mods, the effects of powerups stack with each use, and their remaining duration is displayed on the HUD.";
 KIRIN_HELP_PAGE6 = "Additional Tips";
@@ -69,4 +69,4 @@ KIRIN_HELP_PAGE6_TXT =
 "\n"
 "Yeah, you won't get lost as much with that power at your fingertips. It's also a good thing that, being such a fine work of \cfNukuri\c- technology, the battery lasts really damn long. But don't worry, if you somehow manage to drain it, it can just be recharged anyway. Not that you'd ever see this feature in action unless you somehow spend 5 real-time days in the same campaign...\n"
 "\n"
-"So, anything else? Well, I suppose there's the fact \cfKirin\c- is completely immortal. Get your ass kicked, and you'll be able to get back up after a couple seconds (even though realistically this would be several minutes instead). Get your ass REALLY kicked, and what's left of your body will turn to dust and regenerate from scratch at a safe point. The latter option is still available even if your body didn't get blown to pieces, so there's that.";
+"So, anything else? Well, I suppose there's the fact \cfKirin\c- is completely immortal. Get your ass kicked, and you'll be able to get back up after a couple seconds (even though realistically this would be several minutes instead). Get your ass REALLY kicked, and what's left of your body will turn to dust and regenerate from scratch at a safe point. The latter option is still available even if your body didn't get blown to pieces, if you'd rather just respawn.";

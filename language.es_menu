@@ -1,0 +1,68 @@
+[es]
+// keybinds
+KIRIN_KEYS = "Teclas de RED STAR OF INNOCENCE";
+KIRIN_PRIMARYFIRE = "Fuego Primario";
+KIRIN_SECONDARYFIRE = "Fuego Secundario";
+KIRIN_RELOADFIRE = "Recarga / Bloqueo";
+KIRIN_ZOOMFIRE = "Recarga Alternativa / Parada";
+KIRIN_MELEE = "Patada Rápida";
+KIRIN_EXTRAFIRE = "Granada";
+// skills
+KIRIN_SKCHILL="\cjEstrella Blanca\c-";
+KIRIN_SKEASY="\cfEstrella Amarilla\c-";
+KIRIN_SKNORMAL="\ciEstrella Naranja\c-";
+KIRIN_SKHARD="\crEstrella Roja\c-";
+KIRIN_SKHARDCORE="\cmEstrella Negra\c-";
+KIRIN_SKHARDCORECONFIRM="\cm¿Seguro que quieres hacer eso?\nPuede que te pateen el culo.\c-\n\n\cgMonstruos rápidos\n1.5x salud y daño de monstruos\n25% de agresividad extra\nTrucos deshabilitados\nMonstruos de cooperativo\c-\n\n(Pulsa Y para un desafío)";
+// mod menu
+KIRIN_MTITLE = "Opciones de RED STAR OF INNOCENCE";
+KIRIN_MCREDS = "Créditos de RED STAR OF INNOCENCE Credits";
+// Help menu
+KIRIN_HELP_PAGE1 = "La Historia Hasta Ahora";
+KIRIN_HELP_PAGE1_TXT =
+"\cf\"Oye, Kirin-kun, tengo curiosidad por verte pelear. Ya que Demo-chan ha hecho su parte del trabajo, ¿te gustaría probar a ti también?\"\c-\n"
+"\n"
+"Esas fueron las palabras de \cfSaya Miyamoto\c-, pidiendo a su marido recien casado, el \cfEmperador Kirin Xanai\c-, que hiciese una demostración práctica de su habilidad de combate. Aun así, a pesar de su anterior promesa de que nunca pisaría el mundo de \cfCronos\c-, habiendo sido testigo de sus horrores infestados de puzzles, tuvo que ceder, por su amada. La forma en la que lo miraba, suplicante, era imposible negarse. Incluso la propia \cfDemolicionista\c- e \cfIbuki\c- se le unieron, ¡era un ataque invencible a tres bandas!\n"
+"\n"
+"Y así, habiendo ensamblado un arsenal propio, al igual que sus fieles compañeras luchadoras, se puso en marcha a la aventura, con nada más a mano que su destreza, si magia, y UN ARMA.\n"
+"\n"
+"\cfY entonces, aquel nacido bajo una Inocente Estrella Roja, mostrará clemencia ninguna contra las viles bestias de este mundo.\c-";
+KIRIN_HELP_PAGE2 = "Quien Es Kirin Xanai";
+KIRIN_HELP_PAGE2_TXT =
+"\cfKirin\c- es el hijo único de la \cgEmperadora Emérita Sythana Yanikov\c-, la cual siempre ha admirado, deseando seguir sus pasos al crecer. Y así fue a la temprana edad de 12 años, cuando la relevó de su puesto como nuevo \cfEmperador\c- de las comunidades de \cfAkkou\c-. Amado por su gente, a la cual sirve fielmente como protector y consejero, es hábil no solo en temas de manejo de comunidad, si no también en el arte de la guerra. A la defensa de su tierra natal, permanece al frente de todo como debe un verdadero monarca de los \cfAnarukon\c-.\n"
+"\n"
+"Y ahora, está casado con un puñado de locos, de los cuales tres están totalmente obsesionadas con armas y explosiones y que más será. Y no podría sentirse más feliz, por supuesto.\n"
+"\n"
+"Cierto, ha sido bien entrenado en el combate cuerpo a cuerpo, y también en magia y espadas, pero ¿armas de fuego? Sí, sabe como usar una. Las armas de fuego son también parte esencial del inventario de un guerrero \cfAnarukon\c-, al fin y al cabo.\n"
+"\n"
+"Y todo esto que puede hacer, lo hace manteniendo una belleza impecable.";
+KIRIN_HELP_PAGE3 = "Arsenal del Emperador (Parte 1: Armas)";
+KIRIN_HELP_PAGE3_TXT =
+"No había muchas armas que \cfKirin\c- quisiera llevar encima, así que supuso que solo con cuatro sería suficiente. Tres de ellas fueron su elección personal, mientras que la cuarta fue un regalo de una buena amiga en su familia, la cual desafortunadamente tuvo que ser enviada en partes, para ser ensamblada luego. Esto ciertamente pinta como lo típico de \cfHexen\c-, ¿verdad?\n"
+"\n"
+"La operación de cada una es bastante simple, con dos botones de disparo y una recarga... Excepto para dos de estas armas, las cuales tienen una recarga secundaria adicional. Verás, las típicas armas de fuego \cfAnarukon\c- funcionan mediante magia, y por lo tanto requieren su propia reserva interna de maná. Afortunadamente, reabastecerla es bastante simple también. Y ya de paso, mientras mantengas esa carga de maná, las armas pueden incluso hacer daño aunque no estén cargadas con munición.\n"
+"\n"
+"Por cierto, dada la falta general de \cfHammerspace\c- por aquí, tendrás que manejar tus propios cargadores. Hay una tecla dedicada para esto, la cual te permite tomar un respiro y consolidar la munición en tus cargadores relajadamente. Por supuesto, asegúrate de que no haya distracciones o amenazas en el proceso, o la liarás bien.\n"
+"\n"
+"Ten en cuenta que comienzas también con cuatro hechizos que puedes usar en cualquier momento, siempre que tengas maná de sobra. Ciertamente, hay siempre opciones disponibles para manejar cada batalla. Vamos, si hasta podrías pelear con tus propias manos si quisieras.";
+KIRIN_HELP_PAGE4 = "Arsenal del Emperador (Parte 2: Ítems)";
+KIRIN_HELP_PAGE4_TXT =
+"La mayor parte de los ítems que encontrarás están dedicados generalmente a mantener tu salud y maná a tope para seguir luchando. Bebidas curativas, pócimas para potenciar el maná, y un buen despliegue de reservas de munición con las que recargar tus armas. También hay bombas, las cuales puedes tirar en cualquier momento con una tecla dedicada.\n"
+"\n"
+"¿Y la armadura? ¿Algo pesado que ponerse encima? Pues no, no realmente, en su lugar encontrarás a menudo anillos protectores, con efectos acumulativos. Hasta ocho puedes llevar a la vez, consiguiendo una absorción casi completa de daños. Conveniente ¿verdad?\n"
+"\n"
+"También podrás encontrar otras buenas cosas no listadas aquí. Las cuales tendrás bien guardadas en tus bolsillos o en... Algún lugar. \cfKirin\c- no necesita \cfHammerspace\c-, realmente, tiene sus propios métodos mágicos para guardar cosas, por cortesía de su linaje.";
+KIRIN_HELP_PAGE5 = "Arsenal del Emperador (Parte 3: Potenciadores)";
+KIRIN_HELP_PAGE5_TXT =
+"Siendo tan ingenioso como es, \cfKirin\c- conoce varios artefactos divinos de los que beneficiarse, y gracias a sus conexiones, puede ciertamente abastecerse a gusto de ellos. También tiene a sus amadas esposas de las que recibir regalos, por supuesto. ¿Y que mejor regalo que la misma leche del \cfOni Rojo\c-? Entre otras cosas, por supuesto.\n"
+"\n"
+"Para evitar \"acumular demasiado\", \cfKirin\c- solo recogerá un número limitado de potenciadores, como cualquier otro ítem, dejando atrás lo que no necesite.\n"
+"\n"
+"No hay nada más que decir, realmente. Como en los otros mods, los efectos de los potenciadores se acoplan con cada uso, y su duración restante se muestra en el HUD.";
+KIRIN_HELP_PAGE6 = "Consejos Adicionales";
+KIRIN_HELP_PAGE6_TXT =
+"\cfKirin\c- tiene un teléfono móvil. Es muy útil en el campo. Para empezar, puede servir como una fuente de luz que, aunque no sea tan potente como una linterna, aun ayuda. También es por supuesto útil para recabar información. Puedes mantenerte al tanto de tu progreso fácilmente, tomando nota de puertas cerradas y otros mecanismos y memorizando donde se encuentran los ítems en el mapa par que puedas buscarlos luego y recuperarlos.\n"
+"\n"
+"Sí, ya no te perderás tanto con ese poder a tu alcance. También es bueno que, siendo tal maravilla de la tecnología \cfNukuri\c-, la batería dura muchísimo. Pero no te preocupes, si de alguna forma consigues gastarla, se puede recargar. Tampoco es que vayas a ver esto en acción a menos que no sé como pases 5 días en tiempo real en la misma partida...\n"
+"\n"
+"Bueno, ¿algo más? Bueno, supongo que el hecho de que \cfKirin\c- es completamente inmortal. Si te patean el trasero, puedes volver a levantarte después de unos segundos (aunque realísticamente esto llevaría varios minutos). Si te patean el culo pero BIEN, entonces lo que quede de tu cuerpo se volverá polvo y se regenerará de cero en un lugar seguro. Esta opción está disponible también aunque tu cuerpo no se haya despedazado, si prefieres simplemente reaparecer.";
