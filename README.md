@@ -25,7 +25,7 @@ Apart from these abilities, he's also somewhat skilled at hand to hand combat, a
 
 Although **Kirin** has no access to **Hammerspace**, he nevertheless is capable of *"carrying"* a lot of equipment in the *"void"* that he has access to through the unique powers of his **Yanikov** blood. Most items will be put away and brought back from there as needed, although for very quick access, he'd rather have some of them on his body. Therefore, he's got two holsters, for a pistol and a submachine gun, along with slings for carrying two other weapons on his back, all four of these having been personally chosen by him for this journey. In regards to ammunition, he's got some side pouches for quick access to carefully managed magazines and spare rounds. **Saya** is very impressed by his tactical approach, she really couldn't stop fawning over how he looks all suited up for combat. It should also be mentioned that his emperor suit was constructed with armored lining, although it's not enough protection to survive in a serious combat situation.
 
-Should he fall in battle, he will simply get back up again shortly afterwards. Should his body be torn to shreds, his remains shall scatter in the wind and he will be reformed in a safer place, together with all his belongings. Such is the blessing of the **Father of Eternity**.
+Should he fall in battle, his body shall scatter in the wind and be reformed in a safer place, together with all his belongings. Such is the blessing of the **Father of Eternity**.
 
 ---
 

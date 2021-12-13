@@ -29,5 +29,6 @@ Class KirinPlayer : SWWMPlayer
 		Player.SoundClass "kirin";
 		DamageFactor "Drowning", 0.;
 		+DONTMORPH;
+		SWWMPlayer.ResurrectType RT_RESPAWN;
 	}
 }
