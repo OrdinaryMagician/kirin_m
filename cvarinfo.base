@@ -2,6 +2,7 @@
 nosave float kirin_flashstrength = 1.0;
 user float kirin_bumpstrength = 1.0;
 nosave int kirin_hudmargin = 10;
+nosave bool kirin_hudscale = false;
 nosave int kirin_maxshown = 4;
 nosave int kirin_maxshownbig = 10;
 nosave int kirin_maxpickup = 5;

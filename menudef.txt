@@ -27,6 +27,11 @@ OptionValue "SWWMPistolStart"
 	1, "$SWWM_PISTOLSTART_MAP"
 	2, "$SWWM_PISTOLSTART_CLUSTER"
 }
+OptionValue "SWWMHUDScale"
+{
+	0, "$SWWM_TFITSCALE"
+	1, "$SWWM_LFITSCALE"
+}
 OptionMenu "KirinOptionMenu"
 {
 	Class "SWWMOptionMenu"
@@ -45,6 +50,7 @@ OptionMenu "KirinOptionMenu"
 	Option "$SWWM_MM_ENABLE", "kirin_mm_enable", "YesNo"
 	Option "$SWWM_FORCESTATS", "kirin_forcestats", "SWWMForceStats"
 	Slider "$SWWM_HUDMARGIN", "kirin_hudmargin", 0, 40, 1, 0
+	Option "$SWWM_HUDSCALE", "kirin_hudscale", "SWWMHudScale"
 	Slider "$SWWM_MAXMSG", "kirin_maxshown", 1, 10, 1, 0
 	Slider "$SWWM_MAXMSGBIG", "kirin_maxshownbig", 1, 20, 1, 0
 	Slider "$SWWM_MAXPICK", "kirin_maxpickup", 1, 10, 1, 0
