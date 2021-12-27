@@ -27,3 +27,7 @@ sounds/items/omnisight.ogg
 zscript/items/swwm_omnisight.zsc
 gldefs.omnisight
 modeldef.omnisight
+graphics/HUD/BDScreen
+sounds/BDSCREEN.ogg
+gldefs.bdscreen
+zscript/compat/swwm_shame.zsc
