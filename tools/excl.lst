@@ -28,6 +28,9 @@ zscript/items/swwm_omnisight.zsc
 gldefs.omnisight
 modeldef.omnisight
 graphics/BDScreen
+graphics/HDoom_*
 sounds/BDSCREEN.ogg
+sounds/BONK.ogg
 gldefs.bdscreen
 zscript/compat/swwm_shame.zsc
+zscript/compat/swwm_hdoom.zsc

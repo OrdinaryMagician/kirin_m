@@ -7,6 +7,7 @@ KIRIN_RELOADFIRE = "Recarga / Bloqueo";
 KIRIN_ZOOMFIRE = "Recarga Alternativa / Parada";
 KIRIN_MELEE = "Patada Rápida";
 KIRIN_EXTRAFIRE = "Granada";
+KIRIN_PHONE = "Menú de Teléfono";
 // skills
 KIRIN_SKCHILL="\cjEstrella Blanca\c-";
 KIRIN_SKEASY="\cfEstrella Amarilla\c-";

@@ -7,6 +7,7 @@ KIRIN_RELOADFIRE = "Reload / Block";
 KIRIN_ZOOMFIRE = "Alt Reload / Parry";
 KIRIN_MELEE = "Quick Kick";
 KIRIN_EXTRAFIRE = "Grenade";
+KIRIN_PHONE = "Phone Menu";
 // skills
 KIRIN_SKCHILL="\cjWhite Star\c-";
 KIRIN_SKEASY="\cfYellow Star\c-";
