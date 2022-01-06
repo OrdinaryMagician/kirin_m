@@ -18,7 +18,8 @@ Class KirinTitleStuff : EventHandler
 	ui TextureID logotex[2];
 	ui TextureID kirintex[3];
 	ui TextureID gradtex;
-	ui int gtime;
+	int titletimer;
+	bool bFadeFromBlack;
 
 	private ui void TickSmokeLayers()
 	{
@@ -70,27 +71,48 @@ Class KirinTitleStuff : EventHandler
 		}
 	}
 
+	override void WorldTick()
+	{
+		titletimer++;
+	}
+
+	override void WorldLoaded( WorldEvent e )
+	{
+		Shader.SetEnabled(players[consoleplayer],"kirinsigil1",true);
+		Shader.SetEnabled(players[consoleplayer],"kirinsigil2",true);
+		Shader.SetEnabled(players[consoleplayer],"kirinsigil3",true);
+		titletimer = 0;
+		let shnd = SWWMStaticHandler(StaticEventHandler.Find("SWWMStaticHandler"));
+		if ( !shnd ) return;
+		if ( shnd.titlefirst )
+		{
+			titletimer = GameTicRate*39;	// skip to flash
+			bFadeFromBlack = true;	// fade from black instead of white
+			S_ChangeMusic("");
+		}
+		shnd.titlefirst = true;
+	}
+
 	override void UiTick()
 	{
-		gtime++;
-		if ( gtime == 1 )
+		if ( titletimer == 1 )
 		{
 			S_ChangeMusic("");
 			S_StartSound("kirin/preamb",CHAN_VOICE,CHANF_UI,1.,0.);
 		}
-		else if ( gtime == 39.6*GameTicRate )
+		else if ( titletimer == 39.6*GameTicRate )
 		{
 			System.StopAllSounds();
 			S_StartSound("kirin/logoflash",CHAN_WEAPON,CHANF_UI,1.,0.);
 		}
-		else if ( gtime == 40*GameTicRate )
+		else if ( titletimer == 40*GameTicRate )
 		{
 			Shader.SetEnabled(players[consoleplayer],"kirinsigil1",false);
 			Shader.SetEnabled(players[consoleplayer],"kirinsigil2",false);
 			Shader.SetEnabled(players[consoleplayer],"kirinsigil3",false);
 		}
-		else if ( gtime == 42*GameTicRate ) S_ChangeMusic("music/kirin_titlemus.ogg");
-		if ( gtime >= 40*GameTicRate ) TickSmokeLayers();
+		else if ( titletimer == 42*GameTicRate ) S_ChangeMusic("music/kirin_titlemus.ogg");
+		if ( titletimer >= 40*GameTicRate ) TickSmokeLayers();
 		if ( gamestate != GS_LEVEL ) return;
 		// you're not supposed to be here
 		Menu.SetMenu('EndGameMenu');
@@ -160,16 +182,14 @@ Class KirinTitleStuff : EventHandler
 		}
 	}
 
-	override void WorldLoaded( WorldEvent e )
-	{
-		Shader.SetEnabled(players[consoleplayer],"kirinsigil1",true);
-		Shader.SetEnabled(players[consoleplayer],"kirinsigil2",true);
-		Shader.SetEnabled(players[consoleplayer],"kirinsigil3",true);
-	}
-
 	override void RenderUnderlay( RenderEvent e )
 	{
-		double GameSecs = (gtime+e.FracTic)/GameTicRate;
+		double GameSecs = (titletimer+e.FracTic)/GameTicRate;
+		if ( !kirintex[0] ) kirintex[0] = TexMan.CheckForTexture("graphics/title_kirin.png",TexMan.Type_Any);
+		if ( !kirintex[1] ) kirintex[1] = TexMan.CheckForTexture("graphics/title_kirin_eye.png",TexMan.Type_Any);
+		if ( !kirintex[2] ) kirintex[2] = TexMan.CheckForTexture("graphics/title_kirin_flame.png",TexMan.Type_Any);
+		if ( !logotex[0] ) logotex[0] = TexMan.CheckForTexture("graphics/KirinLogo.png",TexMan.Type_Any);
+		if ( !logotex[1] ) logotex[1] = TexMan.CheckForTexture("graphics/KirinLogo_Glow.png",TexMan.Type_Any);
 		if ( !gradtex ) gradtex = TexMan.CheckForTexture("graphics/title_grad.png",TexMan.Type_Any);
 		double alf;
 		String str;
@@ -227,7 +247,11 @@ Class KirinTitleStuff : EventHandler
 				str = StringTable.Localize("$KIRIN_TITLETXT3B");
 				Screen.DrawText(smallfont,Font.CR_FIRE,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,Screen.GetHeight()-64*CleanYFac,str,DTA_CleanNoMove,true,DTA_Alpha,alf);
 			}
-			if ( GameSecs > 39 ) Screen.Dim(Color(255,224,64),clamp((GameSecs-39.6)*3.,0.,1.),0,0,Screen.GetWidth(),Screen.GetHeight());
+			if ( GameSecs > 39 )
+			{
+				if ( bFadeFromBlack ) Screen.Dim("Black",1.,0,0,Screen.GetWidth(),Screen.GetHeight());
+				Screen.Dim(Color(255,224,64),clamp((GameSecs-39.6)*3.,0.,1.),0,0,Screen.GetWidth(),Screen.GetHeight());
+			}
 			return;
 		}
 		if ( kirin_fuzz )
@@ -242,11 +266,6 @@ Class KirinTitleStuff : EventHandler
 		else Screen.Dim(Color(16,12,0),1.,0,0,Screen.GetWidth(),Screen.GetHeight());
 		double texscl = Screen.GetHeight()/1300.;
 		double logoscl = Screen.GetHeight()/2000.;
-		if ( !kirintex[0] ) kirintex[0] = TexMan.CheckForTexture("graphics/title_kirin.png",TexMan.Type_Any);
-		if ( !kirintex[1] ) kirintex[1] = TexMan.CheckForTexture("graphics/title_kirin_eye.png",TexMan.Type_Any);
-		if ( !kirintex[2] ) kirintex[2] = TexMan.CheckForTexture("graphics/title_kirin_flame.png",TexMan.Type_Any);
-		if ( !logotex[0] ) logotex[0] = TexMan.CheckForTexture("graphics/KirinLogo.png",TexMan.Type_Any);
-		if ( !logotex[1] ) logotex[1] = TexMan.CheckForTexture("graphics/KirinLogo_Glow.png",TexMan.Type_Any);
 		Screen.DrawTexture(gradtex,false,0,Screen.GetHeight(),DTA_DestWidth,Screen.GetWidth(),DTA_DestHeight,512*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(128,16,8),DTA_TopOffset,256);
 		Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,Screen.GetHeight(),DTA_Rotate,90,DTA_DestHeight,Screen.GetHeight(),DTA_DestWidth,640*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_TopOffset,256,DTA_Alpha,.5);
 		Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,0,DTA_Rotate,270,DTA_DestHeight,Screen.GetHeight(),DTA_DestWidth,640*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_TopOffset,256,DTA_Alpha,.5);

@@ -14,9 +14,9 @@ const SWWMMAXBACKPACK = 0;
 const SWWMHEALTHFLASH = Color(255,96,64);
 const SWWMARMORFLASH = Color(192,64,255);
 const SWWMLOGONAME = "M_KIRIN";
-const SWWMCREDITSCOL0 = Font.CR_FIRE;
-const SWWMCREDITSCOL1 = Font.CR_GOLD;
-const SWWMCREDITSCOL2 = Font.CR_ORANGE;
+const SWWMCREDITSCOL0 = Font.CR_ORANGE;
+const SWWMCREDITSCOL1 = Font.CR_RED;
+const SWWMCREDITSCOL2 = Font.CR_FIRE;
 // Gutamatics
 #include "zscript/swwm_Gutamatics/Include.zsc"
 // utility code
