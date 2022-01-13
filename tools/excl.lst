@@ -32,5 +32,6 @@ graphics/HDoom_*
 sounds/BDSCREEN.ogg
 sounds/BONK.ogg
 gldefs.bdscreen
+gldefs.hdscreen
 zscript/compat/swwm_shame.zsc
 zscript/compat/swwm_hdoom.zsc

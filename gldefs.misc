@@ -44,6 +44,10 @@ HardwareShader PostProcess beforebloom
 	Texture glowtex "graphics/kirinsigil_smokeglow.png"
 	Uniform float timer
 }
+HardwareShader Texture "graphics/KirinIcon.png"
+{
+	Shader "shaders/glsl/Bilinear.fp"
+}
 HardwareShader Texture "graphics/title_kirin.png"
 {
 	Shader "shaders/glsl/Bilinear.fp"
