@@ -271,7 +271,7 @@ Once **Kirin** is finished with one ammo type, he'll switch to the other one, if
 
 **Kirin** has a phone, and it is the most powerful tool at his disposal for gathering and processing information about the environment. A journal is available that will be automatically filled in with notes about locked doors, spots where a puzzle item must be used, and other remarks of interest. It's also possible to track the positions of uncollected items and look them up later if needed. And, of course, you also have access to neat lil' stats on your performance, progress through the campaign, and whatnot, just like back in the **Demolitionist** mod. You can also use it to light the way, though it won't be as potent as the Pocket Light.
 
-Don't worry about it running out of battery, though, it's got plenty of juice for several days *(And honestly, if you somehow take that long playing the game that it does run out... You've got a bigger problem there)*.
+Don't worry about it running out of battery, though, it's got plenty of juice for several days *(And honestly, if you somehow take that long playing the game that it does run out... You've got a bigger problem there, but hey, at least you can recharge it)*.
 
 BTW if you're curious, that phone background is his favorite anime character.
 
