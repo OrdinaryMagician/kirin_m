@@ -55,6 +55,7 @@ const SWWMMAXVIPAMOUNT = 1;
 #include "zscript/items/swwm_basehealth.zsc"
 #include "zscript/items/swwm_basearmor.zsc"
 #include "zscript/items/swwm_baseammo.zsc"
+#include "zscript/items/swwm_keys.zsc"
 #include "zscript/items/swwm_angerysigil.zsc"
 #include "zscript/items/swwm_safetytether.zsc"
 // weapons
