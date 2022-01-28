@@ -22,7 +22,7 @@ As a member of the **Anarukon** race, **Kirin** is completely immortal, and bear
 
 Apart from these abilities, he's also somewhat skilled at hand to hand combat, as a requirement for self-defense against assassins. He also knows full well how to employ various firearms. Nevertheless, magic is where he shines, so these are mostly complementary.
 
-Although **Kirin** has no access to **Hammerspace**, he nevertheless is capable of *"carrying"* a lot of equipment in the *"void"* that he has access to through the unique powers of his **Yanikov** blood. Most items will be put away and brought back from there as needed, although for very quick access, he'd rather have some of them on his body. Therefore, he's got two holsters, for a pistol and a submachine gun, along with slings for carrying two other weapons on his back, all four of these having been personally chosen by him for this journey. In regards to ammunition, he's got some side pouches for quick access to carefully managed magazines and spare rounds. **Saya** is very impressed by his tactical approach, she really couldn't stop fawning over how he looks all suited up for combat. It should also be mentioned that his emperor suit was constructed with armored lining, although it's not enough protection to survive in a serious combat situation.
+Although **Kirin** has no access to **Hammerspace**, he nevertheless is capable of *"carrying"* a lot of equipment in the *"void"* that he has access to through the unique powers of his **Yanikov** blood. Most items will be put away and brought back from there as needed. He's quite skilled as this, so he doesn't even really need to carry anything on him to the field, he can just warp things in and out as needed. **Saya** was honestly impressed by his technique, and also kind of jealous, but still, he couldn't stop fawning over how awesome he looks practically *"invoking"* weapons out of thin air just like that. Oh, and it should also be mentioned that his emperor suit was constructed with armored lining, although it's not enough protection to survive in a serious combat situation.
 
 Should he fall in battle, his body shall scatter in the wind and be reformed in a safer place, together with all his belongings. Such is the blessing of the **Father of Eternity**.
 
@@ -134,7 +134,7 @@ Obviously to aid you in this lone journey, you're going to need some extra help.
 
 *"Hehehe... I love these."*
 
-Each of these regains a bit of health and mana when eaten. Part of his grandmother's seemingly endless supply of sweets. If **Kirin** isn't feeling hungry, he'll save them up for later, eating them one by one by himself when needed. These candies are stored in his pockets, for quick access.
+Each of these regains a bit of health and mana when eaten. Part of his grandmother's seemingly endless supply of sweets. If **Kirin** isn't feeling hungry, he'll save them up for later, eating them one by one by himself when needed. These candies are stored in his pockets, for quicker access.
 
 ### Refreshing Beverage *[Quartz Flask]*
 
