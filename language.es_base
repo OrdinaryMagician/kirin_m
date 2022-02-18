@@ -42,6 +42,7 @@ KIRIN_ASMSUCC = "Has ensamblado la Balista de Distorsión";
 D_KIRINFAST = "Los efectos del Amuleto de Aceleración han expirado.";
 D_KIRINLIGHT = "La Luz de Bolsillo se ha quedado sin batería.";
 D_KIRINMILK = "Los efectos de la leche de Ibuki se han desvanecido.";
+$ifgame(doom) D_KIRINMILK = "Los efectos de la leche de Oni Rojo se han desvanecido.";
 D_KIRINFLIGHT = "El Amuleto Aéreo ha perdido su potencia.";
 KIRIN_TITLEPRESENTSB = "presenta";
 KIRIN_TITLEMODBYA = "un mod de";
@@ -61,13 +62,13 @@ TT_KIRINCQC =
 "\cxRecarga Alternativa:\c- Parar.";
 TT_KIRINPISTOL =
 "Un arma común, pequeña pero potente.\n"
-"8mm Corto, 8+1 balas. Poca reserva de maná.\n"
+"8mm Corto, 8 balas. Poca reserva de maná.\n"
 "\n"
 "\cxFuego Primario:\c- Disparo.\n"
 "\cxFuego Secundario:\c- Sobrecarga de presión.";
 TT_KIRINSMG =
 "Un arma fiel de mercenario.\n"
-"5mm Xei, 20+2 balas. Gran reserva de maná.\n"
+"5mm Xei, 20 balas. Gran reserva de maná.\n"
 "\n"
 "\cxFuego Primario:\c- Disparo entrelazado.\n"
 "\cxFuego Secundario:\c- Modo de disparo dual.";

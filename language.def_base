@@ -47,6 +47,7 @@ KIRIN_ASMSUCC = "You have assembled the Warp Ballista";
 D_KIRINFAST = "The Accelerator Amulet's effects have expired.";
 D_KIRINLIGHT = "The Pocket Light ran out of battery.";
 D_KIRINMILK = "The effects of Ibuki's milk have worn off.";
+$ifgame(doom) D_KIRINMILK = "The effects of the Red Oni milk have worn off.";
 D_KIRINFLIGHT = "The Aerial Amulet ran out of power.";
 KIRIN_TITLEPRESENTSA = "UnSX Team";
 KIRIN_TITLEPRESENTSB = "presents";
@@ -68,13 +69,13 @@ TT_KIRINCQC =
 "\cxAlt Reload:\c- Parry.";
 TT_KIRINPISTOL =
 "A common firearm, small but potent.\n"
-"8mm Short, 8+1 rounds. Small mana pool.\n"
+"8mm Short, 8 rounds. Small mana pool.\n"
 "\n"
 "\cxPrimary Fire:\c- Steady shooting.\n"
 "\cxSecondary Fire:\c- Pressure overcharge.";
 TT_KIRINSMG =
 "A trusty mercenary's sidearm.\n"
-"5mm Xei, 20+2 rounds. Large mana pool.\n"
+"5mm Xei, 20 rounds. Large mana pool.\n"
 "\n"
 "\cxPrimary Fire:\c- Interlaced shooting.\n"
 "\cxSecondary Fire:\c- Dual shot mode.";
