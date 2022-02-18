@@ -3,6 +3,8 @@
 extend Class SWWMHandler
 {
 	transient int WeaponFlash[10];
+	transient int spellchangetic;
+	transient ui int lastspell;
 
 	private ui void ModConsoleProcess( ConsoleEvent e )
 	{
@@ -16,5 +18,36 @@ extend Class SWWMHandler
 			if ( (e.Args[0] < 0) || (e.Args[0] > 9) ) return;
 			WeaponFlash[e.Args[0]] = gametic+25;
 		}
+		else if ( e.Name ~== "kirinspellslot" )
+		{
+			if ( (e.Args[0] < -2) || (e.Args[0] > 4) ) return;
+			let kirin = KirinPlayer(players[e.player].mo);
+			if ( kirin )
+			{
+				if ( e.Args[0] == -2 ) kirin.SpellSel = (kirin.SpellSel>0)?(kirin.SpellSel-1):4;
+				else if ( e.Args[0] == -1 ) kirin.SpellSel = (kirin.SpellSel+1)%5;
+				else kirin.SpellSel = e.Args[0];
+				if ( e.player == consoleplayer )
+					spellchangetic = gametic+1;
+			}
+		}
+	}
+
+	override void UiTick()
+	{
+		if ( gametic != spellchangetic ) return;
+		let kirin = KirinPlayer(players[consoleplayer].mo);
+		if ( !kirin ) return;
+		if ( kirin.SpellSel != lastspell )
+		{
+			let bar = SWWMStatusBar(statusbar);
+			if ( bar )
+			{
+				bar.ntagstr = StringTable.Localize("$T_KIRINSPELL"..(kirin.SpellSel+1));
+				bar.ntagtic = level.totaltime;
+				bar.ntagcol = nametagcolor;
+			}
+		}
+		lastspell = kirin.SpellSel;
 	}
 }

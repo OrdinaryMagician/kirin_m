@@ -6,6 +6,7 @@ KIRIN_SECONDARYFIRE = "Secondary Fire";
 KIRIN_RELOADFIRE = "Reload / Block";
 KIRIN_ZOOMFIRE = "Alt Reload / Parry";
 KIRIN_MELEE = "Quick Kick";
+KIRIN_SPELLCAST = "Cast Spell";
 KIRIN_EXTRAFIRE = "Grenade";
 KIRIN_PHONE = "Phone Menu";
 // skills
@@ -32,6 +33,22 @@ KIRIN_HELP_PAGE1_TXT =
 "And so, having assembled an arsenal of his own, much like those of his faithful fighting companions, he set forth for adventure, with nothing in hand but his wits, his magic, and A GUN.\n"
 "\n"
 "\cgAnd so he who was born under an Innocent Red Star, shall show the vile beasts of this world no mercy.\c-";
+$ifgame(heretic) KIRIN_HELP_PAGE1_TXT =
+"\cg\"Damn, Kirin-kun, you really kicked ass back there. Think you could have another go at it? I promise this time you won't have to deal with any of those puzzles, I swear.\"\c-\n"
+"\n"
+"Very impressed with your results in the world of \cgCronos\c-, \cgSaya\c- and the gang are still not satisfied, they want to witness more action, and to be honest, how could you say no to that when they're all making puppy eyes at you?\n"
+"\n"
+"And so, after a good night's rest and a very filling breakfast, you retrieve your gear and set forth once more, this time to the land of \cgParthoris\c-, where, even a month after the \cgDemolitionist\c-'s rampage, scattered evil still remains to be cleansed.\n"
+"\n"
+"\cgSo it will be, that this Red Emperor will once more do battle with the vile beasts of another world.\c-";
+$ifgame(doom) KIRIN_HELP_PAGE1_TXT =
+"\cg\"Kirinoskai, I'm not sure if you've heard the news yet, but there's serious trouble brewing here on Earth, and boy, we could use an extra helping hand. It's no big deal, really, just a little demonic invasion. If you're not busy, how about you come help? I'll give you some nice guns that you can use.\"\c-\n"
+"\n"
+"Appearing all of a sudden at the palace was your aunt \cgAshley Knox\c-, and those were the words you heard from her mouth. It's definitely a big deal, if the demon armies have set forth to invade the \cgEarth\c-, and you're definitely not going to stand idly and let the world you were born and raised in be ravaged by them.\n"
+"\n"
+"Taking her hand, you cross the portal back to the world of the humans, and witness just how grim the situation truly is. The skies bloody red, as the flames light up the night sky of the city of \cgLondon\c-. Death and destruction in the streets, swarms of beasts laying waste, and people fighting back. Truly, an all-out war has ensued.\n"
+"\n"
+"\cgDetermined to fight alongside the survivors, the young emperor took up his weapons and jumped into the fray. Let the demons rue the day they invaded this world.\c-";
 KIRIN_HELP_PAGE2 = "Who Is Kirin Xanai";
 KIRIN_HELP_PAGE2_TXT =
 "\cgKirin\c- is the only child of \cgFormer Empress Sythana Yanikov\c-, whom he has always admired greatly, wishing to follow in her steps upon growing up. And so he did at the young age of 12, when he took her place as the new \cgEmperor\c- of the communities of \cgAkkou\c-. Loved by his people, whom he faithfully serves as protector and advisor, he is skilled not only in matters of community management, but also in the art of warfare. In the defense of his homeland, he stands at the front of all as a true monarch of the \cgAnarukon\c- people would.\n"
@@ -41,9 +58,23 @@ KIRIN_HELP_PAGE2_TXT =
 "Sure, he's well-trained in hand to hand combat, as well as being an excellent spellsword, but guns? Yeah, he knows how to use a gun. Firearms are pretty much a staple of the modern \cgAnarukon\c- warrior's toolset, after all.\n"
 "\n"
 "And all of this he can do, while being extra handsome to boot.";
+$ifgame(doom) KIRIN_HELP_PAGE2_TXT =
+"\cgKirin\c- is the only child of \cgFormer Empress Sythana Yanikov\c-, whom he has always admired greatly, wishing to follow in her steps upon growing up. And so he did at the young age of 12, when he took her place as the new \cgEmperor\c- of the communities of \cgAkkou\c-. Loved by his people, whom he faithfully serves as protector and advisor, he is skilled not only in matters of community management, but also in the art of warfare. In the defense of his homeland, he stands at the front of all as a true monarch of the \cgAnarukon\c- people would.\n"
+"\n"
+"Sure, he's well-trained in hand to hand combat, as well as being an excellent spellsword, but guns? Yeah, he knows how to use a gun. Firearms are pretty much a staple of the modern \cgAnarukon\c- warrior's toolset, after all.\n"
+"\n"
+"And all of this he can do, while being extra handsome to boot.";
 KIRIN_HELP_PAGE3 = "Emperor's Arsenal (Part 1: Weapons)";
 KIRIN_HELP_PAGE3_TXT =
 "There weren't really many weapons that \cgKirin\c- wanted to have to carry around in the field, so he figured just four of them would do the job. Three of them were his personal picks, while the fourth was a gift from a good friend in his extended family, which unfortunately had to be delivered in separate parts, to be assembled afterwards. This pretty much plays out like typical \cgHexen\c- now, does it?\n"
+"\n"
+"The operation of each is fairly straightforward, with two fire buttons and a reload... Except for two of these weapons, which have an additional secondary reload function. You see, common \cgAnarukon\c- firearms are actually operated by magic, and therefore require their own internal mana pool. Thankfully, refilling these is quite simple as well. As a bonus, as long as you maintain this mana charge, the weapons will be capable of dealing some damage even if they're depleted of ammunition.\n"
+"\n"
+"By the way, due to the general lack of \cgHammerspace\c- in here, you have to do mag management by yourself. There is a dedicated key for this, which allows you to sit down and calmly consolidate all that ammunition in your partially loaded mags. Of course, make sure you are free from any distractions or threats in the process, or you'll make a big mess.\n"
+"\n"
+"Do note that you also start with five spells which you can use at any time, provided you've got the mana to spare. Certainly, there's always enough options available to approach any encounter. Hell, you could even fight with your bare hands if you so desire.";
+$ifgame(doom) KIRIN_HELP_PAGE3_TXT =
+"There weren't really many weapons that \cgKirin\c- wanted to have to carry around in the field, so he figured just four of them would do the job. And it's so that his \"cool aunt\" \cgAshley Knox\c- chose those personally, figuring the best that would suit him in this war.\n"
 "\n"
 "The operation of each is fairly straightforward, with two fire buttons and a reload... Except for two of these weapons, which have an additional secondary reload function. You see, common \cgAnarukon\c- firearms are actually operated by magic, and therefore require their own internal mana pool. Thankfully, refilling these is quite simple as well. As a bonus, as long as you maintain this mana charge, the weapons will be capable of dealing some damage even if they're depleted of ammunition.\n"
 "\n"
@@ -64,6 +95,12 @@ KIRIN_HELP_PAGE5_TXT =
 "For the sake of not \"hoarding\", \cgKirin\c- will only pick up a limited number of powerups at any time, like any other item, leaving what he doesn't need behind.\n"
 "\n"
 "There's not much else to say, really. Like in the other mods, the effects of powerups stack with each use, and their remaining duration is displayed on the HUD.";
+$ifgame(doom) KIRIN_HELP_PAGE5_TXT =
+"Being as resourceful as he is, \cgKirin\c- knows of various divine artifacts he could borrow strength from, and thanks to his connections, he can definitely get his hands on a helpful supply of them. His aunt has also located some very interesting items too. One among them being a peculiar beverage known as \cgRed Oni Milk\c-, which you can't help but find quite tasty, although it also fills your mind with images of that woman too, who one day you hope to meet.\n"
+"\n"
+"For the sake of not \"hoarding\", \cgKirin\c- will only pick up a limited number of powerups at any time, like any other item, leaving what he doesn't need behind.\n"
+"\n"
+"There's not much else to say, really. Like in the other mods, the effects of powerups stack with each use, and their remaining duration is displayed on the HUD.";
 KIRIN_HELP_PAGE6 = "Additional Tips";
 KIRIN_HELP_PAGE6_TXT =
 "\cgKirin\c- has a smartphone. It is very useful in the field. For starters, it can serve as a source of light that, while not being as strong as a flashlight, still helps. It's also of course handy for information. You can track your progress easily, keeping notes on locked doors and other contraptions and memorizing the locations of items in the map so you can look them up later if you want to resupply.\n"
@@ -71,3 +108,9 @@ KIRIN_HELP_PAGE6_TXT =
 "Yeah, you won't get lost as much with that power at your fingertips. It's also a good thing that, being such a fine work of \cgNukuri\c- technology, the battery lasts really damn long. But don't worry, if you somehow manage to drain it, it can just be recharged anyway. Not that you'd ever see this feature in action unless you somehow spend 5 real-time days in the same campaign...\n"
 "\n"
 "So, anything else? Well, I suppose there's the fact \cgKirin\c- is completely immortal. Get your ass kicked hard, and your body will turn to dust and regenerate from scratch at a safe point. Sounds familiar, doesn't it? Yeah, \cgSaya\c- thought so too.";
+$ifgame(doom) KIRIN_HELP_PAGE6_TXT =
+"\cgKirin\c- has a smartphone. It is very useful in the field. For starters, it can serve as a source of light that, while not being as strong as a flashlight, still helps. It's also of course handy for information. You can track your progress easily, keeping notes on locked doors and other contraptions and memorizing the locations of items in the map so you can look them up later if you want to resupply.\n"
+"\n"
+"Yeah, you won't get lost as much with that power at your fingertips. It's also a good thing that, being such a fine work of \cgNukuri\c- technology, the battery lasts really damn long. But don't worry, if you somehow manage to drain it, it can just be recharged anyway. Not that you'd ever see this feature in action unless you somehow spend 5 real-time days in the same campaign...\n"
+"\n"
+"So, anything else? Well, I suppose there's the fact \cgKirin\c- is completely immortal. Get your ass kicked hard, and your body will turn to dust and regenerate from scratch at a safe point. Sounds familiar, doesn't it?";

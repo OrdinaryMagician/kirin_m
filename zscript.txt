@@ -47,6 +47,8 @@ const SWWMMAXVIPAMOUNT = 1;
 #include "zscript/menu/swwm_credits.zsc"
 // compat code
 #include "zscript/compat/swwm_compat.zsc"
+#include "zscript/compat/swwm_shame.zsc"
+#include "zscript/compat/swwm_hdoom.zsc"
 // hud
 #include "zscript/hud/swwm_hud.zsc"
 #include "zscript/hud/swwm_hudextra.zsc"
@@ -57,6 +59,8 @@ const SWWMMAXVIPAMOUNT = 1;
 #include "zscript/items/swwm_baseammo.zsc"
 #include "zscript/items/swwm_keys.zsc"
 #include "zscript/items/swwm_angerysigil.zsc"
+#include "zscript/items/swwm_ebarrier.zsc"
+#include "zscript/items/swwm_omnisight.zsc"
 #include "zscript/items/swwm_safetytether.zsc"
 // weapons
 #include "zscript/weapons/swwm_baseweapon.zsc"
@@ -97,6 +101,8 @@ const SWWMMAXVIPAMOUNT = 1;
 #include "zscript/weapons/kirin_shotgun_fx.zsc"
 #include "zscript/weapons/kirin_ballista.zsc"
 #include "zscript/weapons/kirin_ballista_fx.zsc"
+#include "zscript/weapons/kirin_rifle.zsc"
+#include "zscript/weapons/kirin_rifle_fx.zsc"
 #include "zscript/weapons/kirin_heart.zsc"
 #include "zscript/weapons/kirin_heart_fx.zsc"
 #include "zscript/weapons/kirin_flame.zsc"

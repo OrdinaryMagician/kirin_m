@@ -12,11 +12,13 @@ I_KIRINBALLISTA = "Unissix Crafts Warp Ballista";
 T_KIRINBALLISTA1 = "Warp Ballista Grip";
 T_KIRINBALLISTA2 = "Warp Ballista Receiver";
 T_KIRINBALLISTA3 = "Warp Ballista Barrel";
-T_KIRINHEART = "Flame of the Heart";
-T_KIRINFLAME = "Ember Flash";
-T_KIRINFROST = "Cryotic Blast";
-T_KIRINLIGHTNING = "Great Discharge";
-T_KIRINGAP = "Boundary Break";
+T_KIRINSNIPER = "M84 Patriarch";
+I_KIRINSNIPER = "Garrett M84 Patriarch";
+T_KIRINSPELL1 = "Flame of the Heart";
+T_KIRINSPELL2 = "Ember Flash";
+T_KIRINSPELL3 = "Cryotic Blast";
+T_KIRINSPELL4 = "Great Discharge";
+T_KIRINSPELL5 = "Boundary Break";
 T_KIRINMAG = "Mag Management";
 T_KIRINBEAN = "Candy Bean";
 T_KIRINDRINK = "Refreshing Beverage";
@@ -27,8 +29,9 @@ T_KIRINRINGS = "Ring Set";
 T_KIRINMILK = "Red Oni Milk";
 T_KIRINPISTOLAMMO = "8mm Short";
 T_KIRINSMGAMMO = "5mm Xei";
-T_KIRINSHOTGUNAMMO = "10mm Frag";
+T_KIRINSHOTGUNAMMO = "20mm Frag";
 T_KIRINBALLISTAAMMO = "50mm HEAP";
+T_KIRINSNIPERAMMO = ".50 OMG";
 T_KIRINBOMB = "Small Bomb";
 T_KIRINBOMBS = "Small Bombs";
 T_KIRINFAST = "Accelerator Amulet";
@@ -77,38 +80,19 @@ TT_KIRINSMG =
 "\cxSecondary Fire:\c- Dual shot mode.";
 TT_KIRINSHOTGUN =
 "A fine boomstick for the gun-toting pyromancer.\n"
-"10mm Frag, two shots. No mana required.\n"
+"20mm Frag, two shots. No mana required.\n"
 "\n"
 "\cxPrimary Fire:\c- Shoot each barrel.\n"
 "\cxSecondary Fire:\c- Boost loaded shells.";
 TT_KIRINBALLISTA =
 "Faster than light impalement action.\n"
-"50mm HEAP, one shot. No mana requred.\n"
+"50mm HEAP, one shot. No mana required.\n"
 "\n"
 "\cxPrimary Fire:\c- Piercing shot.\n"
 "\cxSecondary Fire:\c- Explosive shot.";
-TT_KIRINHEART =
-"A popular healing spell for couples.\n"
+TT_KIRINSNIPER =
+"A most mighty anti-materiel rifle.\n"
+".50 OMG, 12+1 rounds. No mana required.\n"
 "\n"
-"\cxPrimary Fire:\c- Steady self-heal.\n"
-"\cxSecondary Fire:\c- Stationary heal aura.";
-TT_KIRINFLAME =
-"A fairly common pyromantic spell.\n"
-"\n"
-"\cxPrimary Fire:\c- Left-handed cast.\n"
-"\cxSecondary Fire:\c- Right-handed cast.";
-TT_KIRINFROST =
-"A quite typical cryomantic spell.\n"
-"\n"
-"\cxPrimary Fire:\c- Left-handed cast.\n"
-"\cxSecondary Fire:\c- Right-handed cast.";
-TT_KIRINLIGHTNING =
-"A hair-raisingly potent electromantic spell.\n"
-"\n"
-"\cxPrimary Fire:\c- Manual blast.\n"
-"\cxSecondary Fire:\c- Ball lightning.";
-TT_KIRINGAP =
-"The key to the power of the Yanikov bloodline.\n"
-"\n"
-"\cxPrimary Fire:\c- Direct warp.\n"
-"\cxSecondary Fire:\c- Hold to visualize destination.";
+"\cxPrimary Fire:\c- Steady shooting.\n"
+"\cxSecondary Fire:\c- Scoped aiming.";

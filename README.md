@@ -82,9 +82,19 @@ Primary fire will deploy the payload, piercing through any small targets in its 
 
 Ammunition for this weapon can be found sometimes scattered throughout the world, but it's fairly rare compared to that of the other three. Part of the challenge, perhaps. **Kirin** can only carry six rounds for this, due to their size. The weapon itself can hold one in the chamber, adding up to a total of seven shots.
 
+### Slot 5 - Garrett M84 "Patriarch" Anti-Materiel Rifle
+
+*"I promise I shall make good use of it, aunt Axaleyu."*
+
+Replacing the **Warp Ballista** when playing **Doom** *(strictly for lore reasons)*, this is one mighty .50 OMG rifle, tweaked personally by **Ashley Knox** for left-handed use.
+
+Primary fire of course will shoot, with some rather impressive piercing potential, even through walls. Most small targets are guaranteed to explode into chunky bits from this. Do also note that .50 OMG kicks like an enraged mule on steroids, so you'll feel the kickback, oh you sure will. Secondary fire allows you to aim through the scope, for long-distance shooting.
+
+Ammunition for the weapon is generally scarce. You can carry 2 spare mags, each holding 12 rounds.
+
 ## Spellcasting
 
-Of course, **Kirin** knows a wide range of spells that he can make use of at his leisure, should he possess the mana to spare. All of these require only the primary and secondary fire buttons to be used, so their operation is much easier.
+Of course, **Kirin** knows a wide range of spells that he can make use of at his leisure, should he possess the mana to spare. All of these require only one cast button so their operation is much easier.
 
 ### Slot 6 - Flame of the Heart
 
@@ -92,7 +102,7 @@ Of course, **Kirin** knows a wide range of spells that he can make use of at his
 
 The spell that **Kirin** had learned to impress **Saya** and the girls back when they were first dating. It's proven to be very effective at healing, as well as having a relaxing warmth to it.
 
-Primary fire can be held to cast it within your hands, while secondary fire will instead consume a sizable amount of mana to cast it in the air, as a temporary area of effect heal, allowing you to heal up while having your hands free for handling weapons, or other spells.
+Upon casting, a heart of flame will be summoned in mid-air, which will act as a temporary area of effect heal, allowing you to recover hp while having your hands free for handling weapons, or other spells.
 
 ### Slot 7 - Ember Flash
 
@@ -100,15 +110,11 @@ Primary fire can be held to cast it within your hands, while secondary fire will
 
 A fundamental pyromantic spell, and one that **Kirin** apparently uses very often. Release a burst of flame from your hands, with a lot of kinetic force behind it *(so it can push enemies back)*.
 
-Primary fire shoots out from the left hand, while secondary fire shoots from the right hand.
-
 ### Slot 8 - Cryotic Blast
 
 *"Make of the cold your ally..."*
 
 The cryomantic equivalent of the previous spell, also very commonly used. Releases a burst of gelid air from your hands. Both of these spells get a lot of use in pretty mundane tasks, so practically everyone knows how to use them.
-
-Both fire buttons do what you'd expect.
 
 ### Slot 9 - Great Discharge
 
@@ -116,15 +122,13 @@ Both fire buttons do what you'd expect.
 
 A burst of lightning from your own hands. Can easily stagger enemies while dealing damage over a short period of time. It's proven to be very lethal for anything that's making contact with water (including yourself, so be careful).
 
-Primary fire shoots a straight blast from your hand, while secondary fire charges up a ball lightning that will discharge at its point of impact.
-
 ### Slot 0 - Boundary Break
 
 *"The key to the power of the Yanikov bloodline..."*
 
 A staple of the **Yanikov** family that not many can fully master. Tears open a gap through space-time connecting to a distant spot, allowing you to transport there almost instantly. **Kirin** generally doesn't use it outside of emergencies, as he considers it *"slothful"* to avoid walking by simply tearing through space.
 
-Secondary fire can be held to set up the destination spot. Tapping primary fire will then send you there in an instant. Do note that if you simply tap primary fire by itself, you won't be able to guess exactly where you may land, but it can still be useful to do quick dashes to flee the enemy.
+Holding the cast button allows you to *"preview"* the warp destination, and releasing it sends you there in an instant. Do note that if you simply do a quick tap, you won't be able to guess exactly where you may land, but it can still be useful to do quick dashes to flee the enemy.
 
 ## Items
 
@@ -146,7 +150,7 @@ A popular, sugar-rich drink used mainly by **Anarukon** athletes. Regains some h
 
 *"A scent so familiar... A taste so delicious..."*
 
-A refreshing bottle of sweet tea with a pungent odor, made from iron-rich **Akashna** blood. Greatly boosts regeneration upon consumption, though its full effects fade after a while. Alerts enemies when opened.
+A refreshing bottle of sweet tea with a pungent odor, made from iron-rich **Akashna** blood. Overheals you and greatly boosts regeneration upon consumption, though its full effects fade after a while. Alerts enemies when opened.
 
 ### Mana Stimulant *[Mystic Ambit Incant]*
 
@@ -176,19 +180,25 @@ A flask of **Ibuki**'s own fresh milk. So nutritious it can boost one's defenses
 
 *"Made for murder... To rend flesh and bone..."*
 
-Found in pairs of 2 rounds. **Kirin** will skillfully load them into his reserve mags as he picks them up, and leave any excess behind.
+Found in pairs of 2 rounds. **Kirin** will skillfully load them into his reserve mags as he picks them up, and leave any excess behind. Pickup amounts for non-Hexen IWADs may vary.
 
 ### 5mm Xei *[Blue Mana]*
 
 *"Made for submission... To shed the blood..."*
 
-Found in bunches of 5 rounds. Likewise, these will be jammed into reserve mags as they're collected, and excess rounds will be left behind.
+Found in bunches of 5 rounds. Likewise, these will be jammed into reserve mags as they're collected, and excess rounds will be left behind. Pickup amounts for non-Hexen IWADs may vary.
 
-### 10mm Frag *[Green Mana]*
+### 20mm Frag *[Green Mana]*
 
 *"To weaponize pyromancy in this fashion... Such is warfare."*
 
-Found as single rounds.
+Found as single rounds. Pickup amounts for non-Hexen IWADs may vary.
+
+### .50 OMG *[Cells]*
+
+*"Such awe over its strength was enough to earn its name..."*
+
+Found as single rounds or pairs/trios *(when replacing Cell Packs)*.
 
 ### Assorted Ammo *[Combined Mana]*
 
@@ -279,7 +289,11 @@ BTW if you're curious, that phone background is his favorite anime character.
 
 ## Compatibility
 
-I'm afraid this mod will be **Hexen**-only, for story reasons. It should be compatible with a wide variety of custom mapsets, too, as long as they don't introduce new weapons (which will kinda throw off things).
+~~I'm afraid this mod will be **Hexen**-only, for story reasons.~~ It should be compatible with a wide variety of custom mapsets, too, as long as they don't introduce new weapons (which will kinda throw off things).
+
+On second thought, maybe **Doom**/**Heretic** compatibility can be added. Some people just don't like playing **Hexen**, and that is perfectly understandable. At first I thought this would be *"anachronistic"* lore-wise, but nobody said **Kirin** couldn't have taken part in fighting against the Demon Invasion of 2148. Maybe his aunt asked him to come help, perhaps?
+
+Nevertheless, **Hexen** compat will be the first priority, and everything else will come after.
 
 ---
 

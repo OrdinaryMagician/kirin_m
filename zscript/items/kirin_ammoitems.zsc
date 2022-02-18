@@ -176,6 +176,24 @@ Class KirinBallistaAmmo : SWWMAmmo
 	}
 }
 
+// OH EM GEE
+Class KirinSniperAmmo : SWWMAmmo
+{
+	const MAGCOUNT = 2;
+	const MAGAMOUNT = 12;
+	mixin KirinMagSplitAmmo;
+
+	Default
+	{
+		Tag "$T_KIRINSNIPERAMMO";
+		Inventory.PickupMessage "$T_KIRINSNIPERAMMO";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 24;
+		+INVENTORY.UNTOSSABLE;
+		+SWWMAMMO.USEPICKUPMSG;
+	}
+}
+
 // small bombs™
 Class KirinBombAmmo : SWWMAmmo
 {

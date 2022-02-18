@@ -12,11 +12,13 @@ I_KIRINBALLISTA = "Balista de Distorsión de Artesanía Unissix";
 T_KIRINBALLISTA1 = "Mango de Balista de Distorsión";
 T_KIRINBALLISTA2 = "Cuerpo de Balista de Distorsión";
 T_KIRINBALLISTA3 = "Cañón de Balista de Distorsión";
-T_KIRINHEART = "Llama del Corazón";
-T_KIRINFLAME = "Estallido de Ascuas";
-T_KIRINFROST = "Estallido Gélido";
-T_KIRINLIGHTNING = "Gran Descarga";
-T_KIRINGAP = "Rotura de Frontera";
+T_KIRINSNIPER = "M84 Patriarca";
+I_KIRINSNIPER = "Garrett M84 Patriarca";
+T_KIRINSPELL1 = "Llama del Corazón";
+T_KIRINSPELL2 = "Estallido de Ascuas";
+T_KIRINSPELL3 = "Estallido Gélido";
+T_KIRINSPELL4 = "Gran Descarga";
+T_KIRINSPELL5 = "Rotura de Frontera";
 T_KIRINMAG = "Manejo de Cargador";
 T_KIRINBEAN = "Haba de Caramelo";
 T_KIRINDRINK = "Bebida Refrescante";
@@ -71,7 +73,7 @@ TT_KIRINSMG =
 "\cxFuego Secundario:\c- Modo de disparo dual.";
 TT_KIRINSHOTGUN =
 "Una buena escopeta para el piromante pistolero.\n"
-"10mm Frag, dos disparos. No requiere maná.\n"
+"20mm Frag, dos disparos. No requiere maná.\n"
 "\n"
 "\cxFuego Primario:\c- Dispara cada cañón.\n"
 "\cxFuego Secundario:\c- Potencia los cartuchos cargados.";
@@ -81,28 +83,9 @@ TT_KIRINBALLISTA =
 "\n"
 "\cxFuego Primario:\c- Disparo perforador.\n"
 "\cxFuego Secundario:\c- Disparo explosivo.";
-TT_KIRINHEART =
-"Un popular hechizo para parejas.\n"
+TT_KIRINSNIPER =
+"Un muy potente rifle anti-material.\n"
+".50 OMG, 12+1 balas. No requiere maná.\n"
 "\n"
-"\cxFuego Primario:\c- Curación continuada.\n"
-"\cxFuego Secundario:\c- Aura de curación estática.";
-TT_KIRINFLAME =
-"Un hechizo de piromancia común.\n"
-"\n"
-"\cxFuego Primario:\c- Invocación a mano izquierda.\n"
-"\cxSecondary Fire:\c- Invocación a mano derecha.";
-TT_KIRINFROST =
-"Un típico hechizo de criomancia.\n"
-"\n"
-"\cxFuego Primario:\c- Invocación a mano izquierda.\n"
-"\cxSecondary Fire:\c- Invocación a mano derecha.";
-TT_KIRINLIGHTNING =
-"Un espeluznantemente potente hechizo electromántico.\n"
-"\n"
-"\cxFuego Primario:\c- Estallido manual.\n"
-"\cxFuego Secundario:\c- Orbe de rayos.";
-TT_KIRINGAP =
-"La clave del poder del linaje Yanikov.\n"
-"\n"
-"\cxFuego Primario:\c- Transporte directo.\n"
-"\cxFuego Secundario:\c- Mantén para visualizar destino.";
+"\cxFuego Primario:\c- Disparo.\n"
+"\cxFuego Secundario:\c- Apuntado por mira.";

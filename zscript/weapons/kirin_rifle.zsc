@@ -1,0 +1,5 @@
+// It's a goddamn anti-materiel rifle
+
+Class KirinSniperRifle : SWWMWeapon
+{
+}
