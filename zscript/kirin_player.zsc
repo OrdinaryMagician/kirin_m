@@ -9,7 +9,7 @@ Class KirinPlayer : SWWMPlayer
 		Tag "$T_KIRIN";
 		Speed 1;
 		Radius 16;
-		Height 56;
+		Height 53;
 		Mass 60;
 		PainChance 255;
 		Health 100;
@@ -19,8 +19,10 @@ Class KirinPlayer : SWWMPlayer
 		Player.StartItem "KirinUnarmed";
 		Player.StartItem "KirinMana", 100;
 		Player.StartItem "KirinInternalArmor";
-		Player.ViewHeight 52;
+		Player.AttackZOffset 10;
+		Player.ViewHeight 49;
 		Player.AirCapacity 0;
+		Player.GruntSpeed 20;
 		Player.ForwardMove 1., 1.;
 		Player.SideMove 1., 1.;
 		Player.SoundClass "kirin";

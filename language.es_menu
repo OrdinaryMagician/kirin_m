@@ -6,7 +6,10 @@ KIRIN_SECONDARYFIRE = "Fuego Secundario";
 KIRIN_RELOADFIRE = "Recarga / Bloqueo";
 KIRIN_ZOOMFIRE = "Recarga Alternativa / Parada";
 KIRIN_MELEE = "Patada Rápida";
+KIRIN_SPELLCAST = "Invocar Hechizo";
 KIRIN_EXTRAFIRE = "Granada";
+KIRIN_SPELLPREV = "Hechizo Anterior";
+KIRIN_SPELLNEXT = "Hechizo Siguiente";
 KIRIN_PHONE = "Menú de Teléfono";
 // skills
 KIRIN_SKCHILL="\cjEstrella Blanca\c-";
@@ -14,36 +17,69 @@ KIRIN_SKEASY="\cfEstrella Amarilla\c-";
 KIRIN_SKNORMAL="\ciEstrella Naranja\c-";
 KIRIN_SKHARD="\crEstrella Roja\c-";
 KIRIN_SKHARDCORE="\cmEstrella Negra\c-";
-KIRIN_SKHARDCORECONFIRM="\cm¿Seguro que quieres hacer eso?\nPuede que te pateen el culo.\c-\n\n\cgMonstruos rápidos\n1.5x salud y daño de monstruos\n25% de agresividad extra\nTrucos deshabilitados\nMonstruos de cooperativo\c-\n\n(Pulsa Y para un desafío)";
+KIRIN_SKHARDCORECONFIRM="\cm¿Seguro que quieres hacer eso?\nPuede que te pateen el culo.\c-\n\n\cxMonstruos rápidos\n1.5x salud y daño de monstruos\n25% de agresividad extra\nTrucos deshabilitados\nMonstruos de cooperativo\c-\n\n(Pulsa Y para un desafío)";
+KIRIN_SKLUNATIC="\ctEstrella Nula\c-";
+KIRIN_SKLUNATICCONFIRM="\ctCiertamente deseas morir.\nElige esta dificultad si te atreves.\c-\n\n\cxTodos los cambios de Estrella Negra\n+\nDoble velocidad de enemigos\nProyectiles enemigos duplicados\nPueden aparecer enemigos extra\nReflejos instantáneos de enemigo\nLos enemigos no se estremecen\nLos enemigos no pelean entre si\c-\n\n(Pulsa Y para morir al instante)";
 // mod menu
 KIRIN_MTITLE = "Opciones de RED STAR OF INNOCENCE";
 KIRIN_MCREDS = "Créditos de RED STAR OF INNOCENCE Credits";
 // Help menu
 KIRIN_HELP_PAGE1 = "La Historia Hasta Ahora";
 KIRIN_HELP_PAGE1_TXT =
-"\cg\"Oye, Kirin-kun, tengo curiosidad por verte pelear. Ya que Demo-chan ha hecho su parte del trabajo, ¿te gustaría probar a ti también?\"\c-\n"
+"\cx\"Oye, Kirin-kun, tengo curiosidad por verte pelear. Ya que Demo-chan ha hecho su parte del trabajo, ¿te gustaría probar a ti también?\"\c-\n"
 "\n"
-"Esas fueron las palabras de \cgSaya Miyamoto\c-, pidiendo a su marido recien casado, el \cgEmperador Kirin Xanai\c-, que hiciese una demostración práctica de su habilidad de combate. Aun así, a pesar de su anterior promesa de que nunca pisaría el mundo de \cgCronos\c-, habiendo sido testigo de sus horrores infestados de puzzles, tuvo que ceder, por su amada. La forma en la que lo miraba, suplicante, era imposible negarse. Incluso la propia \cgDemolicionista\c- e \cgIbuki\c- se le unieron, ¡era un ataque invencible a tres bandas!\n"
+"Esas fueron las palabras de \cxSaya Miyamoto\c-, pidiendo a su marido recien casado, el \cxEmperador Kirin Xanai\c-, que hiciese una demostración práctica de su habilidad de combate. Aun así, a pesar de su anterior promesa de que nunca pisaría el mundo de \cxCronos\c-, habiendo sido testigo de sus horrores infestados de puzzles, tuvo que ceder, por su amada. La forma en la que lo miraba, suplicante, era imposible negarse. Incluso la propia \cxDemolicionista\c- e \cxIbuki\c- se le unieron, ¡era un ataque invencible a tres bandas!\n"
 "\n"
 "Y así, habiendo ensamblado un arsenal propio, al igual que sus fieles compañeras luchadoras, se puso en marcha a la aventura, con nada más a mano que su destreza, si magia, y UN ARMA.\n"
 "\n"
-"\cgY entonces, aquel nacido bajo una Inocente Estrella Roja, mostrará clemencia ninguna contra las viles bestias de este mundo.\c-";
+"\cxY entonces, aquel nacido bajo una Inocente Estrella Roja, mostrará clemencia ninguna contra las viles bestias de este mundo.\c-";
+$ifgame(heretic) KIRIN_HELP_PAGE1_TXT =
+"\cx\"Bueno, Kirin-kun, vaya si les has dado caña ahí fuera. ¿Crees que puedes echarle otra vuelta? Te prometo que esta vez no tendrás que liarte con puzzles de esos, lo juro.\"\c-\n"
+"\n"
+"Muy impresionadas con tus resultados en el mundo de \cxCronos\c-, \cxSaya\c- y su pandilla aun no están satisfechas, quieren ver más acción, y sinceramente, ¿como puedes decirles que no cuando te miran así?\n"
+"\n"
+"Y así, tras una buena noche de descanso y un muy sólido desayuno, recoges tus cosas y te adentras de nuevo, esta vez en la tierra de \cxParthoris\c-, en la cual, incluso un mes tras la masacre de la \cxDemolicionista\c-, aun reina el mal, que aun disperso, debe ser eliminado.\n"
+"\n"
+"\cxEs así entonces, que este Emperador Rojo una vez más entrará en batalla contra las viles bestias de otro mundo.\c-";
+$ifgame(doom) KIRIN_HELP_PAGE1_TXT =
+"\cx\"Kirinoskai, no sé si te has enterado de las noticias ya, pero se vienen problemas muy serios aquí en la Tierra, y chico, casi que nos vendría bien un poco de ayuda extra. Tampoco es mucho, realmente, solo una pequeña invasión demoníaca. Si no estas ocupado, ¿que tal si vienes a ayudar? Te prestaré unas bonitas armas que puedes usar.\"\c-\n"
+"\n"
+"Apareciendo de repente en el palacio estaba tu tía \cxAshley Knox\c-, y esas fueron las palabras que escuchaste de su boca. Definitivamente parece serio, el que los ejércitos demoníacos hayan decidido invadir la \cxTierra\c-, y por supuesto no te vas a quedar de brazos cruzados y dejar que destruyan el mundo que te vio nacer y crecer.\n"
+"\n"
+"Tomando su mano, cruzas el portal de vuelta al mundo de los humanos, siendo testigo entonces de la gravedad de la situación. El cielo teñido de un rojo sangriento, las llamas iluminando la noche \cxLondinense\c-. Muerte y la destrucción por las calles, enjambres de bestias arrasando con todo, y gente luchando. Un verdadero escenario de guerra se ha desencadenado.\n"
+"\n"
+"\cxDeterminado a luchar junto a los supervivientes, el joven emperador tomó sus armas y saltó a la refriega. Que los demonios lamenten el día que han decidido invadir este mundo.\c-";
 KIRIN_HELP_PAGE2 = "Quien Es Kirin Xanai";
 KIRIN_HELP_PAGE2_TXT =
-"\cgKirin\c- es el hijo único de la \cgEmperadora Emérita Sythana Yanikov\c-, la cual siempre ha admirado, deseando seguir sus pasos al crecer. Y así fue a la temprana edad de 12 años, cuando la relevó de su puesto como nuevo \cgEmperador\c- de las comunidades de \cgAkkou\c-. Amado por su gente, a la cual sirve fielmente como protector y consejero, es hábil no solo en temas de manejo de comunidad, si no también en el arte de la guerra. A la defensa de su tierra natal, permanece al frente de todo como debe un verdadero monarca de los \cgAnarukon\c-.\n"
+"\cxKirin\c- es el hijo único de la \cxEmperadora Emérita Sythana Yanikov\c-, la cual siempre ha admirado, deseando seguir sus pasos al crecer. Y así fue a la temprana edad de 12 años, cuando la relevó de su puesto como nuevo \cxEmperador\c- de las comunidades de \cxAkkou\c-. Amado por su gente, a la cual sirve fielmente como protector y consejero, es hábil no solo en temas de manejo de comunidad, si no también en el arte de la guerra. A la defensa de su tierra natal, permanece al frente de todo como debe un verdadero monarca de los \cxAnarukon\c-.\n"
 "\n"
 "Y ahora, está casado con un puñado de locos, de los cuales tres están totalmente obsesionadas con armas y explosiones y que más será. Y no podría sentirse más feliz, por supuesto.\n"
 "\n"
-"Cierto, ha sido bien entrenado en el combate cuerpo a cuerpo, y también en magia y espadas, pero ¿armas de fuego? Sí, sabe como usar una. Las armas de fuego son también parte esencial del inventario de un guerrero \cgAnarukon\c-, al fin y al cabo.\n"
+"Cierto, ha sido bien entrenado en el combate cuerpo a cuerpo, y también en magia y espadas, pero ¿armas de fuego? Sí, sabe como usar una. Las armas de fuego son también parte esencial del inventario de un guerrero \cxAnarukon\c-, al fin y al cabo.\n"
+"\n"
+"Y todo esto que puede hacer, lo hace manteniendo una belleza impecable.";
+$ifgame(doom) KIRIN_HELP_PAGE2_TXT =
+"\cxKirin\c- es el hijo único de la \cxEmperadora Emérita Sythana Yanikov\c-, la cual siempre ha admirado, deseando seguir sus pasos al crecer. Y así fue a la temprana edad de 12 años, cuando la relevó de su puesto como nuevo \cxEmperador\c- de las comunidades de \cxAkkou\c-. Amado por su gente, a la cual sirve fielmente como protector y consejero, es hábil no solo en temas de manejo de comunidad, si no también en el arte de la guerra. A la defensa de su tierra natal, permanece al frente de todo como debe un verdadero monarca de los \cxAnarukon\c-.\n"
+"\n"
+"Cierto, ha sido bien entrenado en el combate cuerpo a cuerpo, y también en magia y espadas, pero ¿armas de fuego? Sí, sabe como usar una. Las armas de fuego son también parte esencial del inventario de un guerrero \cxAnarukon\c-, al fin y al cabo.\n"
 "\n"
 "Y todo esto que puede hacer, lo hace manteniendo una belleza impecable.";
 KIRIN_HELP_PAGE3 = "Arsenal del Emperador (Parte 1: Armas)";
 KIRIN_HELP_PAGE3_TXT =
-"No había muchas armas que \cgKirin\c- quisiera llevar encima, así que supuso que solo con cuatro sería suficiente. Tres de ellas fueron su elección personal, mientras que la cuarta fue un regalo de una buena amiga en su familia, la cual desafortunadamente tuvo que ser enviada en partes, para ser ensamblada luego. Esto ciertamente pinta como lo típico de \cgHexen\c-, ¿verdad?\n"
+"No había muchas armas que \cxKirin\c- quisiera llevar encima, así que supuso que solo con cuatro sería suficiente. Tres de ellas fueron su elección personal, mientras que la cuarta fue un regalo de una buena amiga en su familia, la cual desafortunadamente tuvo que ser enviada en partes, para ser ensamblada luego. Esto ciertamente pinta como lo típico de \cxHexen\c-, ¿verdad?\n"
 "\n"
-"La operación de cada una es bastante simple, con dos botones de disparo y una recarga... Excepto para dos de estas armas, las cuales tienen una recarga secundaria adicional. Verás, las típicas armas de fuego \cgAnarukon\c- funcionan mediante magia, y por lo tanto requieren su propia reserva interna de maná. Afortunadamente, reabastecerla es bastante simple también. Y ya de paso, mientras mantengas esa carga de maná, las armas pueden incluso hacer daño aunque no estén cargadas con munición.\n"
+"La operación de cada una es bastante simple, con dos botones de disparo y una recarga... Excepto para dos de estas armas, las cuales tienen una recarga secundaria adicional. Verás, las típicas armas de fuego \cxAnarukon\c- funcionan mediante magia, y por lo tanto requieren su propia reserva interna de maná. Afortunadamente, reabastecerla es bastante simple también. Y ya de paso, mientras mantengas esa carga de maná, las armas pueden incluso hacer daño aunque no estén cargadas con munición.\n"
 "\n"
-"Por cierto, dada la falta general de \cgHammerspace\c- por aquí, tendrás que manejar tus propios cargadores. Hay una tecla dedicada para esto, la cual te permite tomar un respiro y consolidar la munición en tus cargadores relajadamente. Por supuesto, asegúrate de que no haya distracciones o amenazas en el proceso, o la liarás bien.\n"
+"Por cierto, dada la falta general de \cxHammerspace\c- por aquí, tendrás que manejar tus propios cargadores. Hay una tecla dedicada para esto, la cual te permite tomar un respiro y consolidar la munición en tus cargadores relajadamente. Por supuesto, asegúrate de que no haya distracciones o amenazas en el proceso, o la liarás bien.\n"
+"\n"
+"Ten en cuenta que comienzas también con cuatro hechizos que puedes usar en cualquier momento, siempre que tengas maná de sobra. Ciertamente, hay siempre opciones disponibles para manejar cada batalla. Vamos, si hasta podrías pelear con tus propias manos si quisieras.";
+$ifgame(doom) KIRIN_HELP_PAGE3_TXT =
+"There weren't really many weapons that \cxKirin\c- wanted to have to carry around in the field, so he figured just four of them would do the job. And it's so that his \"cool aunt\" \cxAshley Knox\c- chose those personally, figuring the best that would suit him in this war.\n"
+"No había muchas armas que \cxKirin\c- quisiera llevar encima, así que supuso que solo con cuatro sería suficiente. Y es entonces que su \"tía guay\" \cxAshley Knox\c- las eligió personalmente, escogiendo las que mejor le vendrían en esta guerra.\n"
+"\n"
+"La operación de cada una es bastante simple, con dos botones de disparo y una recarga... Excepto para dos de estas armas, las cuales tienen una recarga secundaria adicional. Verás, las típicas armas de fuego \cxAnarukon\c- funcionan mediante magia, y por lo tanto requieren su propia reserva interna de maná. Afortunadamente, reabastecerla es bastante simple también. Y ya de paso, mientras mantengas esa carga de maná, las armas pueden incluso hacer daño aunque no estén cargadas con munición.\n"
+"\n"
+"Por cierto, dada la falta general de \cxHammerspace\c- por aquí, tendrás que manejar tus propios cargadores. Hay una tecla dedicada para esto, la cual te permite tomar un respiro y consolidar la munición en tus cargadores relajadamente. Por supuesto, asegúrate de que no haya distracciones o amenazas en el proceso, o la liarás bien.\n"
 "\n"
 "Ten en cuenta que comienzas también con cuatro hechizos que puedes usar en cualquier momento, siempre que tengas maná de sobra. Ciertamente, hay siempre opciones disponibles para manejar cada batalla. Vamos, si hasta podrías pelear con tus propias manos si quisieras.";
 KIRIN_HELP_PAGE4 = "Arsenal del Emperador (Parte 2: Ítems)";
@@ -52,18 +88,31 @@ KIRIN_HELP_PAGE4_TXT =
 "\n"
 "¿Y la armadura? ¿Algo pesado que ponerse encima? Pues no, no realmente, en su lugar encontrarás a menudo anillos protectores, con efectos acumulativos. Hasta ocho puedes llevar a la vez, consiguiendo una absorción casi completa de daños. Conveniente ¿verdad?\n"
 "\n"
-"También podrás encontrar otras buenas cosas no listadas aquí. Las cuales tendrás bien guardadas en tus bolsillos o en... Algún lugar. \cgKirin\c- no necesita \cgHammerspace\c-, realmente, tiene sus propios métodos mágicos para guardar cosas, por cortesía de su linaje.";
+"También podrás encontrar otras buenas cosas no listadas aquí. Las cuales tendrás bien guardadas en tus bolsillos o en... Algún lugar. \cxKirin\c- no necesita \cxHammerspace\c-, realmente, tiene sus propios métodos mágicos para guardar cosas, por cortesía de su linaje.";
 KIRIN_HELP_PAGE5 = "Arsenal del Emperador (Parte 3: Potenciadores)";
 KIRIN_HELP_PAGE5_TXT =
-"Siendo tan ingenioso como es, \cgKirin\c- conoce varios artefactos divinos de los que beneficiarse, y gracias a sus conexiones, puede ciertamente abastecerse a gusto de ellos. También tiene a sus amadas esposas de las que recibir regalos, por supuesto. ¿Y que mejor regalo que la misma leche del \cgOni Rojo\c-? Entre otras cosas, por supuesto.\n"
+"Siendo tan ingenioso como es, \cxKirin\c- conoce varios artefactos divinos de los que beneficiarse, y gracias a sus conexiones, puede ciertamente abastecerse a gusto de ellos. También tiene a sus amadas esposas de las que recibir regalos, por supuesto. ¿Y que mejor regalo que la misma leche del \cxOni Rojo\c-? Entre otras cosas, por supuesto.\n"
 "\n"
-"Para evitar \"acumular demasiado\", \cgKirin\c- solo recogerá un número limitado de potenciadores, como cualquier otro ítem, dejando atrás lo que no necesite.\n"
+"Para evitar \"acumular demasiado\", \cxKirin\c- solo recogerá un número limitado de potenciadores, como cualquier otro ítem, dejando atrás lo que no necesite.\n"
+"\n"
+"No hay nada más que decir, realmente. Como en los otros mods, los efectos de los potenciadores se acoplan con cada uso, y su duración restante se muestra en el HUD.";
+$ifgame(doom) KIRIN_HELP_PAGE5_TXT =
+"Being as resourceful as he is, \cxKirin\c- knows of various divine artifacts he could borrow strength from, and thanks to his connections, he can definitely get his hands on a helpful supply of them. His aunt has also located some very interesting items too. One among them being a peculiar beverage known as \cxRed Oni Milk\c-, which you can't help but find quite tasty, although it also fills your mind with images of that woman too, who one day you hope to meet.\n"
+"Siendo tan ingenioso como es, \cxKirin\c- conoce varios artefactos divinos de los que beneficiarse, y gracias a sus conexiones, puede ciertamente abastecerse a gusto de ellos. Su tía también ha localizado algunas cosas muy interesantes. Entre ellas una peculiar bebida conocida como \cxLeche de Oni Rojo\c-, la cual no puedes evitar describir como deliciosa, aunque también llena tu mente de imágenes de esa mujer, la cual un día esperas conocer.\n"
+"\n"
+"Para evitar \"acumular demasiado\", \cxKirin\c- solo recogerá un número limitado de potenciadores, como cualquier otro ítem, dejando atrás lo que no necesite.\n"
 "\n"
 "No hay nada más que decir, realmente. Como en los otros mods, los efectos de los potenciadores se acoplan con cada uso, y su duración restante se muestra en el HUD.";
 KIRIN_HELP_PAGE6 = "Consejos Adicionales";
 KIRIN_HELP_PAGE6_TXT =
-"\cgKirin\c- tiene un teléfono móvil. Es muy útil en el campo. Para empezar, puede servir como una fuente de luz que, aunque no sea tan potente como una linterna, aun ayuda. También es por supuesto útil para recabar información. Puedes mantenerte al tanto de tu progreso fácilmente, tomando nota de puertas cerradas y otros mecanismos y memorizando donde se encuentran los ítems en el mapa par que puedas buscarlos luego y recuperarlos.\n"
+"\cxKirin\c- tiene un teléfono móvil. Es muy útil en el campo. Para empezar, puede servir como una fuente de luz que, aunque no sea tan potente como una linterna, aun ayuda. También es por supuesto útil para recabar información. Puedes mantenerte al tanto de tu progreso fácilmente, tomando nota de puertas cerradas y otros mecanismos y memorizando donde se encuentran los ítems en el mapa par que puedas buscarlos luego y recuperarlos.\n"
 "\n"
-"Sí, ya no te perderás tanto con ese poder a tu alcance. También es bueno que, siendo tal maravilla de la tecnología \cgNukuri\c-, la batería dura muchísimo. Pero no te preocupes, si de alguna forma consigues gastarla, se puede recargar. Tampoco es que vayas a ver esto en acción a menos que no sé como pases 5 días en tiempo real en la misma partida...\n"
+"Sí, ya no te perderás tanto con ese poder a tu alcance. También es bueno que, siendo tal maravilla de la tecnología \cxNukuri\c-, la batería dura muchísimo. Pero no te preocupes, si de alguna forma consigues gastarla, se puede recargar. Tampoco es que vayas a ver esto en acción a menos que no sé como pases 5 días en tiempo real en la misma partida...\n"
 "\n"
-"Bueno, ¿algo más? Bueno, supongo que el hecho de que \cgKirin\c- es completamente inmortal. Si te patean el trasero pero BIEN, tu cuerpo se volverá polvo y se regenerará de cero en un lugar seguro. Suena familiar, ¿verdad? Sí, \cgSaya\c- también pensó lo mismo.";
+"Bueno, ¿algo más? Bueno, supongo que el hecho de que \cxKirin\c- es completamente inmortal. Si te patean el trasero pero BIEN, tu cuerpo se volverá polvo y se regenerará de cero en un lugar seguro. Suena familiar, ¿verdad? Sí, \cxSaya\c- también pensó lo mismo.";
+$ifgame(doom) KIRIN_HELP_PAGE6_TXT =
+"\cxKirin\c- tiene un teléfono móvil. Es muy útil en el campo. Para empezar, puede servir como una fuente de luz que, aunque no sea tan potente como una linterna, aun ayuda. También es por supuesto útil para recabar información. Puedes mantenerte al tanto de tu progreso fácilmente, tomando nota de puertas cerradas y otros mecanismos y memorizando donde se encuentran los ítems en el mapa par que puedas buscarlos luego y recuperarlos.\n"
+"\n"
+"Sí, ya no te perderás tanto con ese poder a tu alcance. También es bueno que, siendo tal maravilla de la tecnología \cxNukuri\c-, la batería dura muchísimo. Pero no te preocupes, si de alguna forma consigues gastarla, se puede recargar. Tampoco es que vayas a ver esto en acción a menos que no sé como pases 5 días en tiempo real en la misma partida...\n"
+"\n"
+"Bueno, ¿algo más? Bueno, supongo que el hecho de que \cxKirin\c- es completamente inmortal. Si te patean el trasero pero BIEN, tu cuerpo se volverá polvo y se regenerará de cero en un lugar seguro. Suena familiar, ¿verdad?";

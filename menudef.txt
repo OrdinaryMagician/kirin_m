@@ -72,6 +72,12 @@ OptionMenu "KirinOptionMenu"
 	StaticText "$SWWM_ITITLE", "Orange"
 	Option "$SWWM_WEAPONTOOLTIPS", "kirin_weapontooltips", "YesNo"
 	SafeCommand "$SWWM_RESETTOOLTIPS", "event swwmresettooltips"
+	IfGame(Doom)
+	{
+		StaticText " "
+		StaticText "$SWWM_MCTITLE", "Orange"
+		Option "$SWWM_DRLASKILL", "kirin_drlaskill", "SWWMDRLASkill"
+	}
 
 }
 AddOptionMenu "OptionsMenu"

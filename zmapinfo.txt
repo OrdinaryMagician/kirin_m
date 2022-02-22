@@ -48,6 +48,26 @@ GameInfo
 		"graphics/KirinLogo_Layer5.png",
 		"graphics/KirinLogo_Layer6.png",
 		"graphics/KirinLogo_Layer7.png",
+		"graphics/title_grad.png",
+		"graphics/title_kirin.png",
+		"graphics/title_kirin_eye.png",
+		"graphics/title_kirin_flame.png",
+		"graphics/title_smoke_0.png",
+		"graphics/title_smoke_1.png",
+		"graphics/title_smoke_2.png",
+		"graphics/title_smoke_3.png",
+		"graphics/title_smoke_4.png",
+		"graphics/title_smoke_5.png",
+		"graphics/title_smoke_6.png",
+		"graphics/title_smoke_7.png",
+		"graphics/title_fire_0.png",
+		"graphics/title_fire_1.png",
+		"graphics/title_fire_2.png",
+		"graphics/title_fire_3.png",
+		"graphics/title_fire_4.png",
+		"graphics/title_fire_5.png",
+		"graphics/title_fire_6.png",
+		"graphics/title_fire_7.png",
 		"graphics/M_KIRIN.png"
 }
 
@@ -96,6 +116,21 @@ Skill hardcore
 	ACSReturn = 4
 	Name = "$KIRIN_SKHARDCORE"
 	MustConfirm = "$KIRIN_SKHARDCORECONFIRM"
+}
+Skill lunatic
+{
+	DisableCheats
+	HealthFactor = 2.0
+	DamageFactor = 2.0
+	Aggressiveness = 1.0
+	SpawnFilter = nightmare
+	SpawnMulti
+	TotalInfighting
+	InstantReaction
+	NoPain
+	ACSReturn = 4
+	Name = "$KIRIN_SKLUNATIC"
+	MustConfirm = "$KIRIN_SKLUNATICCONFIRM"
 }
 
 Map TITLEMAP "RED STAR OF INNOCENCE Title Map"

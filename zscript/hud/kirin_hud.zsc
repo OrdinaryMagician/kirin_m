@@ -227,7 +227,7 @@ Class KirinStatusBar : SWWMStatusBar
 		if ( KirinPlayer(CPlayer.mo) ) selslot = KirinPlayer(CPlayer.mo).SpellSel;
 		for ( int i=6; i<=10; i++,xx+=8 )
 		{
-			int ncolor = mhudfontcol[(i==(selslot+6))?MCR_PURPLE:MCR_SILVER];
+			int ncolor = mhudfontcol[(i==(selslot+6))?MCR_CYAN:MCR_SILVER];
 			Screen.DrawText(MiniHUDFont,ncolor,xx,yy,String.Format("%d",(i%10)),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 		}
 		yy = ss.y-(margin+14);
