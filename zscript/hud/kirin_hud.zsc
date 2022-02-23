@@ -39,7 +39,7 @@ Class KirinStatusBar : SWWMStatusBar
 			AmmoOldAmounts[i] = amt;
 		}
 		hp /= 10;
-		if ( hp <= 0 )
+		if ( (hp <= 0) || (hp > 25) )
 		{
 			PulsePhase = 0;
 			return;
