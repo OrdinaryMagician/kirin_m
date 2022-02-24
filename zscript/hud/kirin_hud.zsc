@@ -8,7 +8,6 @@ Class KirinStatusBar : SWWMStatusBar
 	Class<SWWMAmmo> AmmoSlots[4];	// ammo type on each slot
 	int HealthFlash, ManaFlash;	// flash when healing or gaining mana
 	int LastHealth, LastMana;	// to detect when to flash
-	int PulsePhase;	// for health pulsing
 
 	DynamicValueInterpolator HealthInter, ManaInter;
 
@@ -38,17 +37,6 @@ Class KirinStatusBar : SWWMStatusBar
 				AmmoFlash[i] = gametic+25;
 			AmmoOldAmounts[i] = amt;
 		}
-		hp /= 10;
-		if ( (hp <= 0) || (hp > 25) )
-		{
-			PulsePhase = 0;
-			return;
-		}
-		if ( PulsePhase == 15 )
-			S_StartSound("misc/heartbeat",CHAN_BODY,CHANF_UI|CHANF_OVERLAP,(30-hp)/50.);
-		PulsePhase--;
-		if ( (PulsePhase < 0) || (PulsePhase > hp*2+25) )
-			PulsePhase = hp*2+25;
 	}
 
 	// hello??? why is this function clearscope???
@@ -350,19 +338,19 @@ Class KirinStatusBar : SWWMStatusBar
 		if ( invul ) Screen.DrawTexture(IconTex[0],false,margin+2,ss.y-(margin+20),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 		else
 		{
-			if ( (ht > 0) && (ht <= 25) && (PulsePhase <= 15) )
-			{
-				double alph = clamp(sin((PulsePhase-FracTic)*12.),0.,1.);
-				Screen.DrawTexture(IconTex[4],false,margin+2,ss.y-(margin+20),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
-				Screen.DrawTexture(BarTex[5],false,margin+14,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
-				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_REDFLASH],margin+119,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
-			}
-			else if ( ht > 100 )
+			if ( ht > 100 )
 			{
 				double alph = ((ht-100)/100.)**.5;
 				Screen.DrawTexture(IconTex[3],false,margin+2,ss.y-(margin+20),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph);
 				Screen.DrawTexture(BarTex[4],false,margin+14,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_Alpha,alph);
 				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_BRASS],margin+119,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph);
+			}
+			if ( (CPlayer.Health > 0) && (CPlayer.Health <= 25) && (PulsePhase <= 15) )
+			{
+				double alph = clamp(sin((PulsePhase-FracTic)*12.),0.,1.);
+				Screen.DrawTexture(IconTex[4],false,margin+2,ss.y-(margin+20),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
+				Screen.DrawTexture(BarTex[5],false,margin+14,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
+				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_REDFLASH],margin+119,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
 			}
 		}
 		int f = HealthFlash;
