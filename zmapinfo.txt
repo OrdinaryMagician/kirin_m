@@ -3,6 +3,7 @@ GameInfo
 	AddEventHandlers = "SWWMStaticHandler", "SWWMHandler", "SWWMBrutalHandler", "SWWMHDoomHandler"
 	PlayerClasses = "KirinPlayer"
 	StatusBarClass = "KirinStatusBar"
+	StatScreen_Single = "KirinStatScreen"
 	QuitSound = "misc/teleport"
 	QuitMessages = "$QUITMSG"
 	ChatSound = "misc/chat"

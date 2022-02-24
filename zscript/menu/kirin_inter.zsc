@@ -1,0 +1,178 @@
+// intermission stat screen
+Class KirinStatScreen : SWWMStatScreen
+{
+	TextureID bgtex;
+	TitleSmoke smk[128], flm[128];
+	TextureID smk_tex[8], flm_tex[8];
+	TextureID kirintex[3];
+
+	override void Start( wbstartstruct wbstartstruct )
+	{
+		Super.Start(wbstartstruct);
+		lnamecolor = Font.CR_FIRE;
+		lauthcolor = Font.CR_GOLD;
+		lsubcolor = Font.CR_ORANGE;
+		statbasecolor = Font.CR_ORANGE;
+		statcolor0 = Font.CR_WHITE;
+		statcolor1 = Font.CR_GOLD;
+		statcolor2 = Font.CR_RED;
+		tipcolor0 = Font.CR_ORANGE;
+		tipcolor1 = Font.CR_GOLD;
+		glarecolor = "Gold";
+	}
+
+	override void StartMusic()
+	{
+		S_ChangeMusic("music/kirin_intermus.ogg");
+	}
+
+	override String StatCnt( int a, int b )
+	{
+		if ( b <= 0 ) return "N/A";
+		return String.Format("%s \cu/\c- %s \cu(\c-%3d%%\cu)",SWWMUtility.ThousandsNum(max(a,0)),SWWMUtility.ThousandsNum(b),GetPct(a,b));
+	}
+
+	override String TimeStr( int secs )
+	{
+		secs = max(secs,0);
+		int h = secs/3600;
+		int m = (secs/60)%60;
+		int s = secs%60;
+		if ( h ) return String.Format("%d\cu:\c-%02d\cu:\c-%02d",h,m,s);
+		if ( m ) return String.Format("%d\cu:\c-%02d",m,s);
+		return String.Format("%d",s);
+	}
+
+	override void Ticker( void )
+	{
+		Super.Ticker();
+		TickSmokeLayers();
+	}
+
+	private void TickSmokeLayers()
+	{
+		for ( int i=0; i<128; i++ )
+		{
+			int presim = 0;
+			if ( smk[i].age >= smk[i].maxage )
+			{
+				if ( smk[i].maxage == 0 ) presim = Random[UIStuff](0,60);
+				else presim = -1;
+				smk[i].age = Random[UIStuff](-20,0);
+				smk[i].maxage = Random[UIStuff](60,120);
+				smk[i].pos = (FRandom[UIStuff](-512.,512.),FRandom[UIStuff](0.,256.));
+				smk[i].vel = (FRandom[UIStuff](-2.,2.),FRandom[UIStuff](-2.,-8.));
+				smk[i].ang = FRandom[UIStuff](0.,360.);
+				smk[i].angvel = FRandom[UIStuff](1.,4.)*RandomPick[UIStuff](-1,1);
+				smk[i].scale = FRandom[UIStuff](2.,4.);
+			}
+			for ( int j=0; j<=presim; j++ )
+			{
+				smk[i].age++;
+				if ( smk[i].age <= 0 ) continue;
+				smk[i].pos += smk[i].vel;
+				smk[i].ang += smk[i].angvel;
+			}
+			presim = 0;
+			if ( flm[i].age >= flm[i].maxage )
+			{
+				if ( flm[i].maxage == 0 ) presim = Random[UIStuff](0,40);
+				else presim = -1;
+				flm[i].age = Random[UIStuff](-5,0);
+				flm[i].maxage = Random[UIStuff](40,80);
+				flm[i].pos = (FRandom[UIStuff](-128.,128.),FRandom[UIStuff](0.,128.));
+				flm[i].vel = (FRandom[UIStuff](-4.,4.),FRandom[UIStuff](-8.,-16.));
+				flm[i].ang = FRandom[UIStuff](0.,360.);
+				flm[i].angvel = FRandom[UIStuff](1.,4.)*RandomPick[UIStuff](-1,1);
+				flm[i].scale = FRandom[UIStuff](4.,8.);
+			}
+			for ( int j=0; j<=presim; j++ )
+			{
+				flm[i].age++;
+				if ( flm[i].age <= 0 ) continue;
+				flm[i].pos += flm[i].vel;
+				flm[i].vel.x *= .96;
+				flm[i].vel.y -= .02;
+				flm[i].ang += flm[i].angvel;
+				flm[i].scale *= .99;
+			}
+		}
+	}
+
+	// heh
+	private clearscope double smerp( double a ) const
+	{
+		return (sin((a-.5)*180.)+1.)/2.;
+	}
+
+	private void RenderSmokeLayer( double GameSecs, bool back, double alpha = 1. )
+	{
+		double zoomscl = Screen.GetHeight()/600.;
+		int imin = back?64:0;
+		int imax = back?128:64;
+		int base = back?250:750;
+		for ( int i=imin; i<imax; i++ )
+		{
+			if ( !smk[i].maxage ) continue;
+			if ( !smk_tex[i%8] ) smk_tex[i%8] = TexMan.CheckForTexture("graphics/title_smoke_"..(i%8)..".png",TexMan.Type_Any);
+			Vector2 pos = (smk[i].pos+smk[i].vel*FracTic+(0,base))*zoomscl+(Screen.GetWidth()/2,0);
+			double scl = smk[i].scale*zoomscl;
+			double ang = smk[i].ang+smk[i].angvel*FracTic;
+			double alf = cos((smk[i].age/double(smk[i].maxage))*90)*alpha;
+			alf *= clamp(smk[i].age/10.,0,1);
+			Screen.DrawTexture(smk_tex[i%8],false,pos.x,pos.y,DTA_CenterOffset,true,DTA_Rotate,ang,DTA_ScaleX,scl,DTA_ScaleY,scl,DTA_Alpha,alf,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(32,12,4));
+		}
+		if ( !back ) return;
+		double ofs;
+		if ( sp_state >= 2 ) ofs = 120;
+		else ofs = 120*smerp(clamp(GameSecs,0.,1.));
+		base = 950;
+		for ( int i=0; i<128; i++ )
+		{
+			if ( !flm[i].maxage ) continue;
+			if ( !flm_tex[i%8] ) flm_tex[i%8] = TexMan.CheckForTexture("graphics/title_fire_"..(i%8)..".png",TexMan.Type_Any);
+			Vector2 pos = (flm[i].pos+flm[i].vel*FracTic+(0,base))*zoomscl+(Screen.GetWidth()/2,0)+(ofs*CleanXFac_1,0);
+			double scl = flm[i].scale*(1.-.01*FracTic)*zoomscl;
+			double ang = flm[i].ang+flm[i].angvel*FracTic;
+			double alf = 1.-(flm[i].age/double(flm[i].maxage))**2.;
+			alf *= clamp(flm[i].age/5.,0,1);
+			Screen.DrawTexture(flm_tex[i%8],false,pos.x,pos.y,DTA_CenterOffset,true,DTA_Rotate,ang,DTA_ScaleX,scl,DTA_ScaleY,scl,DTA_Alpha,alf,DTA_LegacyRenderStyle,STYLE_Add);
+		}
+	}
+
+	override void drawSWWMBg()
+	{
+		double GameSecs = (bcnt+FracTic)/GameTicRate;
+		if ( kirin_fuzz )
+		{
+			if ( !bgtex ) bgtex = TexMan.CheckForTexture("graphics/tempbg.png",TexMan.Type_Any);
+			Vector2 tsize = TexMan.GetScaledSize(bgtex);
+			double zoom = max(ceil(Screen.GetWidth()/tsize.x),ceil(Screen.GetHeight()/tsize.y));
+			Vector2 vsize = (Screen.GetWidth(),Screen.GetHeight())/zoom;
+			Screen.DrawTexture(bgtex,false,(vsize.x-tsize.x)/2,(vsize.y-tsize.y)/2,DTA_VirtualWidthF,vsize.x,DTA_VirtualHeightF,vsize.y,DTA_KeepRatio,true,DTA_ColorOverlay,Color(192,0,0,0));
+			Screen.Dim(Color(16,12,0),1.-clamp(GameSecs,.25,1.),0,0,Screen.GetWidth(),Screen.GetHeight());
+		}
+		else Screen.Dim(Color(16,12,0),1.,0,0,Screen.GetWidth(),Screen.GetHeight());
+		double texscl = Screen.GetHeight()/1300.;
+		if ( !gradtex ) gradtex = TexMan.CheckForTexture("graphics/title_grad.png",TexMan.Type_Any);
+		Screen.DrawTexture(gradtex,false,0,Screen.GetHeight(),DTA_DestWidth,Screen.GetWidth(),DTA_DestHeight,512*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(128,16,8),DTA_TopOffset,256);
+		if ( !kirintex[0] ) kirintex[0] = TexMan.CheckForTexture("graphics/title_kirin.png",TexMan.Type_Any);
+		if ( !kirintex[1] ) kirintex[1] = TexMan.CheckForTexture("graphics/title_kirin_eye.png",TexMan.Type_Any);
+		if ( !kirintex[2] ) kirintex[2] = TexMan.CheckForTexture("graphics/title_kirin_flame.png",TexMan.Type_Any);
+		double ofs;
+		if ( sp_state >= 2 ) ofs = 120;
+		else ofs = 120*smerp(clamp(GameSecs,0.,1.));
+		Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2+ofs*CleanXFac_1,Screen.GetHeight(),DTA_Rotate,90,DTA_DestHeight,Screen.GetHeight(),DTA_DestWidth,640*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_TopOffset,256,DTA_Alpha,.5);
+		Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2+ofs*CleanXFac_1,0,DTA_Rotate,270,DTA_DestHeight,Screen.GetHeight(),DTA_DestWidth,640*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_TopOffset,256,DTA_Alpha,.5);
+		Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2+ofs*CleanXFac_1,Screen.GetHeight(),DTA_Rotate,90,DTA_DestHeight,Screen.GetHeight(),DTA_DestWidth,512*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(32,6,4),DTA_TopOffset,256);
+		Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2+ofs*CleanXFac_1,0,DTA_Rotate,270,DTA_DestHeight,Screen.GetHeight(),DTA_DestWidth,512*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(32,6,4),DTA_TopOffset,256);
+		RenderSmokeLayer(GameSecs,true,.5);
+		Screen.DrawTexture(kirintex[2],false,Screen.GetWidth()/2-385*texscl+ofs*CleanXFac_1,0,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Translucent);
+		Screen.DrawTexture(kirintex[0],false,Screen.GetWidth()/2-385*texscl+ofs*CleanXFac_1,0,DTA_ScaleX,texscl,DTA_ScaleY,texscl);
+		Screen.DrawTexture(kirintex[1],false,Screen.GetWidth()/2-385*texscl+ofs*CleanXFac_1,0,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Add);
+		double alf = clamp(glarestr/20.,0.,1.)**2;
+		if ( alf > 0. ) Screen.DrawTexture(kirintex[1],false,Screen.GetWidth()/2-385*texscl+ofs*CleanXFac_1,0,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alf);
+		RenderSmokeLayer(GameSecs,false,1.);
+		Screen.DrawTexture(gradtex,false,0,Screen.GetHeight(),DTA_DestWidth,Screen.GetWidth(),DTA_DestHeight,256*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(64,8,4),DTA_TopOffset,256);
+	}
+}

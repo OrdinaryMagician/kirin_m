@@ -45,6 +45,7 @@ const SWWMMAXVIPAMOUNT = 1;
 #include "zscript/menu/swwm_help.zsc"
 #include "zscript/menu/swwm_menus.zsc"
 #include "zscript/menu/swwm_credits.zsc"
+#include "zscript/menu/swwm_inter.zsc"
 // compat code
 #include "zscript/compat/swwm_compat.zsc"
 #include "zscript/compat/swwm_shame.zsc"
@@ -81,6 +82,7 @@ const SWWMMAXVIPAMOUNT = 1;
 #include "zscript/handler/kirin_handler_replacements.zsc"
 // menu code
 #include "zscript/menu/kirin_credits.zsc"
+#include "zscript/menu/kirin_inter.zsc"
 #include "zscript/menu/kirin_title.zsc"
 // hud
 #include "zscript/hud/kirin_hud.zsc"

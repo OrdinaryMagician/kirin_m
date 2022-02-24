@@ -51,6 +51,14 @@ KIRIN_TITLETXT1B = "Que sepan todos de este gran emperador de las tierras oxidad
 KIRIN_TITLETXT2 = "De tu gente eres sirviente, por tu gente has de luchar.";		// Seine kon da khosaya, dera kon dae takharei.
 KIRIN_TITLETXT3A = "Protector por juramento eres del imperio oxidado,"			// Akoxha de ukhaashxe irada Sykhai sya,
 KIRIN_TITLETXT3B = "hijo inmortal nacido bajo una \cgInocente Estrella Roja\c-.";	// Anarukonoskai myze suna Kirin na Xatha Naai.
+KIRIN_INTERDONE = "CONCLUIDO";
+KIRIN_INTERNEXT = "SIGUIENTE";
+KIRIN_INTERKILLS = "ENEMIGOS DERROTADOS:";
+KIRIN_INTERITEMS = "ÍTEMS OBTENIDOS:";
+KIRIN_INTERSECRETS = "SECRETOS DESCUBIERTOS:";
+KIRIN_INTERTIME = "TU TIEMPO:";
+KIRIN_INTERPAR = "TIEMPO PAR:";
+KIRIN_INTERTOTAL = "TIEMPO TOTAL:";
 // weapon tooltips
 TT_KIRINCQC =
 "Lucha con tus puños y tus piernas.\n"
@@ -90,3 +98,31 @@ TT_KIRINSNIPER =
 "\n"
 "\cxFuego Primario:\c- Disparo.\n"
 "\cxFuego Secundario:\c- Apuntado por mira.";
+// intermission tips
+KIRIN_INTERTIP = "Consejo #%d:";
+KIRIN_INTERTIP1 = "Kirin es un buen chico.";
+KIRIN_INTERTIP2 = "No subestimes la Rykha. Esa pistola te puede llevar muy lejos.";
+KIRIN_INTERTIP3 = "Sobrecargar armas mágicas requiere maná extra, pero el efecto dura mucho.";
+KIRIN_INTERTIP4 = "El Xei produce un efecto venenoso acumulativo, así que mantén pulsado ese gatillo.";
+KIRIN_INTERTIP5 = "Recuerda, tanto la Rykha como el Xei requieren maná par funcionar, mantenlos alimentados.";
+KIRIN_INTERTIP6 = "Las armas mágicas pueden disparar incluso con un cargador vacío.";
+KIRIN_INTERTIP7 = "La Carabina de Fragmento produce daño incendiario extra a bocajarro.";
+KIRIN_INTERTIP8 = "Sobrecargar la Carabina de Fragmento incrementa su potencial explosivo.";
+KIRIN_INTERTIP9 = "La Balista de Distorsión es más rápida que la luz. Nada puede esquivar sus proyectiles.";
+$ifgame(doom) KIRIN_INTERTIP9 = "El Patriarca es un rifle potente. Puede penetrar varios objetivos fácilmente.";
+KIRIN_INTERTIP10 = "Intenta evitar las recargas parciales, o tendrás que manejar cargadores manualmente luego.";
+KIRIN_INTERTIP11 = "Las alubias de caramelo recuperan salud y maná a intervalos regulares. Ciertamente, las alubias pueden ser útiles.";
+KIRIN_INTERTIP12 = "La anemia reduce la resistencia al daño. Solo el extracto de Akashna puede aleviar este efecto.";
+KIRIN_INTERTIP13 = "Un buen guerrero sabe como equilibrar el uso de maná entre armas y conjuros.";
+KIRIN_INTERTIP14 = "La Llama del Corazón es útil en un apuro, pero los ítems curativos son más efectivos.";
+KIRIN_INTERTIP15 = "Mantener el botón de conjuro te permite visualizar donde te llevará la Rotura de Frontera.";
+KIRIN_INTERTIP16 = "No uses la Gran Descarga en contacto con el agua. Es de sentido común.";
+KIRIN_INTERTIP17 = "Los Estimulantes de Maná saben a mala medicina, pero recuperan tu maná rápidamente.";
+KIRIN_INTERTIP18 = "Los Anillos de Protección se acoplan hasta ocho veces, volviéndote casi invencible.";
+KIRIN_INTERTIP19 = "Ni siquiera Kirin puede resistir el poder de la leche de Ibuki.";
+KIRIN_INTERTIP20 = "La munición nunca se echa a perder. No olvides que puedes recuperar la munición que queda atrás.";
+KIRIN_INTERTIP21 = "La Marca de Devastación magnifica todo tu daño. Ten cuidado de no hacértelo a ti.";
+KIRIN_INTERTIP22 = "La diplomacia no tiene lugar en esta guerra. Los monstruos deben morir.";
+KIRIN_INTERTIP23 = "El Enlace de Seguridad es la mejor carta de \"salir de la cárcel gratis\".";
+KIRIN_INTERTIP24 = "Los efectos de la Solución de Embelesamiento son indefinidos... Hasta que el objetivo muere.";
+KIRIN_INTERTIP25 = "El Amuleto de Aceleración no solo te hace ir rápido, también te hace patear fuerte también.";

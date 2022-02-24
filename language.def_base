@@ -58,6 +58,14 @@ KIRIN_TITLETXT1B = "Let all know of this great emperor from the rust-covered lan
 KIRIN_TITLETXT2 = "Of your people you are servant, for your people you shall fight.";	// Seine kon da khosaya, dera kon dae takharei.
 KIRIN_TITLETXT3A = "Sworn protector you are of the rust-covered empire,";		// Akoxha de ukhaashxe irada Sykhai sya,
 KIRIN_TITLETXT3B = "undying child born under an \cgInnocent Red Star\c-.";		// Anarukonoskai myze suna Kirin na Xatha Naai.
+KIRIN_INTERDONE = "CONCLUDED";
+KIRIN_INTERNEXT = "INCOMING";
+KIRIN_INTERKILLS = "FOES DEFEATED:";
+KIRIN_INTERITEMS = "ITEMS OBTAINED:";
+KIRIN_INTERSECRETS = "SECRETS UNCOVERED:";
+KIRIN_INTERTIME = "YOUR TIME:";
+KIRIN_INTERPAR = "PAR TIME:";
+KIRIN_INTERTOTAL = "TOTAL TIME:";
 // weapon tooltips
 TT_KIRINCQC =
 "Fight with your fists and legs.\n"
@@ -97,3 +105,34 @@ TT_KIRINSNIPER =
 "\n"
 "\cxPrimary Fire:\c- Steady shooting.\n"
 "\cxSecondary Fire:\c- Scoped aiming.";
+// intermission tips
+KIRIN_NINTERTIP = "25";
+$ifgame(heretic) KIRIN_NINTERTIP = "23";
+$ifgame(doom) KIRIN_NINTERTIP = "22";
+KIRIN_INTERTIP = "Tip #%d:";
+KIRIN_INTERTIP1 = "Kirin is a good boy.";
+KIRIN_INTERTIP2 = "Don't underestimate the Rykha. That gun can carry you very far.";
+KIRIN_INTERTIP3 = "Overcharging magic weapons takes extra mana, but the effect lasts very long.";
+KIRIN_INTERTIP4 = "The Xei builds up a poison debuff on enemies, so keep wailing on them.";
+KIRIN_INTERTIP5 = "Remember, both the Rykha and the Xei require mana to work, keep them well fed.";
+KIRIN_INTERTIP6 = "Magic-based handguns can still fire even with an empty mag.";
+KIRIN_INTERTIP7 = "The Fragment Carbine deals extra fire damage at point blank.";
+KIRIN_INTERTIP8 = "Overcharging the Fragment Carbine increases its explosive potential.";
+KIRIN_INTERTIP9 = "The Warp Ballista is faster than light. Nothing can dodge its projectiles.";
+$ifgame(doom) KIRIN_INTERTIP9 = "The Patriarch is a potent rifle. It can pierce multiple targets with ease.";
+KIRIN_INTERTIP10 = "Try to avoid partial reloads, or you'll have to do manual mag management later.";
+KIRIN_INTERTIP11 = "Candy beans replenish health and mana at regular intervals. Truly, beans might be useful.";
+KIRIN_INTERTIP12 = "Blood thining reduces damage resistance. Only Akashna extract can clear this debuff.";
+KIRIN_INTERTIP13 = "A good warrior knows to balance mana usage between weapons and spells.";
+KIRIN_INTERTIP14 = "Flame of the Heart is useful in a pinch, but healing items are more effective.";
+KIRIN_INTERTIP15 = "Holding the cast button allows you to visualize where Boundary Break will send you.";
+KIRIN_INTERTIP16 = "Don't use Great Discharge in contact with water. This is common sense.";
+KIRIN_INTERTIP17 = "Mana Stimulants taste like bad medicine, but they'll refill your mana quickly.";
+KIRIN_INTERTIP18 = "Rings of Protection stack up to eight times, making you almost invincible.";
+KIRIN_INTERTIP19 = "Not even Kirin can resist the power of Ibuki's milk.";
+KIRIN_INTERTIP20 = "No ammunition is ever wasted. Don't forget you can refill at leftover pickups.";
+KIRIN_INTERTIP21 = "The Devastation Sigil will magnify all your damage. Careful not to hurt yourself.";
+KIRIN_INTERTIP22 = "Diplomacy has no place in this war. Monsters are to be killed.";
+KIRIN_INTERTIP23 = "The Safety Tether is the best \"get out of jail free\" card.";
+KIRIN_INTERTIP24 = "The Enthrallment Solution's effects are indefinite... Until the target dies.";
+KIRIN_INTERTIP25 = "The Accelerator Amulet not only makes you go fast, it makes you kick hard too.";

@@ -2,3 +2,30 @@ $pitchshiftrange 0
 
 kirin/preamb	sounds/kirin_preamb.ogg
 kirin/logoflash	sounds/kirin_logoflash.ogg
+
+rykha/fire	sounds/rykha/rykha_fire.ogg
+rykha/overfire	sounds/rykha/rykha_overfire.ogg
+rykha/airfire	sounds/rykha/rykha_airfire.ogg
+
+xei/fire1	sounds/rykha/rykha_fire1.ogg
+xei/fire2	sounds/rykha/rykha_fire2.ogg
+xei/fire3	sounds/rykha/rykha_fire3.ogg
+$random xei/fire { xei/fire1 xei/fire2 xei/fire3 }
+xei/airfire	sounds/rykha/rykha_airfire.ogg
+
+frag/fire1	sounds/frag/frag_fire1.ogg
+frag/fire2	sounds/frag/frag_fire2.ogg
+frag/fire3	sounds/frag/frag_fire3.ogg
+frag/overfire1	sounds/frag/frag_overfire1.ogg
+frag/overfire2	sounds/frag/frag_overfire2.ogg
+frag/overfire3	sounds/frag/frag_overfire3.ogg
+$random frag/fire { frag/fire1 frag/fire2 frag/fire3 }
+$random frag/overfire { frag/overfire1 frag/overfire2 frag/overfire3 }
+
+ballista/fire1	sounds/ballista/warp_fire1.ogg
+ballista/fire2	sounds/ballista/warp_fire2.ogg
+ballista/fire3	sounds/ballista/warp_fire3.ogg
+$random ballista/fire { ballista/fire1 ballista/fire2 ballista/fire3 }
+
+$alias misc/interstart frag/fire
+$alias misc/interdone misc/w_pkup // temporary
