@@ -206,7 +206,7 @@ Class KirinStatusBar : SWWMStatusBar
 			int f = hnd.WeaponFlash[i%10];
 			if ( f && (gametic < f) )
 			{
-				double alph = ((f-(gametic+FracTic))/25.)**1.5;
+				double alph = max((f-(gametic+FracTic))/25.,0.)**1.5;
 				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],xx,yy,String.Format("%d",(i%10)),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
 			}
 		}
@@ -241,7 +241,7 @@ Class KirinStatusBar : SWWMStatusBar
 			int f = AmmoFlash[0];
 			if ( f && (gametic < f) )
 			{
-				double alph = ((f-(gametic+FracTic))/25.)**1.5;
+				double alph = max((f-(gametic+FracTic))/25.,0.)**1.5;
 				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],xx+2,yy+5,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
 			}
 			for ( int i=0; i<5; i++ )
@@ -261,7 +261,7 @@ Class KirinStatusBar : SWWMStatusBar
 			int f = AmmoFlash[1];
 			if ( f && (gametic < f) )
 			{
-				double alph = ((f-(gametic+FracTic))/25.)**1.5;
+				double alph = max((f-(gametic+FracTic))/25.,0.)**1.5;
 				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],xx+2,yy+7,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
 			}
 			for ( int i=0; i<8; i+=2 )
@@ -283,7 +283,7 @@ Class KirinStatusBar : SWWMStatusBar
 			int f = AmmoFlash[2];
 			if ( f && (gametic < f) )
 			{
-				double alph = ((f-(gametic+FracTic))/25.)**1.5;
+				double alph = max((f-(gametic+FracTic))/25.,0.)**1.5;
 				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],xx+2,yy+10,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
 			}
 			for ( int i=0; i<shel.Amount; i++ )
@@ -300,7 +300,7 @@ Class KirinStatusBar : SWWMStatusBar
 			int f = AmmoFlash[3];
 			if ( f && (gametic < f) )
 			{
-				double alph = ((f-(gametic+FracTic))/25.)**1.5;
+				double alph = max((f-(gametic+FracTic))/25.,0.)**1.5;
 				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],xx+2,yy+22,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
 			}
 			for ( int i=0; i<ball.Amount; i++ )
@@ -317,7 +317,7 @@ Class KirinStatusBar : SWWMStatusBar
 			int f = AmmoFlash[3];
 			if ( f && (gametic < f) )
 			{
-				double alph = ((f-(gametic+FracTic))/25.)**1.5;
+				double alph = max((f-(gametic+FracTic))/25.,0.)**1.5;
 				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],xx+2,yy+16,str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph,DTA_LegacyRenderStyle,STYLE_Add);
 			}
 			for ( int i=0; i<2; i++ ) for ( int j=0; j<omga.Mags[i]; j++ )
@@ -340,7 +340,7 @@ Class KirinStatusBar : SWWMStatusBar
 		{
 			if ( ht > 100 )
 			{
-				double alph = ((ht-100)/100.)**.5;
+				double alph = max((ht-100)/100.,0.)**.5;
 				Screen.DrawTexture(IconTex[3],false,margin+2,ss.y-(margin+20),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph);
 				Screen.DrawTexture(BarTex[4],false,margin+14,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_Alpha,alph);
 				Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_BRASS],margin+119,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_Alpha,alph);
@@ -356,7 +356,7 @@ Class KirinStatusBar : SWWMStatusBar
 		int f = HealthFlash;
 		if ( f && (gametic < f) )
 		{
-			double alph = ((f-(gametic+FracTic))/25.)**1.5;
+			double alph = max((f-(gametic+FracTic))/25.,0.)**1.5;
 			Screen.DrawTexture(BarTex[3],false,margin+14,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 			Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],margin+119,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 			Screen.DrawTexture(IconTex[1],false,margin+2,ss.y-(margin+20),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
@@ -370,7 +370,7 @@ Class KirinStatusBar : SWWMStatusBar
 		f = ManaFlash;
 		if ( f && (gametic < f) )
 		{
-			double alph = ((f-(gametic+FracTic))/25.)**1.5;
+			double alph = max((f-(gametic+FracTic))/25.,0.)**1.5;
 			Screen.DrawTexture(BarTex[3],false,margin+14,ss.y-(margin+8),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,mw,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 			Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],margin+119,ss.y-(margin+8),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 			Screen.DrawTexture(IconTex[2],false,margin+2,ss.y-(margin+8),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
