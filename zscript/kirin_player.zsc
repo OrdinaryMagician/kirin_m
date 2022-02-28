@@ -7,28 +7,23 @@ Class KirinPlayer : SWWMPlayer
 	Default
 	{
 		Tag "$T_KIRIN";
-		Speed 1;
-		Radius 16;
 		Height 53;
 		Mass 60;
-		PainChance 255;
-		Health 100;
 		Player.DisplayName "$T_KIRIN";
 		Player.StartItem "KirinPistol";
 		Player.StartItem "KirinPistolAmmo", 16;
 		Player.StartItem "KirinUnarmed";
 		Player.StartItem "KirinMana", 100;
 		Player.StartItem "KirinInternalArmor";
+		Player.JumpZ 9;
 		Player.AttackZOffset 10;
 		Player.ViewHeight 49;
-		Player.AirCapacity 0;
-		Player.GruntSpeed 20;
-		Player.ForwardMove 1., 1.;
-		Player.SideMove 1., 1.;
 		Player.SoundClass "kirin";
-		DamageFactor "Drowning", 0.;
-		+DONTMORPH;
+		Player.ViewBob .7;
+		SWWMPlayer.MoveSpeed .5, 1.2;
+		SWWMPlayer.DodgeSpeed 15;
 		SWWMPlayer.ResurrectType RT_RESPAWN;
+		+SWWMPLAYER.CANDODGE;
 	}
 
 	override Weapon PickWeapon( int slot, bool checkammo )
