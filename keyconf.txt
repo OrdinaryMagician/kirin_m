@@ -1,4 +1,4 @@
-addkeysection "$KIRIN_KEYS" "KIRIN_XANAI"
+addkeysection "$KIRIN_KEYS" "RED_STAR_OF_INNOCENCE"
 addmenukey "$KIRIN_PRIMARYFIRE" "+attack"
 addmenukey "$KIRIN_SECONDARYFIRE" "+altattack"
 addmenukey "$KIRIN_RELOADFIRE" "+reload"

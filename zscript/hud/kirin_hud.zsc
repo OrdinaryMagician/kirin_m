@@ -2,14 +2,14 @@
 
 Class KirinStatusBar : SWWMStatusBar
 {
-	TextureID StatusTex, AmmoTex[12], InvExtraTex, WeaponTex, BarTex[6], IconTex[5], GenTex[3];
+	TextureID StatusTex, AmmoTex[12], InvExtraTex, WeaponTex, BarTex[7], IconTex[5], GenTex[3];
 	int AmmoFlash[4];		// flash when new ammo is received
 	int AmmoOldAmounts[4];		// to detect when to flash
 	Class<SWWMAmmo> AmmoSlots[4];	// ammo type on each slot
 	int HealthFlash, ManaFlash;	// flash when healing or gaining mana
 	int LastHealth, LastMana;	// to detect when to flash
 
-	DynamicValueInterpolator HealthInter, ManaInter;
+	DynamicValueInterpolator HealthInter, ThinHealthInter, ManaInter;
 
 	override void FlushNotify()
 	{
@@ -17,13 +17,16 @@ Class KirinStatusBar : SWWMStatusBar
 		// flush interpolators (useful since this virtual gets called
 		// when loading saves, too)
 		HealthInter.Reset(CPlayer.Health*10);
+		ThinHealthInter.Reset(CPlayer.mo.SpawnHealth()*10);
 		ManaInter.Reset(CPlayer.mo.CountInv("KirinMana")*10);
 	}
 	override void UpdateInterpolators()
 	{
 		int hp = CPlayer.Health*10;
+		int thp = CPlayer.mo.SpawnHealth()*10;
 		int mp = CPlayer.mo.CountInv("KirinMana")*10;
 		HealthInter.Update(hp);
+		ThinHealthInter.Update(thp);
 		ManaInter.Update(mp);
 		// flash 'em
 		if ( hp > LastHealth ) HealthFlash = gametic+25;
@@ -75,6 +78,7 @@ Class KirinStatusBar : SWWMStatusBar
 		BarTex[3] = TexMan.CheckForTexture("graphics/HUD/BarFlash.png",TexMan.Type_Any);
 		BarTex[4] = TexMan.CheckForTexture("graphics/HUD/HealthBarEx.png",TexMan.Type_Any);
 		BarTex[5] = TexMan.CheckForTexture("graphics/HUD/HealthBarPulse.png",TexMan.Type_Any);
+		BarTex[6] = TexMan.CheckForTexture("graphics/HUD/HealthBarThin.png",TexMan.Type_Any);
 		IconTex[0] = TexMan.CheckForTexture("graphics/HUD/HealthInvul.png",TexMan.Type_Any);
 		IconTex[1] = TexMan.CheckForTexture("graphics/HUD/HealthFlash.png",TexMan.Type_Any);
 		IconTex[2] = TexMan.CheckForTexture("graphics/HUD/ManaFlash.png",TexMan.Type_Any);
@@ -93,6 +97,7 @@ Class KirinStatusBar : SWWMStatusBar
 		LastMana = (CPlayer&&CPlayer.mo)?(CPlayer.mo.CountInv("KirinMana")*10):0;
 		LastHealth = CPlayer?(CPlayer.health*10):1000;
 		HealthInter = DynamicValueInterpolator.Create(0,.1,1,100);
+		ThinHealthInter = DynamicValueInterpolator.Create(100,.1,1,100);
 		ManaInter = DynamicValueInterpolator.Create(0,.1,1,100);
 		AmmoSlots[0] = "KirinPistolAmmo";
 		AmmoSlots[1] = "KirinSMGAmmo";
@@ -334,7 +339,7 @@ Class KirinStatusBar : SWWMStatusBar
 		Screen.DrawTexture(BarTex[0],false,margin+15,ss.y-(margin+17),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_ColorOverlay,Color(255,0,0,0));
 		bool invul = isInvulnerable();
 		Screen.DrawTexture(BarTex[invul?2:0],false,margin+14,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw);
-		Screen.DrawText(MiniHUDFont,mhudfontcol[invul?MCR_BRASS:MCR_RED],margin+119,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
+		Screen.DrawText(MiniHUDFont,mhudfontcol[invul?MCR_WHITE:MCR_RED],margin+119,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 		if ( invul ) Screen.DrawTexture(IconTex[0],false,margin+2,ss.y-(margin+20),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
 		else
 		{
@@ -361,6 +366,9 @@ Class KirinStatusBar : SWWMStatusBar
 			Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],margin+119,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 			Screen.DrawTexture(IconTex[1],false,margin+2,ss.y-(margin+20),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 		}
+		double tht = clamp(ThinHealthInter.GetValue()/10.,0.,100.);
+		if ( tht < 100. )
+			Screen.DrawTexture(BarTex[6],false,margin+14+tht,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,100.-tht);
 		double mt = clamp(ManaInter.GetValue()/10.,0.,999.);
 		str = String.Format("%3d",int(mt));
 		double mw = min(mt,100);

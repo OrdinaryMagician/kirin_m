@@ -124,3 +124,10 @@ HardwareShader Texture "graphics/title_fire_7.png"
 {
 	Shader "shaders/glsl/Bilinear.fp"
 }
+HardwareShader Texture "graphics/HUD/HealthBarInvul.png"
+{
+	Shader "shaders/glsl/Fuzz.fp"
+	Texture "noisetex" "textures/graynoise.png"
+	Define "GRAY_COLORS"
+	Define "BASE_RES" = "vec2(100.,5.)"
+}
