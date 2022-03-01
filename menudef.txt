@@ -1,100 +1,11 @@
-OptionValue "SWWMEnemyDropType"
-{
-	-1, "$SWWM_DROPS_NONE"
-	0, "$SWWM_DROPS_AMMO"
-	1, "$SWWM_DROPS_WEAPONS"
-}
-OptionValue "SWWMForceStats"
-{
-	0, "$SWWM_STATS_DISABLED"
-	1, "$SWWM_STATS_ALWAYS"
-	2, "$SWWM_STATS_MAPNAME"
-}
-OptionValue "SWWMDRLASkill"
-{
-	0, "$SWWM_DRLASKILL_BABY"
-	1, "$SWWM_DRLASKILL_EASY"
-	2, "$SWWM_DRLASKILL_NORMAL"
-	3, "$SWWM_DRLASKILL_HARD"
-	4, "$SWWM_DRLASKILL_NIGHTMARE"
-	5, "$SWWM_DRLASKILL_TECHNOPHOBIA"
-	6, "$SWWM_DRLASKILL_ARMAGEDDON"
-	7, "$SWWM_DRLASKILL_ADAPTIVE"
-}
-OptionValue "SWWMPistolStart"
-{
-	0, "$TXT_NO"
-	1, "$SWWM_PISTOLSTART_MAP"
-	2, "$SWWM_PISTOLSTART_CLUSTER"
-}
-OptionValue "SWWMHUDScale"
-{
-	0, "$SWWM_TFITSCALE"
-	1, "$SWWM_LFITSCALE"
-}
-OptionMenu "KirinOptionMenu"
-{
-	Class "SWWMOptionMenu"
-	Title "$KIRIN_MTITLE"
-
-	SafeCommand "$SWWM_CRESET", "event swwmresetcvars"
-	StaticText " "
-
-	StaticText "$SWWM_PTITLE", "Orange"
-	SWWMPlayTime "$SWWM_PLAYTIME", "kirin_playtime"
-	StaticText " "
-	StaticText "$SWWM_OTITLE", "Orange"
-	Option "$SWWM_SHADERS", "kirin_shaders", "YesNo"
-	Slider "$SWWM_FLASH", "kirin_flashstrength", 0.0, 1.0, 0.1, 1
-	Slider "$SWWM_BUMP", "kirin_bumpstrength", 0.0, 1.0, 0.1, 1
-	Option "$SWWM_MM_ENABLE", "kirin_mm_enable", "YesNo"
-	Option "$SWWM_FORCESTATS", "kirin_forcestats", "SWWMForceStats"
-	Slider "$SWWM_HUDMARGIN", "kirin_hudmargin", 0, 40, 1, 0
-	Option "$SWWM_HUDSCALE", "kirin_hudscale", "SWWMHudScale"
-	Slider "$SWWM_MAXMSG", "kirin_maxshown", 1, 10, 1, 0
-	Slider "$SWWM_MAXMSGBIG", "kirin_maxshownbig", 1, 20, 1, 0
-	Slider "$SWWM_MAXPICK", "kirin_maxpickup", 1, 10, 1, 0
-	Slider "$SWWM_CHATLEN", "kirin_chatduration", 1, 30, 1, 0
-	Slider "$SWWM_MSGLEN", "kirin_msgduration", 1, 30, 1, 0
-	Slider "$SWWM_PICKLEN", "kirin_pickduration", 1, 30, 1, 0
-	Option "$SWWM_FUZZ", "kirin_fuzz", "YesNo"
-	StaticText " "
-	StaticText "$SWWM_ETITLE", "Orange"
-	Option "$SWWM_SHADOWS", "kirin_shadows", "YesNo"
-	ScaleSlider "$SWWM_SHADOWDIST", "kirin_shadowdist", -1, 4000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
-	Option "$SWWM_BLOOD", "kirin_blood", "YesNo"
-	ScaleSlider "$SWWM_MAXBLOOD", "kirin_maxblood", -1, 1000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
-	ScaleSlider "$SWWM_MAXGIBS", "kirin_maxgibs", -1, 1000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
-	ScaleSlider "$SWWM_MAXCASINGS", "kirin_maxcasings", -1, 1000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
-	ScaleSlider "$SWWM_MAXDEBRIS", "kirin_maxdebris", -1, 1000, 1, "$SWWM_NONE", "$SWWM_UNLIMITED"
-	SafeCommand "$SWWM_CLEARFX", "netevent swwmcleareffects"
-	StaticText " "
-	StaticText "$SWWM_BTITLE", "Orange"
-	Option "$SWWM_PS_FULLRESET", "kirin_ps_fullreset", "SWWMPistolStart"
-	Option "$SWWM_PS_RESETAMMO", "kirin_ps_resetammo", "SWWMPistolStart"
-	Option "$SWWM_PS_RESETITEMS", "kirin_ps_resetitems", "SWWMPistolStart"
-	Option "$SWWM_PS_RESETHEALTH", "kirin_ps_resethealth", "SWWMPistolStart"
-	Option "$SWWM_ENEMYDROPS", "kirin_enemydrops", "SWWMEnemyDropType"
-	StaticText " "
-	StaticText "$SWWM_ITITLE", "Orange"
-	Option "$SWWM_WEAPONTOOLTIPS", "kirin_weapontooltips", "YesNo"
-	SafeCommand "$SWWM_RESETTOOLTIPS", "event swwmresettooltips"
-	IfGame(Doom)
-	{
-		StaticText " "
-		StaticText "$SWWM_MCTITLE", "Orange"
-		Option "$SWWM_DRLASKILL", "kirin_drlaskill", "SWWMDRLASkill"
-	}
-
-}
 AddOptionMenu "OptionsMenu"
 {
-	Submenu "$KIRIN_MTITLE", "KirinOptionMenu"
+	Submenu "$KIRIN_MTITLE", "SWWMOptionMenu"
 	Submenu "$KIRIN_MCREDS", "KirinCreditsMenu"
 }
 AddOptionMenu "OptionsMenuSimple"
 {
-	Submenu "$KIRIN_MTITLE", "KirinOptionMenu"
+	Submenu "$KIRIN_MTITLE", "SWWMOptionMenu"
 	Submenu "$KIRIN_MCREDS", "KirinCreditsMenu"
 }
 ListMenu "MainMenu"

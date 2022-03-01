@@ -2,12 +2,31 @@
 
 extend Class SWWMHandler
 {
-	private ui void RenderShaders( RenderEvent e )
+	private ui bool RenderModShaders( RenderEvent e, PlayerInfo p, PlayerPawn mo )
 	{
+		let deva = AngeryPower(mo.FindInventory("AngeryPower"));
+		if ( deva )
+		{
+			Shader.SetEnabled(p,"DevastationShader",true);
+			Shader.SetUniform1f(p,"DevastationShader","timer",(gametic+e.FracTic)/GameTicRate);
+			double xstrastr = 1.+max(0,deva.lastpulse-(gametic+e.Fractic))/35.;
+			Shader.SetUniform1f(p,"DevastationShader","xtrastr",xstrastr**2.);
+		}
+		else Shader.SetEnabled(p,"DevastationShader",false);
+		let coat = BarrierPower(mo.FindInventory("BarrierPower"));
+		if ( coat )
+		{
+			Shader.SetEnabled(p,"BarrierShader",true);
+			Shader.SetUniform1f(p,"BarrierShader","timer",(gametic+e.FracTic)/GameTicRate);
+		}
+		else Shader.SetEnabled(p,"BarrierShader",false);
+		return !!coat;
 	}
 
-	static clearscope void ClearAllShaders( PlayerInfo p, bool noscope = false )
+	static clearscope void ClearAllModShaders( PlayerInfo p, bool noscope )
 	{
+		Shader.SetEnabled(p,"BarrierShader",false);
+		Shader.SetEnabled(p,"DevastationShader",false);
 		// make sure titlemap shaders get disabled just in case
 		Shader.SetEnabled(players[consoleplayer],"kirinsigil1",false);
 		Shader.SetEnabled(players[consoleplayer],"kirinsigil2",false);
