@@ -368,7 +368,10 @@ Class KirinStatusBar : SWWMStatusBar
 		}
 		double tht = clamp(ThinHealthInter.GetValue()/10.,0.,100.);
 		if ( tht < 100. )
+		{
+			Screen.DrawTexture(BarTex[0],false,margin+15+tht,ss.y-(margin+17),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,100.-tht,DTA_ColorOverlay,Color(255,0,0,0));
 			Screen.DrawTexture(BarTex[6],false,margin+14+tht,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,100.-tht);
+		}
 		double mt = clamp(ManaInter.GetValue()/10.,0.,999.);
 		str = String.Format("%3d",int(mt));
 		double mw = min(mt,100);
