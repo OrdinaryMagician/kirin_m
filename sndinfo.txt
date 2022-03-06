@@ -1,5 +1,77 @@
 $pitchshiftrange 0
 
+kirin/hipain	sounds/kirin/kirin_hipain.ogg
+kirin/pain	sounds/kirin/kirin_pain.ogg
+kirin/lopain	sounds/kirin/kirin_lopain.ogg
+kirin/grunt	sounds/kirin/kirin_grunt.ogg
+kirin/whine1	sounds/kirin/kirin_whine1.ogg
+kirin/whine2	sounds/kirin/kirin_whine2.ogg
+kirin/whine3	sounds/kirin/kirin_whine3.ogg
+kirin/whine4	sounds/kirin/kirin_whine4.ogg
+kirin/whine5	sounds/kirin/kirin_whine5.ogg
+kirin/whine6	sounds/kirin/kirin_whine6.ogg
+kirin/whine7	sounds/kirin/kirin_whine7.ogg
+kirin/whine8	sounds/kirin/kirin_whine8.ogg
+kirin/whine9	sounds/kirin/kirin_whine9.ogg
+kirin/whine10	sounds/kirin/kirin_whine10.ogg
+kirin/whine11	sounds/kirin/kirin_whine11.ogg
+kirin/whine12	sounds/kirin/kirin_whine12.ogg
+kirin/whine13	sounds/kirin/kirin_whine13.ogg
+kirin/whine14	sounds/kirin/kirin_whine14.ogg
+kirin/jump1	sounds/kirin/kirin_jump1.ogg
+kirin/jump2	sounds/kirin/kirin_jump2.ogg
+kirin/land1	sounds/kirin/kirin_land1.ogg
+kirin/land2	sounds/kirin/kirin_land2.ogg
+kirin/land3	sounds/kirin/kirin_land3.ogg
+kirin/run1	sounds/kirin/kirin_run1.ogg
+kirin/run2	sounds/kirin/kirin_run2.ogg
+kirin/run3	sounds/kirin/kirin_run3.ogg
+kirin/run4	sounds/kirin/kirin_run4.ogg
+kirin/run5	sounds/kirin/kirin_run5.ogg
+kirin/run6	sounds/kirin/kirin_run6.ogg
+kirin/walk1	sounds/kirin/kirin_walk1.ogg
+kirin/walk2	sounds/kirin/kirin_walk2.ogg
+kirin/walk3	sounds/kirin/kirin_walk3.ogg
+kirin/walk4	sounds/kirin/kirin_walk4.ogg
+kirin/walk5	sounds/kirin/kirin_walk5.ogg
+kirin/walk6	sounds/kirin/kirin_walk6.ogg
+$random kirin/jump { kirin/jump1 kirin/jump2 }
+$random kirin/land { kirin/land1 kirin/land2 kirin/land3 }
+$random kirin/run { kirin/run1 kirin/run2 kirin/run3 kirin/run4 kirin/run5 kirin/run6 }
+$random kirin/walk { kirin/walk1 kirin/walk2 kirin/walk3 kirin/walk4 kirin/walk5 kirin/walk6 }
+$random kirin/nouse { kirin/whine5 kirin/whine12 kirin/whine13 }
+$random kirin/puzzfail { kirin/whine6 kirin/whine7 kirin/whine12 }
+$random kirin/puzzhate { kirin/whine1 kirin/whine2 kirin/whine3 kirin/whine4 kirin/whine8 kirin/whine9 kirin/whine10 kirin/whine11 kirin/whine12 kirin/whine14 }	// whining caused by Hexen's "puzzle" switches
+
+$playeralias kirin neutral *death	kirin/pain
+$playeralias kirin neutral *xdeath	kirin/hipain
+$playeralias kirin neutral *wimpydeath	kirin/lopain
+$playeralias kirin neutral *crazydeath	kirin/hipain
+$playeralias kirin neutral *burndeath	kirin/pain
+$playeralias kirin neutral *gibbed	kirin/hipain
+$playeralias kirin neutral *splat	kirin/hipain
+$playeralias kirin neutral *pain100	kirin/lopain
+$playeralias kirin neutral *pain75	kirin/pain
+$playeralias kirin neutral *pain50	kirin/hipain
+$playeralias kirin neutral *pain25	kirin/hipain
+$playeralias kirin neutral *grunt	kirin/grunt
+$playeralias kirin neutral *land	kirin/land
+$playersound kirin neutral *falling	DSEMPTY
+$playeralias kirin neutral *jump	kirin/jump
+$playersound kirin neutral *fist	DSEMPTY
+$playersound kirin neutral *fistgrunt	DSEMPTY
+$playeralias kirin neutral *usefail	kirin/nouse
+$playersound kirin neutral *evillaugh	DSEMPTY
+$playersound kirin neutral *weaponlaugh	DSEMPTY
+$playeralias kirin neutral *puzzfail	kirin/puzzfail
+$playersound kirin neutral *poison	DSEMPTY
+$playersound kirin neutral *dive	DSEMPTY
+$playersound kirin neutral *surface	DSEMPTY
+$playersound kirin neutral *gasp	DSEMPTY
+$playersound kirin neutral *taunt	DSEMPTY
+$playersound kirin neutral *regenerate	DSEMPTY
+$playersound kirin neutral *drainhealth	DSEMPTY
+
 kirin/preamb	sounds/kirin_preamb.ogg
 kirin/logoflash	sounds/kirin_logoflash.ogg
 
