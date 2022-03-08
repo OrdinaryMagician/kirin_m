@@ -23,6 +23,7 @@ Class KirinPlayer : SWWMPlayer
 		SWWMPlayer.MoveSpeed .5, 1.2;
 		SWWMPlayer.DodgeSpeed 15;
 		SWWMPlayer.ResurrectType RT_RESPAWN;
+		SWWMPlayer.PainThresholds 0, 10, 30, 50;
 		+SWWMPLAYER.CANDODGE;
 		+SWWMPLAYER.CANWALLCLIMB;
 	}
