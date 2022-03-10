@@ -131,3 +131,9 @@ HardwareShader Texture "graphics/HUD/HealthBarInvul.png"
 	Define "GRAY_COLORS"
 	Define "BASE_RES" = "vec2(100.,5.)"
 }
+HardwareShader Texture "graphics/HUD/HealthBarEx.png"
+{
+	Shader "shaders/glsl/RoughWarp.fp"
+	Texture "warptex" "textures/roughwarp.png"
+	Define "BASE_RES" = "vec2(100.,5.)"
+}
