@@ -32,7 +32,7 @@ Should he fall in battle, his body shall scatter in the wind and be reformed in 
 
 There are four weapons available throughout your journey, one of which you already start with. As this is a mod for **Hexen**, that's very much the "ideal" layout. The only bindings you ever need are both fire buttons, reload and zoom.
 
-### Slot 1 - Unarmed
+### Slot 1 - Unarmed *[Fist et al]*
 
 *"I shall not back down from a fight..."*
 
@@ -42,7 +42,7 @@ Primary fire alternates between two quick jabs and a hook. This has some decent 
 
 The reload and zoom functions allow you to block and parry respectively. Blocking is mostly effective, thanks to the armored lining of your suit, especially around the cuffs. Parrying, if timed well, will leave an enemy stunned for a short period of time, upon which any damage to them is amplified. It is not possible to parry projectiles, you are not **Demo-chan**, nor know exactly how they can even do such a thing.
 
-### Slot 2 - Nelaka Rykha Semi-Auto
+### Slot 2 - Nelaka Rykha Semi-Auto *[Pistol/Chaingun, Elven Wand, Sapphire Wand]*
 
 *"A fine gun... And one that'll be most helpful."*
 
@@ -52,7 +52,7 @@ Primary fire will of course shoot the gun, while secondary lets **Kirin** make u
 
 Like any **Anarukon** firearm, the weapon not only needs to be reloaded with more bullets, but also have its inner mana supply replenished in order for it to actually fire off rounds. This recharge process is done through the zoom key. In addition, even if there are no rounds chambered, the weapon can still deal some damage by being *"dry fired"* as the ignition impulse will still trigger while it has mana left.
 
-### Slot 3 - Nelaka Xei PDW
+### Slot 3 - Nelaka Xei PDW *[Shotgun, Crossbow, Frost Shards]*
 
 *"Not the most potent firearm, but still... I'll take it."*
 
@@ -62,7 +62,7 @@ Primary fire shoots alternating between each barrel at a steady rate, while seco
 
 As per usual, this weapon also has to be replenished with mana through the same method as the pistol, although due to its lower muzzle energy the mana supply tends to last much longer, and dry-firing isn't as damaging.
 
-### Slot 4 - Sokana Fragment Carbine
+### Slot 4 - Sokana Fragment Carbine *[Rocket Launcher, Dragon Claw/Hellstaff, Arc of Death]*
 
 *"A genuine Sokana piece, it is an honor to wield it."*
 
@@ -72,7 +72,7 @@ Primary fire shoots each barrel. Due to the employment of solidified pyromantic 
 
 Unlike other firearms, the use of a physical propellant means that the weapon does not need to be replenished with mana for it to keep operating.
 
-### Slot 5 - Unissix Crafts Warp Ballista
+### Slot 5 - Unissix Crafts Warp Ballista *[Bloodscourge, Phoenix Rod/Firemace]*
 
 *"Such a mighty weapon... Thank you, Misa."*
 
@@ -82,7 +82,7 @@ Primary fire will deploy the payload, piercing through any small targets in its 
 
 Ammunition for this weapon can be found sometimes scattered throughout the world, but it's fairly rare compared to that of the other three. Part of the challenge, perhaps. **Kirin** can only carry six rounds for this, due to their size. The weapon itself can hold one in the chamber, adding up to a total of seven shots.
 
-### Slot 5 - Garrett M84 "Patriarch" Anti-Materiel Rifle
+### Slot 5 - Garrett M84 "Patriarch" Anti-Materiel Rifle *[Plasma Rifle/BFG9000]*
 
 *"I promise I shall make good use of it, aunt Axaleyu."*
 
@@ -134,61 +134,61 @@ Holding the cast button allows you to *"preview"* the warp destination, and rele
 
 Obviously to aid you in this lone journey, you're going to need some extra help. Various items have been scattered around, as per usual. While you don't really need to care about storage space, **Kirin** would rather not hoard too much, so there are some limits to the items you can carry. Also he will never waste anything, so excess amounts that can't be picked up will be left behind for later. This is especially important for ammunition, of course.
 
-### Candy Bean *[Crystal Vial]*
+### Candy Bean *[Crystal Vial, Health Bonus]*
 
 *"Hehehe... I love these."*
 
 Each of these regains a bit of health and mana when eaten. Part of his grandmother's seemingly endless supply of sweets. If **Kirin** isn't feeling hungry, he'll save them up for later, eating them one by one by himself when needed. These candies are stored in his pockets, for quicker access.
 
-### Refreshing Beverage *[Quartz Flask]*
+### Refreshing Beverage *[Quartz Flask, Medikit/Stimpack]*
 
 *"It is very important to stay hydrated when exercising."*
 
 A popular, sugar-rich drink used mainly by **Anarukon** athletes. Regains some health on use, and has a very appealing taste to boot.
 
-### Akashna Extract *[Mystic Urn]*
+### Akashna Extract *[Mystic Urn, Soulsphere/Megasphere]*
 
 *"A scent so familiar... A taste so delicious..."*
 
 A refreshing bottle of sweet tea with a pungent odor, made from iron-rich **Akashna** blood. Overheals you and greatly boosts regeneration upon consumption, though its full effects fade after a while. Alerts enemies when opened.
 
-### Mana Stimulant *[Mystic Ambit Incant]*
+### Mana Stimulant *[Mystic Ambit Incant, Chainsaw, Gauntlets of the Necromancer]*
 
 *"Nnnnnn... It tastes like medicine..."*
 
 A potion that boosts mana absorption for some time, allowing you to replenish your reserves quicker. Has a distinct *"rooty"* taste.
 
-### Ring of Protection *[Amulet of Warding, Falcon Shield, Mesh Armor, Platinum Helm]*
+### Ring of Protection *[Amulet of Warding, Falcon Shield, Mesh Armor, Platinum Helm, Green Armor, Silver Shield]*
 
 *"Sayacchi says they're everything you could ever want... I don't get it."*
 
 You can carry up to eight of these at the same time, stacking into almost complete invulnerability. They will shatter after absorbing too much damage, however. Strangely, you don't need to put these in your fingers for them to have any effect. They'll work as long as you keep them close to your body, so **Kirin** just puts them in his chest pocket.
 
-### Ring Set *[Dragonskin Bracers]*
+### Ring Set *[Dragonskin Bracers, Blue Armor, Enchanted Shield]*
 
 *"A valuable collection."*
 
 Four rings of protection in one package.
 
-### Red Oni Milk *[Icon of the Defender]*
+### Red Oni Milk *[Icon of the Defender, Invulnerability, Ring of Invincibility]*
 
 *"I-Ibuki's..."*
 
 A flask of **Ibuki**'s own fresh milk. So nutritious it can boost one's defenses to unheard of levels, for a limited time.
 
-### 8mm Short *[Flechette]*
+### 8mm Short *[Flechette, Clip, Wand Crystal]*
 
 *"Made for murder... To rend flesh and bone..."*
 
 Found in pairs of 2 rounds. **Kirin** will skillfully load them into his reserve mags as he picks them up, and leave any excess behind. Pickup amounts for non-Hexen IWADs may vary.
 
-### 5mm Xei *[Blue Mana]*
+### 5mm Xei *[Blue Mana, Shells, Ethereal Arrows]*
 
 *"Made for submission... To shed the blood..."*
 
 Found in bunches of 5 rounds. Likewise, these will be jammed into reserve mags as they're collected, and excess rounds will be left behind. Pickup amounts for non-Hexen IWADs may vary.
 
-### 20mm Frag *[Green Mana]*
+### 20mm Frag *[Green Mana, Rockets, Claw Orbs/Runes]*
 
 *"To weaponize pyromancy in this fashion... Such is warfare."*
 
@@ -200,19 +200,25 @@ Found as single rounds. Pickup amounts for non-Hexen IWADs may vary.
 
 Found as single rounds or pairs/trios *(when replacing Cell Packs)*.
 
+### Ballista Rounds *[Flame Orbs/Mace Spheres]*
+
+*"So much power inside this..."*
+
+Sometimes found. Spawn rarity varies.
+
 ### Assorted Ammo *[Combined Mana]*
 
 *"I shall only take what I need."*
 
 4 pistol rounds, 10 SMG rounds and 2 shells.
 
-### Ammo Pack *[Krater of Might]*
+### Ammo Pack *[Krater of Might, Backpack, Bag of Holding]*
 
 *"A bountiful resource..."*
 
 12 pistol rounds, 30 SMG rounds and 6 shells in one package, plus a ballista round!
 
-### Small Bomb *[Disc of Repulsion]*
+### Small Bomb *[Disc of Repulsion, Armor Bonus, Timebomb of the Ancients]*
 
 *"Purupurupikopuyo...?"*
 
@@ -230,19 +236,19 @@ Yet another gift from **Saya**. She wants to ensure that you don't need to perfo
 
 Hastens your stride for a limited time. Appears to also affect the speed of your melee kicks, too.
 
-### Devastation Sigil *[Dark Servant, Banishment Device]*
+### Devastation Sigil *[Dark Servant, Banishment Device, Berserk, Tome of Power]*
 
 *"A gift from the gods to them, and now a gift to me... Thank you, Demo."*
 
 A gift from **Demo-chan**. Greatly empowers all damage you deal, though this comes at the price of potentially putting yourself in greater danger with your own weapons.
 
-### Enthrallment Solution *[Porkalator]*
+### Enthrallment Solution *[Porkalator, Morph Ovum]*
 
 *"These mindless beasts are so easy to control..."*
 
 Creatures sprinkled with this will abide by your command, turning against your own foes. Does not appear to work on very strong-willed enemies *(that is, bosses)*.
 
-### Pocket Light *[Torch]*
+### Pocket Light *[Torch, Lite-Amp]*
 
 *"I should try not to shine this on myself, it's very intense."*
 
@@ -253,6 +259,18 @@ A little flashlight that attaches to your chest pocket. Provides fairly strong i
 *"I am no stranger to the power of flight, and its many dangers..."*
 
 Allows you to fly about. Its effects can be toggled at will *(do watch out for heights when you do so)*. Due to its fragility, it will shatter should you travel too far of a distance through portals.
+
+### Elemental Coating *[Radsuit]*
+
+*"Earth has become quite dangerous since the invasion. Lava seeps in from Hell itself, and toxic waste is abound..."*
+
+Allows you to harmlessly wade through hazardous liquids for a limited time.
+
+### Omnisight *[Computer Map]*
+
+*"Seems people are passing these around so others can find their way... Most useful."*
+
+Connected to your phone, this will fill in the rough outline of the map.
 
 ## Ammo Management
 
