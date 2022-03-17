@@ -41,6 +41,17 @@ T_KIRINFLIGHT = "Aerial Amulet";
 T_KIRIN = "Kirin Xanai";
 // quit messages
 QUITMSG = "Farewell, brave soul...";
+// startup (don't localize)
+STARTUP1 =
+"\n"
+" \cg★\cr~\c- \cfBless The Cute Emperor \cr~\cg★\c-\n"
+"\n"
+"     \cg★\cr~\c- \cfKirin Best Boy \cr~\cg★\c-\n"
+"\n";
+STARTUP2 = "";
+STARTUP3 = "";
+STARTUP4 = "";
+STARTUP5 = "";
 // misc
 KIRIN_ASMFAIL = "You don't have all Ballista parts yet";
 KIRIN_ASMSUCC = "You have assembled the Warp Ballista";
@@ -106,9 +117,9 @@ TT_KIRINSNIPER =
 "\cxPrimary Fire:\c- Steady shooting.\n"
 "\cxSecondary Fire:\c- Scoped aiming.";
 // intermission tips
-KIRIN_NINTERTIP = "25";
-$ifgame(heretic) KIRIN_NINTERTIP = "23";
-$ifgame(doom) KIRIN_NINTERTIP = "22";
+KIRIN_NINTERTIP = "30";
+$ifgame(heretic) KIRIN_NINTERTIP = "28";
+$ifgame(doom) KIRIN_NINTERTIP = "27";
 KIRIN_INTERTIP = "Tip #%d:";
 KIRIN_INTERTIP1 = "Kirin is a good boy.";
 KIRIN_INTERTIP2 = "Don't underestimate the Rykha. That gun can carry you very far.";
@@ -122,7 +133,7 @@ KIRIN_INTERTIP9 = "The Warp Ballista is faster than light. Nothing can dodge its
 $ifgame(doom) KIRIN_INTERTIP9 = "The Patriarch is a potent rifle. It can pierce multiple targets with ease.";
 KIRIN_INTERTIP10 = "Try to avoid partial reloads, or you'll have to do manual mag management later.";
 KIRIN_INTERTIP11 = "Candy beans replenish health and mana at regular intervals. Truly, beans might be useful.";
-KIRIN_INTERTIP12 = "Blood thining reduces damage resistance. Only Akashna extract can clear this debuff.";
+KIRIN_INTERTIP12 = "Blood thining reduces your maximum health. Only Akashna extract can clear this debuff.";
 KIRIN_INTERTIP13 = "A good warrior knows to balance mana usage between weapons and spells.";
 KIRIN_INTERTIP14 = "Flame of the Heart is useful in a pinch, but healing items are more effective.";
 KIRIN_INTERTIP15 = "Holding the cast button allows you to visualize where Boundary Break will send you.";
@@ -133,6 +144,11 @@ KIRIN_INTERTIP19 = "Not even Kirin can resist the power of Ibuki's milk.";
 KIRIN_INTERTIP20 = "No ammunition is ever wasted. Don't forget you can refill at leftover pickups.";
 KIRIN_INTERTIP21 = "The Devastation Sigil will magnify all your damage. Careful not to hurt yourself.";
 KIRIN_INTERTIP22 = "Diplomacy has no place in this war. Monsters are to be killed.";
-KIRIN_INTERTIP23 = "The Safety Tether is the best \"get out of jail free\" card.";
-KIRIN_INTERTIP24 = "The Enthrallment Solution's effects are indefinite... Until the target dies.";
-KIRIN_INTERTIP25 = "The Accelerator Amulet not only makes you go fast, it makes you kick hard too.";
+KIRIN_INTERTIP23 = "Your phone is a very helpful tool. Make sure to use it well.";
+KIRIN_INTERTIP24 = "Yes, the boy can in fact shoot guns.";
+KIRIN_INTERTIP25 = "You are not immune to the boy™.";
+KIRIN_INTERTIP26 = "Death is not the end. Being Anarukon, Kirin can scatter his body into ashes and be reformed at a safe spot.";
+KIRIN_INTERTIP27 = "Combining ice and fire magic can result in amplified damage if done just right.";
+KIRIN_INTERTIP28 = "The Safety Tether is the best \"get out of jail free\" card.";
+KIRIN_INTERTIP29 = "The Enthrallment Solution's effects are indefinite... Until the target dies.";
+KIRIN_INTERTIP30 = "The Accelerator Amulet not only makes you go fast, it makes you kick hard too.";

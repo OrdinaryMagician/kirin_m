@@ -12,14 +12,13 @@ KIRIN_SPELLPREV = "Hechizo Anterior";
 KIRIN_SPELLNEXT = "Hechizo Siguiente";
 KIRIN_PHONE = "Menú de Teléfono";
 // skills
-KIRIN_SKCHILL="\cjEstrella Blanca\c-";
 KIRIN_SKEASY="\cfEstrella Amarilla\c-";
 KIRIN_SKNORMAL="\ciEstrella Naranja\c-";
-KIRIN_SKHARD="\crEstrella Roja\c-";
-KIRIN_SKHARDCORE="\cmEstrella Negra\c-";
-KIRIN_SKHARDCORECONFIRM="\cm¿Seguro que quieres hacer eso?\nPuede que te pateen el culo.\c-\n\n\cxMonstruos rápidos\n1.5x salud y daño de monstruos\n25% de agresividad extra\nTrucos deshabilitados\nMonstruos de cooperativo\c-\n\n(Pulsa Y para un desafío)";
-KIRIN_SKLUNATIC="\ctEstrella Nula\c-";
-KIRIN_SKLUNATICCONFIRM="\ctCiertamente deseas morir.\nElige esta dificultad si te atreves.\c-\n\n\cxTodos los cambios de Estrella Negra\n+\nDoble velocidad de enemigos\nProyectiles enemigos duplicados\nPueden aparecer enemigos extra\nReflejos instantáneos de enemigo\nLos enemigos no se estremecen\nLos enemigos no pelean entre si\c-\n\n(Pulsa Y para morir al instante)";
+KIRIN_SKHARD="\cgEstrella Roja\c-";
+KIRIN_SKHARDCORE="\crEstrella Oscura\c-";
+KIRIN_SKHARDCORECONFIRM="\cr¿Seguro que quieres hacer eso?\nPuede que te pateen el culo.\c-\n\n\cxMonstruos rápidos\n1.5x salud y daño de monstruos\n25% de agresividad extra\nTrucos deshabilitados\nMonstruos de cooperativo\c-\n\n(Pulsa Y para un desafío)";
+KIRIN_SKLUNATIC="\cmEstrella Negra\c-";
+KIRIN_SKLUNATICCONFIRM="\cmCiertamente deseas morir.\nElige esta dificultad si te atreves.\c-\n\n\cxTodos los cambios de \crEstrella Oscura\cx\n+\nDoble velocidad de enemigos\nProyectiles enemigos duplicados\nPueden aparecer enemigos extra\nReflejos instantáneos de enemigo\nLos enemigos no se estremecen\nLos enemigos no pelean entre si\c-\n\n(Pulsa Y para morir al instante)";
 // mod menu
 KIRIN_MTITLE = "Opciones de RED STAR OF INNOCENCE";
 KIRIN_MCREDS = "Créditos de RED STAR OF INNOCENCE Credits";

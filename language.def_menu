@@ -12,14 +12,13 @@ KIRIN_SPELLPREV = "Previous Spell";
 KIRIN_SPELLNEXT = "Next Spell";
 KIRIN_PHONE = "Phone Menu";
 // skills
-KIRIN_SKCHILL="\cjWhite Star\c-";
 KIRIN_SKEASY="\cfYellow Star\c-";
 KIRIN_SKNORMAL="\ciOrange Star\c-";
-KIRIN_SKHARD="\crRed Star\c-";
-KIRIN_SKHARDCORE="\cmBlack Star\c-";
-KIRIN_SKHARDCORECONFIRM="\cmAre you sure you want to do that?\nYou might get your ass kicked.\c-\n\n\cxFast monsters\n1.5x monster health & damage\n25% extra aggressiveness\nCheats are disabled\nCoop monsters will spawn\c-\n\n(Press Y for a challenge)";
-KIRIN_SKLUNATIC="\ctVoid Star\c-";
-KIRIN_SKLUNATICCONFIRM="\ctYou've clearly got a death wish.\nChoose this skill if you dare.\c-\n\n\cxAll changes from Black Star\n+\n2x speedup for all enemy actions\nEnemy projectiles will multiply\nAdditional enemies may spawn\nEnemies react instantly\nEnemies don't flinch\nInfighting is disabled\c-\n\n(Press Y to die instantly)";
+KIRIN_SKHARD="\cgRed Star\c-";
+KIRIN_SKHARDCORE="\crDark Star\c-";
+KIRIN_SKHARDCORECONFIRM="\crAre you sure you want to do that?\nYou might get your ass kicked.\c-\n\n\cxFast monsters\n1.5x monster health & damage\n25% extra aggressiveness\nCheats are disabled\nCoop monsters will spawn\c-\n\n(Press Y for a challenge)";
+KIRIN_SKLUNATIC="\cmBlack Star\c-";
+KIRIN_SKLUNATICCONFIRM="\cmYou've clearly got a death wish.\nChoose this skill if you dare.\c-\n\n\cxAll changes from \crDark Star\cx\n+\n2x speedup for all enemy actions\nEnemy projectiles will multiply\nAdditional enemies may spawn\nEnemies react instantly\nEnemies don't flinch\nInfighting is disabled\c-\n\n(Press Y to die instantly)";
 // mod menu
 KIRIN_MTITLE = "RED STAR OF INNOCENCE Options";
 KIRIN_MCREDS = "RED STAR OF INNOCENCE Credits";
