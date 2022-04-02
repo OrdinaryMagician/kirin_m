@@ -24,14 +24,9 @@ Class KirinPlayer : SWWMPlayer
 		SWWMPlayer.DodgeSpeed 15;
 		SWWMPlayer.ResurrectType RT_RESPAWN;
 		SWWMPlayer.PainThresholds 0, 10, 30, 50;
+		SWWMPlayer.HealthDecrease 50, 10;
 		+SWWMPLAYER.CANDODGE;
 		+SWWMPLAYER.CANWALLCLIMB;
-	}
-
-	override void Die( Actor source, Actor inflictor, int dmgflags, Name MeansOfDeath )
-	{
-		Super.Die(source,inflictor,dmgflags,MeansOfDeath);
-		MaxHealth = StartHealth = max(50,SpawnHealth()-10);
 	}
 
 	override Weapon PickWeapon( int slot, bool checkammo )
@@ -43,13 +38,3 @@ Class KirinPlayer : SWWMPlayer
 	}
 }
 
-// event handler hook needed because player_t::Resurrect() does not respect SpawnHealth
-extend Class SWWMHandler
-{
-	override void PlayerRespawned( PlayerEvent e )
-	{
-		PlayerInfo p = players[e.PlayerNumber];
-		if ( p.mo && (p.mo is 'KirinPlayer') )
-			p.Health = p.mo.Health = p.mo.SpawnHealth();
-	}
-}
