@@ -18,6 +18,7 @@ Class KirinTitleStuff : EventHandler
 	ui TextureID gradtex;
 	int titletimer;
 	bool bFadeFromBlack;
+	ui Font mSmallFont;
 
 	private ui void TickSmokeLayers()
 	{
@@ -160,6 +161,7 @@ Class KirinTitleStuff : EventHandler
 		if ( !logotex[0] ) logotex[0] = TexMan.CheckForTexture("graphics/KirinLogo.png",TexMan.Type_Any);
 		if ( !logotex[1] ) logotex[1] = TexMan.CheckForTexture("graphics/KirinLogo_Glow.png",TexMan.Type_Any);
 		if ( !gradtex ) gradtex = TexMan.CheckForTexture("graphics/title_grad.png",TexMan.Type_Any);
+		if ( !mSmallFont ) mSmallFont = Font.GetFont('TewiFont');
 		double alf;
 		String str;
 		if ( GameSecs < 40 )
@@ -172,49 +174,49 @@ Class KirinTitleStuff : EventHandler
 				alf = clamp(GameSecs-1,0.,1.);
 				alf *= 1.-clamp(GameSecs-6,0.,1.);
 				String str = StringTable.Localize("$KIRIN_TITLEPRESENTSA");
-				Screen.DrawText(smallfont,Font.CR_GOLD,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2)-(smallfont.GetHeight()*CleanYFac),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+				Screen.DrawText(mSmallFont,Font.CR_GOLD,(Screen.GetWidth()-mSmallFont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2)-(mSmallFont.GetHeight()*CleanYFac),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
 				str = StringTable.Localize("$KIRIN_TITLEPRESENTSB");
-				Screen.DrawText(smallfont,Font.CR_ORANGE,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+				Screen.DrawText(mSmallFont,Font.CR_ORANGE,(Screen.GetWidth()-mSmallFont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
 			}
 			else if ( GameSecs < 15 )
 			{
 				alf = clamp(GameSecs-7,0.,1.);
 				alf *= 1.-clamp(GameSecs-12,0.,1.);
 				str = StringTable.Localize("$KIRIN_TITLEMODBYA");
-				Screen.DrawText(smallfont,Font.CR_ORANGE,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2)-(smallfont.GetHeight()*CleanYFac),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+				Screen.DrawText(mSmallFont,Font.CR_ORANGE,(Screen.GetWidth()-mSmallFont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2)-(mSmallFont.GetHeight()*CleanYFac),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
 				str = StringTable.Localize("$KIRIN_TITLEMODBYB");
-				Screen.DrawText(smallfont,Font.CR_GOLD,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+				Screen.DrawText(mSmallFont,Font.CR_GOLD,(Screen.GetWidth()-mSmallFont.StringWidth(str)*CleanXFac)/2,(Screen.GetHeight()/2),str,DTA_CleanNoMove,true,DTA_Alpha,alf);
 			}
 			else if ( GameSecs < 23 )
 			{
 				alf = clamp(GameSecs-15,0.,1.);
 				alf *= 1.-clamp(GameSecs-22,0.,1.);
-				Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,Screen.GetHeight()-64*CleanYFac,DTA_DestWidth,Screen.GetWidth()/2,DTA_DestHeight,(smallfont.GetHeight()*2+4)*CleanYFac,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,alf*.5,DTA_TopOffset,256,DTA_LeftOffset,128,DTA_Rotate,90);
-				Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,Screen.GetHeight()-64*CleanYFac,DTA_DestWidth,Screen.GetWidth()/2,DTA_DestHeight,(smallfont.GetHeight()*2+4)*CleanYFac,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,alf*.5,DTA_TopOffset,256,DTA_LeftOffset,128,DTA_Rotate,270);
+				Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,Screen.GetHeight()-64*CleanYFac,DTA_DestWidth,Screen.GetWidth()/2,DTA_DestHeight,(mSmallFont.GetHeight()*2+4)*CleanYFac,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,alf*.5,DTA_TopOffset,256,DTA_LeftOffset,128,DTA_Rotate,90);
+				Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,Screen.GetHeight()-64*CleanYFac,DTA_DestWidth,Screen.GetWidth()/2,DTA_DestHeight,(mSmallFont.GetHeight()*2+4)*CleanYFac,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,alf*.5,DTA_TopOffset,256,DTA_LeftOffset,128,DTA_Rotate,270);
 				str = StringTable.Localize("$KIRIN_TITLETXT1A");
-				Screen.DrawText(smallfont,Font.CR_FIRE,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,Screen.GetHeight()-(64+smallfont.GetHeight())*CleanYFac,str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+				Screen.DrawText(mSmallFont,Font.CR_FIRE,(Screen.GetWidth()-mSmallFont.StringWidth(str)*CleanXFac)/2,Screen.GetHeight()-(64+mSmallFont.GetHeight())*CleanYFac,str,DTA_CleanNoMove,true,DTA_Alpha,alf);
 				str = StringTable.Localize("$KIRIN_TITLETXT1B");
-				Screen.DrawText(smallfont,Font.CR_FIRE,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,Screen.GetHeight()-64*CleanYFac,str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+				Screen.DrawText(mSmallFont,Font.CR_FIRE,(Screen.GetWidth()-mSmallFont.StringWidth(str)*CleanXFac)/2,Screen.GetHeight()-64*CleanYFac,str,DTA_CleanNoMove,true,DTA_Alpha,alf);
 			}
 			else if ( GameSecs < 31 )
 			{
 				alf = clamp(GameSecs-23,0.,1.);
 				alf *= 1.-clamp(GameSecs-30,0.,1.);
-				Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,Screen.GetHeight()-64*CleanYFac,DTA_DestWidth,Screen.GetWidth()/2,DTA_DestHeight,(smallfont.GetHeight()+4)*CleanYFac,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,alf*.5,DTA_TopOffset,256,DTA_LeftOffset,128,DTA_Rotate,90);
-				Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,Screen.GetHeight()-64*CleanYFac,DTA_DestWidth,Screen.GetWidth()/2,DTA_DestHeight,(smallfont.GetHeight()+4)*CleanYFac,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,alf*.5,DTA_TopOffset,256,DTA_LeftOffset,128,DTA_Rotate,270);
+				Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,Screen.GetHeight()-64*CleanYFac,DTA_DestWidth,Screen.GetWidth()/2,DTA_DestHeight,(mSmallFont.GetHeight()+4)*CleanYFac,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,alf*.5,DTA_TopOffset,256,DTA_LeftOffset,128,DTA_Rotate,90);
+				Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,Screen.GetHeight()-64*CleanYFac,DTA_DestWidth,Screen.GetWidth()/2,DTA_DestHeight,(mSmallFont.GetHeight()+4)*CleanYFac,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,alf*.5,DTA_TopOffset,256,DTA_LeftOffset,128,DTA_Rotate,270);
 				str = StringTable.Localize("$KIRIN_TITLETXT2");
-				Screen.DrawText(smallfont,Font.CR_FIRE,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,Screen.GetHeight()-(64+smallfont.GetHeight()/2)*CleanYFac,str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+				Screen.DrawText(mSmallFont,Font.CR_FIRE,(Screen.GetWidth()-mSmallFont.StringWidth(str)*CleanXFac)/2,Screen.GetHeight()-(64+mSmallFont.GetHeight()/2)*CleanYFac,str,DTA_CleanNoMove,true,DTA_Alpha,alf);
 			}
 			else
 			{
 				alf = clamp(GameSecs-31,0.,1.);
 				alf *= 1.-clamp(GameSecs-38,0.,1.);
-				Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,Screen.GetHeight()-64*CleanYFac,DTA_DestWidth,Screen.GetWidth()/2,DTA_DestHeight,(smallfont.GetHeight()*2+4)*CleanYFac,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,alf*.5,DTA_TopOffset,256,DTA_LeftOffset,128,DTA_Rotate,90);
-				Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,Screen.GetHeight()-64*CleanYFac,DTA_DestWidth,Screen.GetWidth()/2,DTA_DestHeight,(smallfont.GetHeight()*2+4)*CleanYFac,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,alf*.5,DTA_TopOffset,256,DTA_LeftOffset,128,DTA_Rotate,270);
+				Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,Screen.GetHeight()-64*CleanYFac,DTA_DestWidth,Screen.GetWidth()/2,DTA_DestHeight,(mSmallFont.GetHeight()*2+4)*CleanYFac,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,alf*.5,DTA_TopOffset,256,DTA_LeftOffset,128,DTA_Rotate,90);
+				Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2,Screen.GetHeight()-64*CleanYFac,DTA_DestWidth,Screen.GetWidth()/2,DTA_DestHeight,(mSmallFont.GetHeight()*2+4)*CleanYFac,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_Alpha,alf*.5,DTA_TopOffset,256,DTA_LeftOffset,128,DTA_Rotate,270);
 				str = StringTable.Localize("$KIRIN_TITLETXT3A");
-				Screen.DrawText(smallfont,Font.CR_FIRE,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,Screen.GetHeight()-(64+smallfont.GetHeight())*CleanYFac,str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+				Screen.DrawText(mSmallFont,Font.CR_FIRE,(Screen.GetWidth()-mSmallFont.StringWidth(str)*CleanXFac)/2,Screen.GetHeight()-(64+mSmallFont.GetHeight())*CleanYFac,str,DTA_CleanNoMove,true,DTA_Alpha,alf);
 				str = StringTable.Localize("$KIRIN_TITLETXT3B");
-				Screen.DrawText(smallfont,Font.CR_FIRE,(Screen.GetWidth()-smallfont.StringWidth(str)*CleanXFac)/2,Screen.GetHeight()-64*CleanYFac,str,DTA_CleanNoMove,true,DTA_Alpha,alf);
+				Screen.DrawText(mSmallFont,Font.CR_FIRE,(Screen.GetWidth()-mSmallFont.StringWidth(str)*CleanXFac)/2,Screen.GetHeight()-64*CleanYFac,str,DTA_CleanNoMove,true,DTA_Alpha,alf);
 			}
 			if ( GameSecs > 39 )
 			{
