@@ -2,34 +2,34 @@
 
 extend Class SWWMHandler
 {
-	private ui bool RenderModShaders( RenderEvent e, PlayerInfo p, PlayerPawn mo )
+	private ui bool RenderModShaders( RenderEvent e, PlayerPawn mo )
 	{
 		let deva = AngeryPower(mo.FindInventory("AngeryPower"));
 		if ( deva )
 		{
-			Shader.SetEnabled(p,"DevastationShader",true);
-			Shader.SetUniform1f(p,"DevastationShader","timer",(gametic+e.FracTic)/GameTicRate);
+			PPShader.SetEnabled("DevastationShader",true);
+			PPShader.SetUniform1f("DevastationShader","timer",(gametic+e.FracTic)/GameTicRate);
 			double xstrastr = 1.+max(0,deva.lastpulse-(gametic+e.Fractic))/35.;
-			Shader.SetUniform1f(p,"DevastationShader","xtrastr",xstrastr**2.);
+			PPShader.SetUniform1f("DevastationShader","xtrastr",xstrastr**2.);
 		}
-		else Shader.SetEnabled(p,"DevastationShader",false);
+		else PPShader.SetEnabled("DevastationShader",false);
 		let coat = BarrierPower(mo.FindInventory("BarrierPower"));
 		if ( coat )
 		{
-			Shader.SetEnabled(p,"BarrierShader",true);
-			Shader.SetUniform1f(p,"BarrierShader","timer",(gametic+e.FracTic)/GameTicRate);
+			PPShader.SetEnabled("BarrierShader",true);
+			PPShader.SetUniform1f("BarrierShader","timer",(gametic+e.FracTic)/GameTicRate);
 		}
-		else Shader.SetEnabled(p,"BarrierShader",false);
+		else PPShader.SetEnabled("BarrierShader",false);
 		return !!coat;
 	}
 
-	static clearscope void ClearAllModShaders( PlayerInfo p, bool noscope )
+	static clearscope void ClearAllModShaders( bool noscope )
 	{
-		Shader.SetEnabled(p,"BarrierShader",false);
-		Shader.SetEnabled(p,"DevastationShader",false);
+		PPShader.SetEnabled("BarrierShader",false);
+		PPShader.SetEnabled("DevastationShader",false);
 		// make sure titlemap shaders get disabled just in case
-		Shader.SetEnabled(players[consoleplayer],"kirinsigil1",false);
-		Shader.SetEnabled(players[consoleplayer],"kirinsigil2",false);
-		Shader.SetEnabled(players[consoleplayer],"kirinsigil3",false);
+		PPShader.SetEnabled("kirinsigil1",false);
+		PPShader.SetEnabled("kirinsigil2",false);
+		PPShader.SetEnabled("kirinsigil3",false);
 	}
 }

@@ -77,9 +77,9 @@ Class KirinTitleStuff : EventHandler
 
 	override void WorldLoaded( WorldEvent e )
 	{
-		Shader.SetEnabled(players[consoleplayer],"kirinsigil1",true);
-		Shader.SetEnabled(players[consoleplayer],"kirinsigil2",true);
-		Shader.SetEnabled(players[consoleplayer],"kirinsigil3",true);
+		PPShader.SetEnabled("kirinsigil1",true);
+		PPShader.SetEnabled("kirinsigil2",true);
+		PPShader.SetEnabled("kirinsigil3",true);
 		titletimer = 0;
 		let shnd = SWWMStaticHandler(StaticEventHandler.Find("SWWMStaticHandler"));
 		if ( !shnd ) return;
@@ -106,9 +106,9 @@ Class KirinTitleStuff : EventHandler
 		}
 		else if ( titletimer == 40*GameTicRate )
 		{
-			Shader.SetEnabled(players[consoleplayer],"kirinsigil1",false);
-			Shader.SetEnabled(players[consoleplayer],"kirinsigil2",false);
-			Shader.SetEnabled(players[consoleplayer],"kirinsigil3",false);
+			PPShader.SetEnabled("kirinsigil1",false);
+			PPShader.SetEnabled("kirinsigil2",false);
+			PPShader.SetEnabled("kirinsigil3",false);
 		}
 		else if ( titletimer == 42*GameTicRate ) S_ChangeMusic("music/kirin_titlemus.ogg");
 		if ( titletimer >= 40*GameTicRate ) TickSmokeLayers();
@@ -167,8 +167,8 @@ Class KirinTitleStuff : EventHandler
 		if ( GameSecs < 40 )
 		{
 			if ( GameSecs < 5 ) Screen.Dim("Black",1.-clamp(GameSecs/5.,0.,1.),0,0,Screen.GetWidth(),Screen.GetHeight());
-			Shader.SetUniform1f(players[consoleplayer],"kirinsigil1","timer",GameSecs-11.);
-			Shader.SetUniform1f(players[consoleplayer],"kirinsigil3","timer",GameSecs-11.);
+			PPShader.SetUniform1f("kirinsigil1","timer",GameSecs-11.);
+			PPShader.SetUniform1f("kirinsigil3","timer",GameSecs-11.);
 			if ( GameSecs < 7 )
 			{
 				alf = clamp(GameSecs-1,0.,1.);
