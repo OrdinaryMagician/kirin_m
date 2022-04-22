@@ -10,28 +10,29 @@ Class KirinStatusBar : SWWMStatusBar
 	int LastHealth, LastMana;	// to detect when to flash
 	int LagHealth[10], LagMana[10];	// for delayed decay bar
 
-	DynamicValueInterpolator HealthInter, ThinHealthInter, ManaInter, LagHealthInter, LagManaInter;
+	SmoothDynamicValueInterpolator HealthInter, ManaInter;
+	SmoothLinearValueInterpolator ThinHealthInter, LagHealthInter, LagManaInter;
 
 	override void FlushNotify()
 	{
 		Super.FlushNotify();
 		// flush interpolators (useful since this virtual gets called
 		// when loading saves, too)
-		HealthInter.Reset(CPlayer.Health*10);
-		ThinHealthInter.Reset(CPlayer.mo.SpawnHealth()*10);
-		ManaInter.Reset(CPlayer.mo.CountInv("KirinMana")*10);
+		HealthInter.Reset(CPlayer.Health);
+		ThinHealthInter.Reset(CPlayer.mo.SpawnHealth());
+		ManaInter.Reset(CPlayer.mo.CountInv("KirinMana"));
 		for ( int i=9; i>0; i-- )
-			LagHealth[i] = CPlayer.Health*10;
+			LagHealth[i] = CPlayer.Health;
 		for ( int i=9; i>0; i-- )
-			LagMana[i] = CPlayer.mo.CountInv("KirinMana")*10;
-		LagHealthInter.Reset(CPlayer.Health*10);
-		LagManaInter.Reset(CPlayer.mo.CountInv("KirinMana")*10);
+			LagMana[i] = CPlayer.mo.CountInv("KirinMana");
+		LagHealthInter.Reset(CPlayer.Health);
+		LagManaInter.Reset(CPlayer.mo.CountInv("KirinMana"));
 	}
 	override void UpdateInterpolators()
 	{
-		int hp = CPlayer.Health*10;
-		int thp = CPlayer.mo.SpawnHealth()*10;
-		int mp = CPlayer.mo.CountInv("KirinMana")*10;
+		int hp = CPlayer.Health;
+		int thp = CPlayer.mo.SpawnHealth();
+		int mp = CPlayer.mo.CountInv("KirinMana");
 		HealthInter.Update(hp);
 		ThinHealthInter.Update(thp);
 		ManaInter.Update(mp);
@@ -120,13 +121,13 @@ Class KirinStatusBar : SWWMStatusBar
 		tcsucks = Font.CR_RED;
 		tclabel_s = "x";
 		tcextra_s = "u";
-		LastMana = (CPlayer&&CPlayer.mo)?(CPlayer.mo.CountInv("KirinMana")*10):1000;
-		LastHealth = CPlayer?(CPlayer.health*10):1000;
-		HealthInter = DynamicValueInterpolator.Create(0,.5,1,1000);
-		ThinHealthInter = DynamicValueInterpolator.Create(100,.5,1,100);
-		ManaInter = DynamicValueInterpolator.Create(0,.5,1,1000);
-		LagHealthInter = DynamicValueInterpolator.Create(0,.1,1,50);
-		LagManaInter = DynamicValueInterpolator.Create(0,.1,1,50);
+		LastMana = (CPlayer&&CPlayer.mo)?CPlayer.mo.CountInv("KirinMana"):100;
+		LastHealth = CPlayer?CPlayer.health:100;
+		HealthInter = SmoothDynamicValueInterpolator.Create(LastHealth,.5,1,100);
+		ThinHealthInter = SmoothLinearValueInterpolator.Create((CPlayer&&CPlayer.mo)?CPlayer.mo.SpawnHealth():100,1);
+		ManaInter = SmoothDynamicValueInterpolator.Create(LastMana,.5,1,100);
+		LagHealthInter = SmoothLinearValueInterpolator.Create(LastHealth,2);
+		LagManaInter = SmoothLinearValueInterpolator.Create(LastMana,2);
 		for ( int i=0; i<10; i++ )
 		{
 			LagHealth[i] = LastHealth;
@@ -366,8 +367,8 @@ Class KirinStatusBar : SWWMStatusBar
 	override int DrawStatus()
 	{
 		Screen.DrawTexture(StatusTex,false,margin,ss.y-(margin+22),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true);
-		double ht = clamp(HealthInter.GetValue()/10.,0.,999.);
-		String str = String.Format("%3d",int(ht));
+		double ht = clamp(HealthInter.GetValue(fractic),0,999);
+		String str = String.Format("%3d",round(ht));
 		double hw = min(ht,100);
 		Screen.DrawTexture(BarTex[0],false,margin+15,ss.y-(margin+17),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,hw,DTA_ColorOverlay,Color(255,0,0,0));
 		bool invul = isInvulnerable();
@@ -399,17 +400,17 @@ Class KirinStatusBar : SWWMStatusBar
 			Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],margin+119,ss.y-(margin+18),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 			Screen.DrawTexture(IconTex[1],false,margin+2,ss.y-(margin+20),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 		}
-		ht = clamp(LagHealthInter.GetValue()/10.,0.,999.);
+		ht = clamp(LagHealthInter.GetValue(fractic),0,999);
 		double lhw = min(ht,100);
 		if ( lhw > hw ) Screen.DrawTexture(BarTex[7],false,margin+14,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowLeftF,hw,DTA_WindowRightF,lhw);
-		double tht = clamp(ThinHealthInter.GetValue()/10.,0.,100.);
-		if ( tht < 100. )
+		double tht = clamp(ThinHealthInter.GetValue(fractic),0,100);
+		if ( tht < 100 )
 		{
 			Screen.DrawTexture(BarTex[0],false,margin+15+tht,ss.y-(margin+17),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,100.-tht,DTA_ColorOverlay,Color(255,0,0,0));
 			Screen.DrawTexture(BarTex[6],false,margin+14+tht,ss.y-(margin+18),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,100.-tht);
 		}
-		double mt = clamp(ManaInter.GetValue()/10.,0.,999.);
-		str = String.Format("%3d",int(mt));
+		double mt = clamp(ManaInter.GetValue(fractic),0,999);
+		str = String.Format("%3d",round(mt));
 		double mw = min(mt,100);
 		Screen.DrawTexture(BarTex[1],false,margin+15,ss.y-(margin+7),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,mw,DTA_ColorOverlay,Color(255,0,0,0));
 		Screen.DrawTexture(BarTex[1],false,margin+14,ss.y-(margin+8),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_WindowRightF,mw);
@@ -422,7 +423,7 @@ Class KirinStatusBar : SWWMStatusBar
 			Screen.DrawText(MiniHUDFont,mhudfontcol[MCR_FLASH],margin+119,ss.y-(margin+8),str,DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 			Screen.DrawTexture(IconTex[2],false,margin+2,ss.y-(margin+8),DTA_VirtualWidthF,ss.x,DTA_VirtualHeightF,ss.y,DTA_KeepRatio,true,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alph);
 		}
-		mt = clamp(LagManaInter.GetValue()/10.,0.,999.);
+		mt = clamp(LagManaInter.GetValue(fractic),0,999);
 		double lmw = min(mt,100);
 		if ( lmw > mw )
 		{
