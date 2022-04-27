@@ -115,9 +115,9 @@ Class KirinStatScreen : SWWMStatScreen
 		{
 			if ( !smk[i].maxage ) continue;
 			if ( !smk_tex[i%8] ) smk_tex[i%8] = TexMan.CheckForTexture("graphics/title_smoke_"..(i%8)..".png",TexMan.Type_Any);
-			Vector2 pos = (smk[i].pos+smk[i].vel+(0,base))*zoomscl+(Screen.GetWidth()/2,0);
+			Vector2 pos = (smk[i].pos+smk[i].vel*fractic+(0,base))*zoomscl+(Screen.GetWidth()/2,0);
 			double scl = smk[i].scale*zoomscl;
-			double ang = smk[i].ang+smk[i].angvel;
+			double ang = smk[i].ang+smk[i].angvel*fractic;
 			double alf = cos((smk[i].age/double(smk[i].maxage))*90)*alpha;
 			alf *= clamp(smk[i].age/10.,0,1);
 			Screen.DrawTexture(smk_tex[i%8],false,pos.x,pos.y,DTA_CenterOffset,true,DTA_Rotate,ang,DTA_ScaleX,scl,DTA_ScaleY,scl,DTA_Alpha,alf,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(32,12,4));
@@ -131,9 +131,9 @@ Class KirinStatScreen : SWWMStatScreen
 		{
 			if ( !flm[i].maxage ) continue;
 			if ( !flm_tex[i%8] ) flm_tex[i%8] = TexMan.CheckForTexture("graphics/title_fire_"..(i%8)..".png",TexMan.Type_Any);
-			Vector2 pos = (flm[i].pos+flm[i].vel+(0,base))*zoomscl+(Screen.GetWidth()/2,0)+(ofs*CleanXFac_1,0);
-			double scl = flm[i].scale*(1.-.01)*zoomscl;
-			double ang = flm[i].ang+flm[i].angvel;
+			Vector2 pos = (flm[i].pos+flm[i].vel*fractic+(0,base))*zoomscl+(Screen.GetWidth()/2,0)+(ofs*CleanXFac_1,0);
+			double scl = flm[i].scale*(1.-.01*fractic)*zoomscl;
+			double ang = flm[i].ang+flm[i].angvel*fractic;
 			double alf = 1.-(flm[i].age/double(flm[i].maxage))**2.;
 			alf *= clamp(flm[i].age/5.,0,1);
 			Screen.DrawTexture(flm_tex[i%8],false,pos.x,pos.y,DTA_CenterOffset,true,DTA_Rotate,ang,DTA_ScaleX,scl,DTA_ScaleY,scl,DTA_Alpha,alf,DTA_LegacyRenderStyle,STYLE_Add);
@@ -142,7 +142,7 @@ Class KirinStatScreen : SWWMStatScreen
 
 	override void drawSWWMBg()
 	{
-		double GameSecs = bcnt/double(GameTicRate);
+		double GameSecs = (bcnt+fractic)/double(GameTicRate);
 		if ( swwm_fuzz )
 		{
 			if ( !bgtex ) bgtex = TexMan.CheckForTexture("graphics/tempbg.png",TexMan.Type_Any);
@@ -170,7 +170,7 @@ Class KirinStatScreen : SWWMStatScreen
 		Screen.DrawTexture(kirintex[2],false,Screen.GetWidth()/2-385*texscl+ofs*CleanXFac_1,0,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Translucent);
 		Screen.DrawTexture(kirintex[0],false,Screen.GetWidth()/2-385*texscl+ofs*CleanXFac_1,0,DTA_ScaleX,texscl,DTA_ScaleY,texscl);
 		Screen.DrawTexture(kirintex[1],false,Screen.GetWidth()/2-385*texscl+ofs*CleanXFac_1,0,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Add);
-		double alf = clamp(glarestr/20.,0.,1.)**2;
+		double alf = clamp((glarestr-fractic)/20.,0.,1.)**2;
 		if ( alf > 0. ) Screen.DrawTexture(kirintex[1],false,Screen.GetWidth()/2-385*texscl+ofs*CleanXFac_1,0,DTA_ScaleX,texscl,DTA_ScaleY,texscl,DTA_LegacyRenderStyle,STYLE_Add,DTA_Alpha,alf);
 		RenderSmokeLayer(GameSecs,false,1.);
 		Screen.DrawTexture(gradtex,false,0,Screen.GetHeight(),DTA_DestWidth,Screen.GetWidth(),DTA_DestHeight,256*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(64,8,4),DTA_TopOffset,256);
