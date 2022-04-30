@@ -1,5 +1,7 @@
 $pitchshiftrange 0
 
+kirin/death	sounds/kirin/kirin_death.ogg
+kirin/xpain	sounds/kirin/kirin_xpain.ogg
 kirin/hipain	sounds/kirin/kirin_hipain.ogg
 kirin/pain	sounds/kirin/kirin_pain.ogg
 kirin/lopain	sounds/kirin/kirin_lopain.ogg
@@ -43,17 +45,17 @@ $random kirin/nouse { kirin/whine5 kirin/whine12 kirin/whine13 }
 $random kirin/puzzfail { kirin/whine6 kirin/whine7 kirin/whine12 }
 $random kirin/puzzhate { kirin/whine1 kirin/whine2 kirin/whine3 kirin/whine4 kirin/whine8 kirin/whine9 kirin/whine10 kirin/whine11 kirin/whine12 kirin/whine14 }	// whining caused by Hexen's "puzzle" switches
 
-$playeralias kirin neutral *death	kirin/pain
-$playeralias kirin neutral *xdeath	kirin/hipain
-$playeralias kirin neutral *wimpydeath	kirin/lopain
-$playeralias kirin neutral *crazydeath	kirin/hipain
-$playeralias kirin neutral *burndeath	kirin/pain
-$playeralias kirin neutral *gibbed	kirin/hipain
-$playeralias kirin neutral *splat	kirin/hipain
+$playeralias kirin neutral *death	kirin/death
+$playeralias kirin neutral *xdeath	kirin/death
+$playeralias kirin neutral *wimpydeath	kirin/death
+$playeralias kirin neutral *crazydeath	kirin/death
+$playeralias kirin neutral *burndeath	kirin/death
+$playeralias kirin neutral *gibbed	kirin/death
+$playeralias kirin neutral *splat	kirin/death
 $playeralias kirin neutral *pain100	kirin/lopain
 $playeralias kirin neutral *pain75	kirin/pain
 $playeralias kirin neutral *pain50	kirin/hipain
-$playeralias kirin neutral *pain25	kirin/hipain
+$playeralias kirin neutral *pain25	kirin/xpain
 $playeralias kirin neutral *grunt	kirin/grunt
 $playeralias kirin neutral *land	kirin/land
 $playersound kirin neutral *falling	DSEMPTY

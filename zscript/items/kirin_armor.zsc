@@ -36,13 +36,13 @@ Class KirinInternalArmor : SWWMArmor
 		case 'Magma':
 		case 'Heat':
 		case 'Thermal':
-			dr = .4;
-			dt = 2;
+			dr = .6;
+			dt = 4;
 			break;
 		case 'Ice':
 		case 'Cold':
 			dr = .4;
-			dt = 2;
+			dt = 3;
 			break;
 		case 'Poison':
 		case 'PoisonCloud':
@@ -64,27 +64,31 @@ Class KirinInternalArmor : SWWMArmor
 		case 'Electric':
 		case 'Plasma':
 		case 'Chaos':
-			dr = .4;
-			dt = 2;
+			dr = .5;
+			dt = 3;
 			break;
 		case 'Bullet':
 		case 'Hitscan':
 		case 'Shot':
-			dr = .3;
-			dt = 4;
+			dr = .5;
+			dt = 2;
 			break;
 		case 'Melee':
-			dr = .25;
+			dr = .6;
 			dt = 3;
 			break;
 		default:
-			dr = .25;
+			dr = .4;
 			dt = 3;
 			break;
 		}
 		// 25% general splash reduction
 		if ( flags&DMG_EXPLOSION )
 			dr = (.5+dr)/2;
-		return clamp(int(damage*dr)+dt,0,damage);
+		// damage resistance wavers with blood thinning
+		if ( Owner.SpawnHealth() < Owner.default.Health )
+			dr *= Owner.SpawnHealth()/double(Owner.default.Health);
+		int newdamage = int(ceil(max(damage-dt,0)*(1.-dr)));
+		return damage-newdamage;
 	}
 }
