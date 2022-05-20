@@ -10,6 +10,7 @@ Struct TitleSmoke
 
 Class KirinTitleStuff : EventHandler
 {
+	ui bool bInitialized;
 	ui TextureID bgtex;
 	ui TextureID bdtex;
 	ui TitleSmoke smk[128], flm[128];
@@ -17,8 +18,8 @@ Class KirinTitleStuff : EventHandler
 	ui TextureID logotex[2];
 	ui TextureID kirintex[3];
 	ui TextureID gradtex;
-	int titletimer;
-	bool bFadeFromBlack;
+	ui int titletimer;
+	ui bool bFadeFromBlack;
 	ui Font mSmallFont, mBigFont;
 
 	private ui void TickSmokeLayers()
@@ -71,42 +72,33 @@ Class KirinTitleStuff : EventHandler
 		}
 	}
 
-	override void WorldTick()
-	{
-		titletimer++;
-	}
-
-	override void WorldLoaded( WorldEvent e )
-	{
-		PPShader.SetEnabled("kirinsigil1",true);
-		PPShader.SetEnabled("kirinsigil2",true);
-		PPShader.SetEnabled("kirinsigil3",true);
-		titletimer = 0;
-		let shnd = SWWMStaticHandler(StaticEventHandler.Find("SWWMStaticHandler"));
-		if ( !shnd ) return;
-		if ( shnd.titlefirst )
-		{
-			titletimer = GameTicRate*39;	// skip to flash
-			bFadeFromBlack = true;	// fade from black instead of white
-			S_ChangeMusic("");
-		}
-		shnd.titlefirst = true;
-	}
-
-	// GROSS HACK, GROSS HACK
-	static ui bool IsBirthday()
-	{
-		return (SystemTime.Format("%d%m",SystemTime.Now()) == "1304");
-	}
-	static play void SetBirthday()
-	{
-		let hnd = KirinTitleStuff(EventHandler.Find("KirinTitleStuff"));
-		if ( !hnd.bFadeFromBlack )
-			hnd.titletimer = -200;
-	}
-
 	override void UiTick()
 	{
+		// you're not supposed to be here
+		if ( gamestate == GS_LEVEL )
+			ThrowAbortException("Attempted to warp into TITLEMAP");
+		if ( !bInitialized )
+		{
+			bInitialized = true;
+			PPShader.SetEnabled("kirinsigil1",true);
+			PPShader.SetEnabled("kirinsigil2",true);
+			PPShader.SetEnabled("kirinsigil3",true);
+			titletimer = 0;
+			// birthday event
+			if ( SystemTime.Format("%d%m",SystemTime.Now()) == "1304" )
+				titletimer = -200;
+			let shnd = SWWMStaticHandler(StaticEventHandler.Find("SWWMStaticHandler"));
+			if ( shnd )
+			{
+				if ( shnd.titlefirst )
+				{
+					titletimer = GameTicRate*39;	// skip to flash
+					bFadeFromBlack = true;	// fade from black instead of white
+					S_ChangeMusic("");
+				}
+				shnd.titlefirst = true;
+			}
+		}
 		if ( titletimer == 1 )
 		{
 			S_ChangeMusic("");
@@ -125,12 +117,7 @@ Class KirinTitleStuff : EventHandler
 		}
 		else if ( titletimer == 42*GameTicRate ) S_ChangeMusic("music/kirin_titlemus.ogg");
 		if ( titletimer >= 40*GameTicRate ) TickSmokeLayers();
-		if ( gamestate != GS_LEVEL ) return;
-		// you're not supposed to be here
-		Menu.SetMenu('EndGameMenu');
-		let m = MessageBoxMenu(Menu.GetCurrentMenu());
-		if ( m ) m.HandleResult(true);
-		// special thanks to marrub for this absolute crime
+		titletimer++;
 	}
 
 	private ui void RenderSmokeLayer( RenderEvent e, double GameSecs, bool back, double alpha = 1. )
