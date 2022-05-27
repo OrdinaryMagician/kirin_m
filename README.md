@@ -56,9 +56,9 @@ Like any **Anarukon** firearm, the weapon not only needs to be reloaded with mor
 
 *"Not the most potent firearm, but still... I'll take it."*
 
-Another usual **Anarukon** sidearm, often seen in the hands of mercenaries. At 5mm, it definitely doesn't have as much stopping power as the **Rykha**, but it can deliver the pain much faster and with lower recoil. Each magazine holds a whopping 20 rounds. **Kirin** can carry up to 80 rounds in total.
+Another usual **Anarukon** sidearm, often seen in the hands of mercenaries. At 5mm, it definitely doesn't have as much stopping power as the **Rykha**, but it can deliver more pain through its higher piercing potential and a coating of caustic materials. Each magazine holds a whopping 20 rounds. **Kirin** can carry up to 80 rounds in total.
 
-Primary fire shoots alternating between each barrel at a steady rate, while secondary fire engages a *"dual-shot"* mode, which rapidly discharges both sides of the magazine. Only a select few models of the **Xei** have this feature, however, due to the complexity of its implementation.
+Primary fire shoots alternating between each barrel at a steady rate. Secondary fire lets you sacrifice some mana in order to temporarily *"enhance"* the ammunition as it fires, increasing the caustic damage of the rounds on impact for a limited time.
 
 As per usual, this weapon also has to be replenished with mana through the same method as the pistol, although due to its lower muzzle energy the mana supply tends to last much longer, and dry-firing isn't as damaging.
 
