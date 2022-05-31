@@ -25,6 +25,7 @@ Class KirinPlayer : SWWMPlayer
 		SWWMPlayer.ResurrectType RT_RESPAWN;
 		SWWMPlayer.PainThresholds 0, 5, 20, 50;
 		SWWMPlayer.HealthDecrease 50, 10;
+		SWWMPlayer.DodgeIFrames 10;
 		+SWWMPLAYER.CANDODGE;
 		+SWWMPLAYER.CANWALLCLIMB;
 	}
