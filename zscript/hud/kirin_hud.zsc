@@ -62,7 +62,7 @@ Class KirinStatusBar : SWWMStatusBar
 		for ( int i=0; i<4; i++ )
 		{
 			let amt = CPlayer.mo.CountInv(AmmoSlots[0]);
-			if ( amt > AmmoOldAmounts[i] )
+			if ( (amt > AmmoOldAmounts[i]) && (AmmoOldAmounts[i] != int.min) )
 				AmmoFlash[i] = gametic+25;
 			AmmoOldAmounts[i] = amt;
 		}
