@@ -99,12 +99,6 @@ Class KirinStatScreen : SWWMStatScreen
 		}
 	}
 
-	// heh
-	private clearscope double smerp( double a ) const
-	{
-		return (sin((a-.5)*180.)+1.)/2.;
-	}
-
 	private void RenderSmokeLayer( double GameSecs, bool back, double alpha = 1. )
 	{
 		double zoomscl = Screen.GetHeight()/600.;
@@ -125,7 +119,7 @@ Class KirinStatScreen : SWWMStatScreen
 		if ( !back ) return;
 		double ofs;
 		if ( sp_state >= 2 ) ofs = 120;
-		else ofs = 120*smerp(clamp(GameSecs,0.,1.));
+		else ofs = 120*SWWMUtility.smerp(clamp(GameSecs,0.,1.));
 		base = 950;
 		for ( int i=0; i<128; i++ )
 		{
@@ -161,7 +155,7 @@ Class KirinStatScreen : SWWMStatScreen
 		if ( !kirintex[2] ) kirintex[2] = TexMan.CheckForTexture("graphics/title_kirin_flame.png",TexMan.Type_Any);
 		double ofs;
 		if ( sp_state >= 2 ) ofs = 120;
-		else ofs = 120*smerp(clamp(GameSecs,0.,1.));
+		else ofs = 120*SWWMUtility.smerp(clamp(GameSecs,0.,1.));
 		Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2+ofs*CleanXFac_1,Screen.GetHeight(),DTA_Rotate,90,DTA_DestHeight,Screen.GetHeight(),DTA_DestWidth,640*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_TopOffset,256,DTA_Alpha,.5);
 		Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2+ofs*CleanXFac_1,0,DTA_Rotate,270,DTA_DestHeight,Screen.GetHeight(),DTA_DestWidth,640*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_Shaded,DTA_FillColor,Color(0,0,0),DTA_TopOffset,256,DTA_Alpha,.5);
 		Screen.DrawTexture(gradtex,false,Screen.GetWidth()/2+ofs*CleanXFac_1,Screen.GetHeight(),DTA_Rotate,90,DTA_DestHeight,Screen.GetHeight(),DTA_DestWidth,512*CleanYFac_1,DTA_LegacyRenderStyle,STYLE_AddShaded,DTA_FillColor,Color(32,6,4),DTA_TopOffset,256);
