@@ -76,7 +76,7 @@ Unlike other firearms, the use of a physical propellant means that the weapon do
 
 *"Such a mighty weapon... Thank you, Misa."*
 
-A gift from **Kirin**'s very distant cousin. This beast is effectively an FTL rocket launcher. Due to some specifics of deployment, the weapon had to be delivered in a disassembled state, but the three main parts ended up scattered. **Saya** cites that **Cyrus** may have done it on purpose so the weapon can be *"unlocked in stages"*, which she additionally commented on as being *"some videogamey bullshit"*. Nevertheless, **Kirin** considers that to make the prospect of using it more exciting, as he has a great admiration for **Misa**'s handiwork.
+A gift from **Kirin**'s very distant cousin. This beast is effectively an FTL rocket launcher. In **Hexen**, the weapon can be found disassembled into three scattered parts. **Cyrus** did this on purpose so the weapon can be *"unlocked in stages"*, which **Saya** additionally commented on as being *"some videogamey bullshit"*. Nevertheless, **Kirin** considers that to make the prospect of using it more exciting, as he has a great admiration for **Misa**'s handiwork.
 
 Primary fire will deploy the payload, piercing through any small targets in its path in the mere blink of an eye, before colliding with something hard enough to trigger its explosive charge. Secondary fire arms the explosive early, causing the projectile to burst upon hitting its first target.
 
